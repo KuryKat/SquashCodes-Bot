@@ -1,0 +1,101 @@
+[09:02:05 7th abr. 21] [Squash#4343] :> @STAFF @​Pedro_Araujo
+[09:02:05 7th abr. 21] [Squash#4343] :> 
+[09:02:16 7th abr. 21] [Pedro_Araujo#3089] :> Bom dia.
+[09:02:44 7th abr. 21] [Tyurin#6675] :> Bom dia, como podemos ajudar?
+[09:03:43 7th abr. 21] [Pedro_Araujo#3089] :> Eu quero comprar o script custom.
+[09:03:49 7th abr. 21] [Pedro_Araujo#3089] :> Mas não sei como funciona.
+[09:04:00 7th abr. 21] [Pedro_Araujo#3089] :> Pq não sou o dono do servidor, apenas amigo do dono
+[09:04:07 7th abr. 21] [Pedro_Araujo#3089] :> Eu colocando o ip do servidor dele
+[09:04:12 7th abr. 21] [Pedro_Araujo#3089] :> Ele consegue alterar o script?
+[09:04:18 7th abr. 21] [Pedro_Araujo#3089] :> Ou somente eu?
+[09:04:50 7th abr. 21] [Tyurin#6675] :> Você vai ter o direito ao painel e lá vai receber o código de ativação
+[09:05:08 7th abr. 21] [Tyurin#6675] :> Esse código de ativação terá que ser colocado no arquivo de configuração no script assim como o e-mail cadastrado no site
+[09:05:51 7th abr. 21] [Tyurin#6675] :> Você colocando o IP e enviando o arquivo para o Filezilla ou diretamente pra ele, ele consegue alterar sim
+[09:06:11 7th abr. 21] [Tyurin#6675] :> E colocando essas informações que eu disse encima
+[09:06:20 7th abr. 21] [Tyurin#6675] :> De resto é configuração pessoal
+[09:06:28 7th abr. 21] [Pedro_Araujo#3089] :> Ah, maravilha
+[09:06:59 7th abr. 21] [Pedro_Araujo#3089] :> Ele me passou o login de vcs da squash
+[09:07:01 7th abr. 21] [Pedro_Araujo#3089] :> No caso da conta dele
+[09:07:05 7th abr. 21] [Pedro_Araujo#3089] :> Aí eu comprando
+[09:07:09 7th abr. 21] [Pedro_Araujo#3089] :> Ele já recebe tudo né?
+[09:07:12 7th abr. 21] [Pedro_Araujo#3089] :> Ou não?
+[09:07:28 7th abr. 21] [Tyurin#6675] :> Isso, a compra é realizada na conta que você está logado
+[09:07:41 7th abr. 21] [Tyurin#6675] :> Já recebe tudo sim
+[09:07:54 7th abr. 21] [Pedro_Araujo#3089] :> Maravilha
+[09:07:58 7th abr. 21] [Pedro_Araujo#3089] :> Vou lá então
+[09:08:46 7th abr. 21] [Tyurin#6675] :> Certo, quando efetuar o pagamento só enviar o comprovante
+[09:08:58 7th abr. 21] [Tyurin#6675] :> Aí você diz se a tag de cliente no caso seria pra você ou pra ele, ok?
+[09:09:09 7th abr. 21] [Pedro_Araujo#3089] :> Sem problemas
+[09:09:26 7th abr. 21] [Tyurin#6675] :> Podemos ajudar em mais alguma coisa?
+[09:09:51 7th abr. 21] [Pedro_Araujo#3089] :> Sim
+[09:09:59 7th abr. 21] [Pedro_Araujo#3089] :> Eu tentei alterar o ip lá
+[09:10:10 7th abr. 21] [Pedro_Araujo#3089] :> Pq o da conta dele
+[09:10:16 7th abr. 21] [Pedro_Araujo#3089] :> É o ip antigo do servidor
+[09:10:19 7th abr. 21] [Pedro_Araujo#3089] :> Aí preciso alterar
+[09:11:08 7th abr. 21] [Pedro_Araujo#3089] :> Como faço?
+[09:11:40 7th abr. 21] [Pedro_Araujo#3089] :> Posso comprar normalmente e depois ele resolve essa parte de trocar o ip e etc?
+[09:11:46 7th abr. 21] [Pedro_Araujo#3089] :> @​Tyurin
+[09:12:22 7th abr. 21] [Tyurin#6675] :> Pode sim, você pode comprar e autenticando a conta ao bot da Squash vocês conseguem alterar o IP
+[09:12:29 7th abr. 21] [Pedro_Araujo#3089] :> Show!
+[09:13:15 7th abr. 21] [Tyurin#6675] :> O dono do servidor é o @​ssky?
+[09:13:26 7th abr. 21] [Pedro_Araujo#3089] :> Sim
+[09:13:27 7th abr. 21] [Pedro_Araujo#3089] :> Kkkkkkkkkkkk
+[09:13:30 7th abr. 21] [Tyurin#6675] :> Ok
+[09:13:38 7th abr. 21] [Tyurin#6675] :> Ksksks, ele me falou aqui
+[09:15:53 7th abr. 21] [Pedro_Araujo#3089] :> Consegue por ele nesse ticket tb?
+[09:16:19 7th abr. 21] [Tyurin#6675] :> Puts, infelizmente não tenho essa permissão
+[09:16:22 7th abr. 21] [Pedro_Araujo#3089] :> 
+https://cdn.discordapp.com/attachments/829325156706156554/829328749534117898/image0.png
+[09:16:25 7th abr. 21] [Pedro_Araujo#3089] :> Comprovante
+[09:16:56 7th abr. 21] [Tyurin#6675] :> Ok, pra você ou pra ele?
+[09:17:01 7th abr. 21] [Pedro_Araujo#3089] :> Pra ele mesmo
+[09:17:25 7th abr. 21] [Tyurin#6675] :> @​ssky
+[09:17:33 7th abr. 21] [Tyurin#6675] :> @​dutra @​JoohnWiick
+[09:21:12 7th abr. 21] [Pedro_Araujo#3089] :> Ah
+[09:21:18 7th abr. 21] [Pedro_Araujo#3089] :> Você é o rapaz que faz as fardas?
+[09:21:23 7th abr. 21] [Pedro_Araujo#3089] :> Ou é outro?
+[09:25:17 7th abr. 21] [Tyurin#6675] :> É outro, porém não sei se ele ainda está na equipe da Squash
+[09:25:37 7th abr. 21] [Tyurin#6675] :> Mas acredito que o Dutra saiba alguns nomes de quem faça
+[09:35:18 7th abr. 21] [Pedro_Araujo#3089] :> Ah
+[09:35:20 7th abr. 21] [Pedro_Araujo#3089] :> Tranquilo
+[09:35:27 7th abr. 21] [Pedro_Araujo#3089] :> Acho que já tá tudo resolvido
+[09:35:37 7th abr. 21] [Pedro_Araujo#3089] :> Sky deve entrar em contato com vcs
+[09:37:02 7th abr. 21] [dutra#0069] :> @​Pedro_Araujo podemos ajudar em algo mais
+[09:37:03 7th abr. 21] [dutra#0069] :> ?
+[09:46:04 7th abr. 21] [Pedro_Araujo#3089] :> Só isso mesmo
+[09:46:44 7th abr. 21] [Pedro_Araujo#3089] :> Na verdade
+[09:46:48 7th abr. 21] [Pedro_Araujo#3089] :> Tipo
+[09:47:06 7th abr. 21] [Pedro_Araujo#3089] :> Da pra pegar skin da net e usar como roupa né?
+[09:47:10 7th abr. 21] [Pedro_Araujo#3089] :> Sem ser peça por peça
+[09:47:12 7th abr. 21] [Pedro_Araujo#3089] :> A skin toda
+[09:47:15 7th abr. 21] [Pedro_Araujo#3089] :> ?
+[09:47:29 7th abr. 21] [dutra#0069] :> como assim?
+[09:48:58 7th abr. 21] [Pedro_Araujo#3089] :> Pegar uma skin da net
+[09:49:19 7th abr. 21] [Pedro_Araujo#3089] :> Ai ao invés de coisar
+[09:49:49 7th abr. 21] [Pedro_Araujo#3089] :> De mudar tudo
+[09:50:00 7th abr. 21] [Pedro_Araujo#3089] :> Ser apenas a parte de corpo
+[09:50:04 7th abr. 21] [Pedro_Araujo#3089] :> Que nem nesse vídeo olha
+[09:50:50 7th abr. 21] [dutra#0069] :> você quer colocar outro corpo no custom?
+[09:51:11 7th abr. 21] [Pedro_Araujo#3089] :> Não
+[09:51:13 7th abr. 21] [Pedro_Araujo#3089] :> Olha
+[09:52:04 7th abr. 21] [Pedro_Araujo#3089] :> 
+https://cdn.discordapp.com/attachments/829325156706156554/829337733578883082/video0.mov
+[09:52:33 7th abr. 21] [dutra#0069] :> tem, o painel de fardas é justamente pra isso
+[09:52:41 7th abr. 21] [dutra#0069] :> mas assim
+[09:52:49 7th abr. 21] [dutra#0069] :> não dá pra você pegar qualquer skin da net e só colocar no script
+[09:52:55 7th abr. 21] [dutra#0069] :> tem que ter um modelador ou contratar
+[09:53:03 7th abr. 21] [dutra#0069] :> pra fazer o personagem com as roupas policiais pra você
+[09:53:19 7th abr. 21] [dutra#0069] :> https://i.imgur.com/OZ3ZVNW.mp4
+[09:53:57 7th abr. 21] [Pedro_Araujo#3089] :> A entendi
+[09:54:08 7th abr. 21] [Pedro_Araujo#3089] :> E você sabe quem façam
+[09:54:12 7th abr. 21] [Pedro_Araujo#3089] :> Faça?*
+[09:54:46 7th abr. 21] [dutra#0069] :> conheço um
+[09:54:49 7th abr. 21] [dutra#0069] :> mas ele é dificil de responder
+[09:54:50 7th abr. 21] [dutra#0069] :> !                    Bradockϟ3ds#2222
+[09:57:00 7th abr. 21] [dutra#0069] :> @​Pedro_Araujo mais alguma dúvida?
+[09:59:18 7th abr. 21] [Pedro_Araujo#3089] :> Vish
+[09:59:21 7th abr. 21] [Pedro_Araujo#3089] :> Então só isso mesmo
+[09:59:25 7th abr. 21] [Pedro_Araujo#3089] :> Obrigado, Dutra
+[09:59:43 7th abr. 21] [dutra#0069] :> por nada, estarei fechando seu ticket tenha um bom dia 😉
+[09:59:47 7th abr. 21] [dutra#0069] :> !close
+[09:59:47 7th abr. 21] [Squash#4343] :> 

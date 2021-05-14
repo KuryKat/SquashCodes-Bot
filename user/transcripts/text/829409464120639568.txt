@@ -1,0 +1,56 @@
+[14:37:06 7th abr. 21] [Squash#4343] :> @STAFF @​ssky
+[14:37:06 7th abr. 21] [Squash#4343] :> 
+[14:37:13 7th abr. 21] [ssky#0001] :> Boa Tarde.
+[14:37:23 7th abr. 21] [ssky#0001] :> Estou com uma dificuldade de adicionar peças no custom.
+[14:37:28 7th abr. 21] [ssky#0001] :> Poderia me ajudarw
+[14:37:34 7th abr. 21] [ssky#0001] :> 
+https://cdn.discordapp.com/attachments/829409464120639568/829409585470505001/coldre.txd
+[14:37:35 7th abr. 21] [ssky#0001] :> 
+https://cdn.discordapp.com/attachments/829409464120639568/829409587442352210/coldre.dff
+[14:37:39 7th abr. 21] [ssky#0001] :> Tipo eu tenho esse coldre
+[14:37:45 7th abr. 21] [ssky#0001] :> não sei c está da maneira certaa
+[14:38:24 7th abr. 21] [JoohnWiick#2547] :> **COMO ADICIONAR MODELAGENS NO SCRIPT**
+
+**OBS:** Não damos suporte para adicionar a modelagem no DFF, não temos conhecimento nesta área.
+**OBS²:** Importante! O tamanho do DFF não pode passar de 4.7mb's, caso passe irá dar erro de replace por conta que o MTA não suporta modelagens tão grandes, o DFF já está no limite, então coloque modelos leves ou retire um para por outro!
+
+1 - Após adicionar os modelos no DFF, exporte uma das imagens do TXD e coloque a imagem invisível no TXD com O **MESMO NOME** que você colocou no DFF pelo 3DS. Por exemplo, se você colocou uma imagem chamada `colete.padrao.png` no DFF, você terá que colocar uma **IMAGEM INVISÍVEL** (IMPORTANTE!)
+no TXD chamado de `colete.padrao`.
+
+2 - Adicione a textura visível , a textura original do objeto nas pastas de texturas **assets/textures/male/NomeDoObjeto/1.png **. Exemplo: `assets/textures/male/colete.padrao/1.png`
+
+3 - Adicione no meta a textura visível que você acabou de colocar nas pastas de texturas.
+Exemplo: `<file src="assets/textures/male/colete.padrao/1.png" />`
+
+4 - Compile a modelagem. Primeiro, desligue o script, **APAGUE OS ARQUIVOS .3D DA PASTA LOADER (APENAS DA SKIN QUE VOCÊ QUER TROCAR, MASCULINO OU FEMININO)** troque no meta de .3D para .txd e .dff, coloque os arquivos descompilados que você editou na pasta loader, **COM OS SEGUINTES NOMES:** `Male.txd` e `Male.dff` para o masculino e `Female.txd` e `Female.dff` para a skin feminina. Ligue o script, é normal dar error, agora você pode desligar o script novamente e voltar para a pasta loader. Verifique se criou os novos arquivos .3D (Caso não tenha aparecido ainda no seu filezilla, basta dar um F5). Troque novamente no meta.xml de .txd e .dff para **.3D**, após isso basta iniciar o script. Caso não tenha funcionado, repita o processo.
+[14:38:33 7th abr. 21] [JoohnWiick#2547] :> Você tem q botar os objetos no personagem
+[14:39:58 7th abr. 21] [ssky#0001] :> Eu vi esse texto porém ficou dificil de entender.
+[14:40:06 7th abr. 21] [ssky#0001] :> Tipo aabrir o personagem no 3da
+[14:40:08 7th abr. 21] [ssky#0001] :> e colocar la??
+[14:40:15 7th abr. 21] [JoohnWiick#2547] :> é
+[14:40:45 7th abr. 21] [ssky#0001] :> Ok, dai eu exporto ele em dff & txd normal??
+[14:44:55 7th abr. 21] [JoohnWiick#2547] :> acho q sim
+[14:45:04 7th abr. 21] [JoohnWiick#2547] :> n entendemos mt de molagem
+[17:59:39 7th abr. 21] [ssky#0001] :> Tem limite de camisas padrãao?
+[17:59:42 7th abr. 21] [ssky#0001] :> tipo
+[17:59:46 7th abr. 21] [ssky#0001] :> as png das camisa
+[18:00:11 7th abr. 21] [ssky#0001] :> pq nois ja fez um monte kssks
+https://cdn.discordapp.com/attachments/829409464120639568/829460569676841030/unknown.png
+[18:00:14 7th abr. 21] [ssky#0001] :> <:rtwet:808066034731974717>
+[18:02:41 7th abr. 21] [ssky#0001] :> @​JoohnWiick
+[18:17:53 7th abr. 21] [JoohnWiick#2547] :> nops
+[18:19:24 7th abr. 21] [ssky#0001] :> Oks
+[18:23:26 7th abr. 21] [ssky#0001] :> ultima duvida minha aqui
+[18:23:38 7th abr. 21] [ssky#0001] :> pode adicionar cabelo tbm.
+[18:36:54 7th abr. 21] [ssky#0001] :> ?
+[18:37:19 7th abr. 21] [JoohnWiick#2547] :> textura? sim
+[18:57:56 7th abr. 21] [ssky#0001] :> to falaando outra model de cabelo
+[18:57:58 7th abr. 21] [ssky#0001] :> outro tipo
+[18:57:59 7th abr. 21] [ssky#0001] :> tlg?
+[20:04:04 7th abr. 21] [JoohnWiick#2547] :> pode ue
+[22:58:31 7th abr. 21] [JoohnWiick#2547] :> @​ssky mais alguma dúvida ?
+[23:11:11 7th abr. 21] [ssky#0001] :> Nono
+[23:11:18 7th abr. 21] [ssky#0001] :> https://tenor.com/view/minion-bye-takecare-gif-10859314
+[23:11:22 7th abr. 21] [ssky#0001] :> obg pelo atendimento
+[23:14:46 7th abr. 21] [Chorão#3666] :> !close
+[23:14:46 7th abr. 21] [Squash#4343] :> 

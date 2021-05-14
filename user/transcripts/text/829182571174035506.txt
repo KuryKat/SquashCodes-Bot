@@ -1,0 +1,156 @@
+[23:35:30 6th abr. 21] [Squash#4343] :> @STAFF @​!Mr.L1P3
+[23:35:30 6th abr. 21] [Squash#4343] :> 
+[23:36:00 6th abr. 21] [!Mr.L1P3#5341] :> Depois que eu coloquei o sistema de vcs
+[23:36:09 6th abr. 21] [!Mr.L1P3#5341] :> as armas parou de salvar
+[23:36:16 6th abr. 21] [!Mr.L1P3#5341] :> quando personagem reloga
+[23:36:18 6th abr. 21] [!Mr.L1P3#5341] :> ela some
+[23:36:20 6th abr. 21] [Tyurin#6675] :> Como assim?
+[23:36:36 6th abr. 21] [!Mr.L1P3#5341] :> ex - o jogador tem uma ak47
+[23:36:43 6th abr. 21] [!Mr.L1P3#5341] :> ele sai do servidor ela some
+[23:36:51 6th abr. 21] [!Mr.L1P3#5341] :> meu savesystem tava normal tlg
+[23:37:07 6th abr. 21] [!Mr.L1P3#5341] :> ai depois que eu botei o sistema de character bugo
+[23:37:12 6th abr. 21] [Tyurin#6675] :> Ela some da onde? Do slot do jogador, do inventário?...
+[23:37:25 6th abr. 21] [!Mr.L1P3#5341] :> meu servidor n tem inventario
+[23:37:27 6th abr. 21] [!Mr.L1P3#5341] :> some da mão
+[23:37:33 6th abr. 21] [JoohnWiick#2547] :> desativa o custom e vê se as armas fica salvando normal
+[23:37:45 6th abr. 21] [JoohnWiick#2547] :> se tiver salvando ai vc avisa
+[23:37:49 6th abr. 21] [!Mr.L1P3#5341] :> blz
+[23:37:59 6th abr. 21] [!Mr.L1P3#5341] :> joohn tem algo que ta pedindo permissão de acl
+[23:37:59 6th abr. 21] [!Mr.L1P3#5341] :> tbm
+[23:38:01 6th abr. 21] [!Mr.L1P3#5341] :> vou mostra print
+[23:38:38 6th abr. 21] [!Mr.L1P3#5341] :> 
+https://cdn.discordapp.com/attachments/829182571174035506/829183356096872498/unknown.png
+[23:40:13 6th abr. 21] [Tyurin#6675] :> Se você for usar o painel de organizações, crie a ACL que dará o direito de abrir o painel e coloque lá
+[23:40:21 6th abr. 21] [Tyurin#6675] :> Se não for usar, troca por "Everyone"
+[23:41:18 6th abr. 21] [!Mr.L1P3#5341] :> tem previsão para att
+[23:41:20 6th abr. 21] [!Mr.L1P3#5341] :> do mod w
+[23:41:22 6th abr. 21] [!Mr.L1P3#5341] :> ?
+[23:43:39 6th abr. 21] [Tyurin#6675] :> Infelizmente não, mas o Dutra e o Joohn estão trabalhando bastante pra sair o mais rápido possível! 🙂
+[23:44:04 6th abr. 21] [!Mr.L1P3#5341] :> ata
+[23:44:21 6th abr. 21] [!Mr.L1P3#5341] :> jaja renicio o servidor
+[23:44:28 6th abr. 21] [!Mr.L1P3#5341] :> pra ver se ta bugando o sistema de salvar
+[23:44:39 6th abr. 21] [Tyurin#6675] :> Certo
+[09:57:33 7th abr. 21] [Tyurin#6675] :> Bom dia @​!Mr.L1P3, seu problema foi corrigido?
+[10:59:06 7th abr. 21] [!Mr.L1P3#5341] :> Bom dia, amigo troquei meu save system
+[10:59:12 7th abr. 21] [!Mr.L1P3#5341] :> vou testar agora
+[11:03:48 7th abr. 21] [!Mr.L1P3#5341] :> acho que vou precisa da ajuda de vcs
+[11:03:55 7th abr. 21] [!Mr.L1P3#5341] :> troquei painel de login
+[11:03:58 7th abr. 21] [!Mr.L1P3#5341] :> ai quando eu logo
+[11:04:04 7th abr. 21] [!Mr.L1P3#5341] :> o personagem fica invisivel
+[11:05:53 7th abr. 21] [Tyurin#6675] :> Você usou o exports pra quando o jogador logar?
+[11:06:38 7th abr. 21] [!Mr.L1P3#5341] :> certeza
+[11:09:28 7th abr. 21] [Tyurin#6675] :> ?
+[11:10:37 7th abr. 21] [!Mr.L1P3#5341] :> eu mudei o painel de login
+[11:10:42 7th abr. 21] [!Mr.L1P3#5341] :> ultima vez o joon
+[11:10:44 7th abr. 21] [!Mr.L1P3#5341] :> tinha mexido nele
+[11:10:53 7th abr. 21] [!Mr.L1P3#5341] :> como eu mudei, acho que mudou alguma config
+[11:12:11 7th abr. 21] [Tyurin#6675] :> Certo, no caso possui o exports no sistema de personagem pra quando o jogador registrar e quando jogador logar?
+[11:13:22 7th abr. 21] [!Mr.L1P3#5341] :> mano depois que eu mudei o painel
+[11:13:23 7th abr. 21] [!Mr.L1P3#5341] :> bugo
+[11:13:38 7th abr. 21] [!Mr.L1P3#5341] :> tipo n ta mais aparecendo o personagem quando loga tals
+[11:15:06 7th abr. 21] [Tyurin#6675] :> Sim, sim, essa parte eu entendi
+[11:15:41 7th abr. 21] [Tyurin#6675] :> Porém você adaptou o painel login ao sistema de personagem?
+[11:16:05 7th abr. 21] [!Mr.L1P3#5341] :> nn
+[11:16:07 7th abr. 21] [Tyurin#6675] :> Ou só colocou o sistema de personagem e outro painel login e não fez nenhuma alteração relacionado com o sistema de personagem(exports)
+[11:16:28 7th abr. 21] [!Mr.L1P3#5341] :> ultima vez o joon edito o painel de login meu
+[11:40:56 7th abr. 21] [Tyurin#6675] :> Você consegue me enviar a função ou o lado server do seu painel login? @​!Mr.L1P3
+[11:46:39 7th abr. 21] [!Mr.L1P3#5341] :> pera ai
+[12:46:18 7th abr. 21] [!Mr.L1P3#5341] :> addEvent("onServerRequestRegister", true)
+addEventHandler("onServerRequestRegister", resourceRoot, function(username, password)
+    local accounts = getTableAccounts(client)
+    if #accounts >= 2 then
+        triggerClientEvent(client, "addLoginNotification", resourceRoot, "Máximo de contas atingido. Logue nelas: "..table.concat(accounts, ", "), 2)
+        triggerClientEvent(client, "onBlockRegister", resourceRoot)
+        return
+    end
+
+    local account = getAccount(username)
+    if account then
+        triggerClientEvent(client, "addLoginNotification", resourceRoot, "Este nome de usuário já esta sendo usado!", 1)
+        return
+    end
+
+    local accountAdded = addAccount(username,password)
+    if accountAdded then
+        setAccountData(accountAdded, "serial", getPlayerSerial(client))
+        if logIn(client, accountAdded, password) then
+            triggerClientEvent(client, "useLoginFile", resourceRoot, "set", username, password)
+            triggerClientEvent(client, "onLoginClientManager", resourceRoot)
+            triggerClientEvent(client, "addLoginNotification", resourceRoot, "Bem-vindo. Você foi registrado e logado com sucesso!", 2)
+        end
+    end
+end)
+[13:29:13 7th abr. 21] [!Mr.L1P3#5341] :> ??
+[13:50:58 7th abr. 21] [!Mr.L1P3#5341] :> @​dutra
+[14:11:47 7th abr. 21] [Tyurin#6675] :> Quando vem a notificação "Bem-vindo. Você foi registrado e logado com sucesso!" o que acontece depois? @​!Mr.L1P3
+[14:12:04 7th abr. 21] [Tyurin#6675] :> Envia também de quando o jogador loga pf
+[15:06:22 7th abr. 21] [!Mr.L1P3#5341] :> mais facil
+[15:06:25 7th abr. 21] [!Mr.L1P3#5341] :> vcs ve minha tela
+[15:38:57 7th abr. 21] [!Mr.L1P3#5341] :> @​JoohnWiick
+[17:51:55 7th abr. 21] [!Mr.L1P3#5341] :> Algum suporte disponivel ?
+[19:00:37 7th abr. 21] [Tyurin#6675] :> Pode aguardar até daqui a pouco? @​!Mr.L1P3
+[19:00:50 7th abr. 21] [Tyurin#6675] :> Vou estar disponível já já! Só estou resolvendo algumas coisas
+[19:02:15 7th abr. 21] [!Mr.L1P3#5341] :> to esperando dez das 11 hr da amanha
+[19:02:20 7th abr. 21] [!Mr.L1P3#5341] :> espera mais um pouco n da nada n
+[20:20:10 7th abr. 21] [!Mr.L1P3#5341] :> Alguem disponivel pra agora ?
+[21:05:48 7th abr. 21] [dutra#0069] :> @​!Mr.L1P3 tô chegando em casa e já te ajudo, ok?
+[21:05:55 7th abr. 21] [dutra#0069] :> enquanto isso, pode me mandar seu login?
+[21:12:30 7th abr. 21] [!Mr.L1P3#5341] :> dutra eu vou compartilha a tela
+[21:12:33 7th abr. 21] [!Mr.L1P3#5341] :> ai vc ve arquivo
+[21:12:35 7th abr. 21] [!Mr.L1P3#5341] :> pra mim ti manda
+[21:12:47 7th abr. 21] [!Mr.L1P3#5341] :> ai eu envio ta ?
+[21:19:39 7th abr. 21] [dutra#0069] :> não posso call agora
+[21:43:57 7th abr. 21] [!Mr.L1P3#5341] :> qual pasta
+[21:44:01 7th abr. 21] [!Mr.L1P3#5341] :> eu tenho que ti manda
+[21:46:24 7th abr. 21] [dutra#3978] :> login e registro
+[21:47:20 7th abr. 21] [!Mr.L1P3#5341] :> é arquivo server
+[21:47:22 7th abr. 21] [!Mr.L1P3#5341] :> ou cliente
+[21:48:16 7th abr. 21] [dutra#3978] :> ambos
+[21:50:51 7th abr. 21] [!Mr.L1P3#5341] :> 
+https://cdn.discordapp.com/attachments/829182571174035506/829518621528031272/sourceC.lua
+[21:50:52 7th abr. 21] [!Mr.L1P3#5341] :> 
+https://cdn.discordapp.com/attachments/829182571174035506/829518626138095646/sourceS.lua
+[21:50:58 7th abr. 21] [!Mr.L1P3#5341] :> ta ae
+[22:03:56 7th abr. 21] [dutra#3978] :> @​!Mr.L1P3 qual o problema mesmo?
+[22:04:17 7th abr. 21] [!Mr.L1P3#5341] :> quando pessoal loga skin fica invisivel
+[22:04:36 7th abr. 21] [dutra#3978] :> todo mundo?
+[22:04:39 7th abr. 21] [!Mr.L1P3#5341] :> ss
+[22:04:54 7th abr. 21] [!Mr.L1P3#5341] :> fica só a sombra no chão
+[22:05:05 7th abr. 21] [dutra#3978] :> mostra a config system
+[22:05:06 7th abr. 21] [dutra#3978] :> do custom
+[22:05:30 7th abr. 21] [!Mr.L1P3#5341] :> e quando loga
+[22:05:33 7th abr. 21] [!Mr.L1P3#5341] :> entra com skin do CJ
+[22:05:40 7th abr. 21] [!Mr.L1P3#5341] :> n mostra painel do personagem
+[22:06:21 7th abr. 21] [!Mr.L1P3#5341] :> tipo amigo meu acabou de cria a conta
+[22:06:27 7th abr. 21] [!Mr.L1P3#5341] :> nasceu com skin do cj
+[22:06:29 7th abr. 21] [dutra#3978] :> .
+[22:07:15 7th abr. 21] [!Mr.L1P3#5341] :> 
+https://cdn.discordapp.com/attachments/829182571174035506/829522751265308703/System.lua
+[22:17:39 7th abr. 21] [!Mr.L1P3#5341] :> tá dando certo @​dutra
+[22:18:38 7th abr. 21] [dutra#3978] :> vc trocou de login?
+[22:18:51 7th abr. 21] [!Mr.L1P3#5341] :> s
+[22:20:02 7th abr. 21] [dutra#3978] :> troca o openPanelLogin
+[22:20:04 7th abr. 21] [dutra#3978] :> na config system
+[22:20:05 7th abr. 21] [dutra#3978] :> pra true
+[22:20:08 7th abr. 21] [dutra#3978] :> e ve se vai
+[22:23:47 7th abr. 21] [!Mr.L1P3#5341] :> acho que foi
+[22:23:49 7th abr. 21] [!Mr.L1P3#5341] :> pera ai
+[22:47:44 7th abr. 21] [!Mr.L1P3#5341] :> liberei
+[22:47:46 7th abr. 21] [!Mr.L1P3#5341] :> o servidor
+[22:47:51 7th abr. 21] [!Mr.L1P3#5341] :> pessoal falou que ta normal
+[22:48:28 7th abr. 21] [JoohnWiick#2547] :> ok, podemos ajudar em algo mais?
+[22:49:05 7th abr. 21] [!Mr.L1P3#5341] :> creio
+[22:49:07 7th abr. 21] [!Mr.L1P3#5341] :> que so isso
+[22:49:15 7th abr. 21] [!Mr.L1P3#5341] :> uma pergunta
+[22:52:42 7th abr. 21] [JoohnWiick#2547] :> ?
+[22:52:57 7th abr. 21] [!Mr.L1P3#5341] :> sabe me fala
+[22:53:04 7th abr. 21] [!Mr.L1P3#5341] :> se tem juliete
+[22:53:06 7th abr. 21] [!Mr.L1P3#5341] :> no DFF
+[22:53:09 7th abr. 21] [!Mr.L1P3#5341] :> bloqueado de vcs ?
+[22:53:12 7th abr. 21] [!Mr.L1P3#5341] :> no male ?
+[22:58:05 7th abr. 21] [JoohnWiick#2547] :> n
+[22:58:14 7th abr. 21] [!Mr.L1P3#5341] :> só isso mesmo joohn
+[22:58:17 7th abr. 21] [!Mr.L1P3#5341] :> vlw ai
+[22:58:18 7th abr. 21] [JoohnWiick#2547] :> ok, irei encerrar
+[22:58:19 7th abr. 21] [JoohnWiick#2547] :> !close
+[22:58:20 7th abr. 21] [Squash#4343] :> 

@@ -1,0 +1,98 @@
+[21:17:06 3rd abr. 21] [Squash#4343] :> @STAFF @​!Mr.L1P3
+[21:17:06 3rd abr. 21] [Squash#4343] :> 
+[21:17:26 3rd abr. 21] [!Mr.L1P3#5341] :> está dando erro no mod dentro do servidor
+[21:27:55 3rd abr. 21] [dutra#0069] :> que erro?
+[22:23:04 3rd abr. 21] [dutra#0069] :> @​!Mr.L1P3
+[22:38:36 3rd abr. 21] [!Mr.L1P3#5341] :> tipo
+[22:38:40 3rd abr. 21] [!Mr.L1P3#5341] :> eu loguei no servidor
+[22:38:45 3rd abr. 21] [!Mr.L1P3#5341] :> aparece uma tela roxa
+[22:38:48 3rd abr. 21] [!Mr.L1P3#5341] :> com uns escrito
+[22:38:56 3rd abr. 21] [dutra#0069] :> como assim?
+[22:38:58 3rd abr. 21] [dutra#0069] :> manda print
+[22:39:08 3rd abr. 21] [!Mr.L1P3#5341] :> quando aparece denovo eu mostro
+[22:39:21 3rd abr. 21] [!Mr.L1P3#5341] :> e tbm ta dando erro em uma linha
+[22:39:25 3rd abr. 21] [!Mr.L1P3#5341] :> group acl
+[22:39:31 3rd abr. 21] [!Mr.L1P3#5341] :> arquivo ta compilado
+[01:17:02 4th abr. 21] [Tyurin#6675] :> @​!Mr.L1P3 Bom dia, assim que possível, pode enviar uma print do debug mostrando o erro?
+[01:58:31 4th abr. 21] [!Mr.L1P3#5341] :> ss
+[11:55:40 4th abr. 21] [!Mr.L1P3#5341] :> ei meu mod bugo de vez agora
+[11:55:45 4th abr. 21] [!Mr.L1P3#5341] :> n ta nem aparecendo mais a skin
+[12:01:03 4th abr. 21] [JoohnWiick#2547] :> hm
+[12:01:06 4th abr. 21] [JoohnWiick#2547] :> mostra debug
+[12:03:04 4th abr. 21] [!Mr.L1P3#5341] :> 
+https://cdn.discordapp.com/attachments/828060575112233000/828283537093558372/unknown.png
+[12:03:08 4th abr. 21] [!Mr.L1P3#5341] :> quando eu ligo ele
+[12:04:11 4th abr. 21] [!Mr.L1P3#5341] :> 
+https://cdn.discordapp.com/attachments/828060575112233000/828283818619306044/unknown.png
+[12:04:26 4th abr. 21] [JoohnWiick#2547] :> qual nome do seu sv?
+[12:04:43 4th abr. 21] [!Mr.L1P3#5341] :> brasileiros vivendo no stylo rpg/fivem
+[12:05:09 4th abr. 21] [JoohnWiick#2547] :> aqui ta dizendo q seu resource foi ligado corretamente
+[12:05:13 4th abr. 21] [JoohnWiick#2547] :> da reconnect ai
+[12:06:11 4th abr. 21] [!Mr.L1P3#5341] :> agora pego
+[12:06:19 4th abr. 21] [!Mr.L1P3#5341] :> antes n tava indo n
+[12:06:26 4th abr. 21] [JoohnWiick#2547] :> '-'
+[12:06:31 4th abr. 21] [JoohnWiick#2547] :> mais alguma dúvida?
+[12:06:49 4th abr. 21] [!Mr.L1P3#5341] :> uma pergunta sim
+[12:07:02 4th abr. 21] [!Mr.L1P3#5341] :> eu posso ta adicionando txt com a mesma textura das camisetas ?
+[12:07:09 4th abr. 21] [!Mr.L1P3#5341] :> ex: ja tem os modelos de vcs
+[12:07:21 4th abr. 21] [!Mr.L1P3#5341] :> se eu edita 1 camiseta com msm txt porem muda imagem
+[12:07:25 4th abr. 21] [!Mr.L1P3#5341] :> pega de boa  ?
+[14:28:12 4th abr. 21] [Tyurin#6675] :> No caso, editar a textura de uma camiseta já existente? @​!Mr.L1P3
+[14:30:40 4th abr. 21] [Tyurin#6675] :> Ou criar uma nova camiseta com a mesma textura que uma já existente?
+[15:37:15 4th abr. 21] [!Mr.L1P3#5341] :> ja consegui aqui
+[15:37:23 4th abr. 21] [!Mr.L1P3#5341] :> crie uma textura nova
+[15:37:28 4th abr. 21] [!Mr.L1P3#5341] :> porem o DFF dela ja tem no mod
+[15:37:30 4th abr. 21] [!Mr.L1P3#5341] :> deu certo
+[15:37:48 4th abr. 21] [!Mr.L1P3#5341] :> mano vcs precisa coloca uns tenis novo, que tem no pack de um cara da net
+[15:37:53 4th abr. 21] [!Mr.L1P3#5341] :> muito foda aqueel tenis
+[15:38:00 4th abr. 21] [!Mr.L1P3#5341] :> tem mais de 8 textura nele
+[15:38:07 4th abr. 21] [!Mr.L1P3#5341] :> bolsa tbm ja tem nele
+[15:38:10 4th abr. 21] [!Mr.L1P3#5341] :> mascara
+[15:38:16 4th abr. 21] [!Mr.L1P3#5341] :> juliete
+[15:38:48 4th abr. 21] [!Mr.L1P3#5341] :> ai vai fica top, pq se a atualização que vcs fize só vim camiseta diferente n vai muda mt saca, tenta inova a att com esse pack que falei ai
+[15:39:29 4th abr. 21] [!Mr.L1P3#5341] :> é isso tmj
+[15:39:41 4th abr. 21] [!Mr.L1P3#5341] :> ta pegando suave do mod agora @​JoohnWiick
+[15:40:12 4th abr. 21] [JoohnWiick#2547] :> vc mesmo pode colocar.
+[15:40:37 4th abr. 21] [!Mr.L1P3#5341] :> mesmo com dff bloqueado ?
+[15:40:45 4th abr. 21] [JoohnWiick#2547] :> #📌・c-avisos
+[15:40:48 4th abr. 21] [!Mr.L1P3#5341] :> n tem que mexe no script
+[15:40:51 4th abr. 21] [!Mr.L1P3#5341] :> tbm
+[15:40:57 4th abr. 21] [JoohnWiick#2547] :> n
+[15:41:03 4th abr. 21] [!Mr.L1P3#5341] :> pra centraliza a muchila ?
+[15:41:06 4th abr. 21] [!Mr.L1P3#5341] :> mochila *
+[15:41:12 4th abr. 21] [JoohnWiick#2547] :> isso vc faz na dff
+[15:41:23 4th abr. 21] [!Mr.L1P3#5341] :> joohn
+[15:41:29 4th abr. 21] [!Mr.L1P3#5341] :> juliete que tem no mod
+[15:41:32 4th abr. 21] [!Mr.L1P3#5341] :> pras menina
+[15:41:38 4th abr. 21] [!Mr.L1P3#5341] :> como que eu coloco pros homens
+[15:41:49 4th abr. 21] [JoohnWiick#2547] :> só por no dff
+[15:41:51 4th abr. 21] [JoohnWiick#2547] :> e criar a txd invisivel
+[15:42:03 4th abr. 21] [!Mr.L1P3#5341] :> eu n manjo mt
+[15:42:05 4th abr. 21] [!Mr.L1P3#5341] :> com DFF
+[15:42:10 4th abr. 21] [JoohnWiick#2547] :> nós também não
+[15:42:52 4th abr. 21] [!Mr.L1P3#5341] :> então ai fodeu kk
+[15:43:04 4th abr. 21] [JoohnWiick#2547] :> não damos suporte de como colocar as coisas no dff.
+[15:43:12 4th abr. 21] [JoohnWiick#2547] :> somente pra colocar no jogo
+[15:43:35 4th abr. 21] [!Mr.L1P3#5341] :> mais na att nova, pode fala mais ou menos se vai coloca mochila
+[15:43:39 4th abr. 21] [!Mr.L1P3#5341] :> essas coisas ?
+[15:43:41 4th abr. 21] [JoohnWiick#2547] :> não.
+[15:43:49 4th abr. 21] [!Mr.L1P3#5341] :> a blz
+[15:43:58 4th abr. 21] [!Mr.L1P3#5341] :> tattu vai vim ne
+[15:44:00 4th abr. 21] [JoohnWiick#2547] :> talvez a mulher mude, mais o homem não.
+[15:44:09 4th abr. 21] [!Mr.L1P3#5341] :> pode cré
+[15:46:26 4th abr. 21] [!Mr.L1P3#5341] :> se eu muda dff
+[15:46:34 4th abr. 21] [!Mr.L1P3#5341] :> pega dff do mod do cara
+[15:46:39 4th abr. 21] [!Mr.L1P3#5341] :> sera que n da
+[15:46:41 4th abr. 21] [!Mr.L1P3#5341] :> ?
+[15:46:45 4th abr. 21] [JoohnWiick#2547] :> não sei
+[15:46:53 4th abr. 21] [JoohnWiick#2547] :> não temos conhecimento!
+[15:47:21 4th abr. 21] [!Mr.L1P3#5341] :> vou tenta aqui
+[08:06:55 5th abr. 21] [dutra#0069] :> Podemos ajudar em mais alguma coisa?
+[08:06:59 5th abr. 21] [dutra#0069] :> @​!Mr.L1P3 ]
+[16:59:25 5th abr. 21] [Tyurin#6675] :> Boa tarde @​!Mr.L1P3, para prosseguir com o atendimento precisamos que você responda o **Dutra**, caso não responda até às 00:00 o ticket será encerrado! <:true:764918513667932180>
+[17:00:20 5th abr. 21] [!Mr.L1P3#5341] :> só isso dutra
+[17:00:22 5th abr. 21] [!Mr.L1P3#5341] :> obrigado
+[17:01:06 5th abr. 21] [!Mr.L1P3#5341] :> se n tive mochila, tenis top, mascara n vai ter graça o mod
+[17:01:08 5th abr. 21] [!Mr.L1P3#5341] :> mais vlw !
+[21:09:07 5th abr. 21] [Tyurin#6675] :> !close
+[21:09:07 5th abr. 21] [Squash#4343] :> 

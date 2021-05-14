@@ -1,0 +1,23 @@
+[18:55:34 7th abr. 21] [Squash#4343] :> @STAFF @​Tiago Vieira
+[18:55:34 7th abr. 21] [Squash#4343] :> 
+[18:55:43 7th abr. 21] [Tiago Vieira#2008] :> Opa
+[18:56:21 7th abr. 21] [Tiago Vieira#2008] :> Já paguei pro Bradock por os objetos na skin e agora como faço pra por no painel no scirpt pra usar o Custom corp ? @​dutra
+[19:28:33 7th abr. 21] [Chorão#3666] :> **COMO ADICIONAR MODELAGENS NO SCRIPT**
+
+**OBS:** Não damos suporte para adicionar a modelagem no DFF, não temos conhecimento nesta área.
+**OBS²:** Importante! O tamanho do DFF não pode passar de 4.7mb's, caso passe irá dar erro de replace por conta que o MTA não suporta modelagens tão grandes, o DFF já está no limite, então coloque modelos leves ou retire um para por outro!
+
+1 - Após adicionar os modelos no DFF, exporte uma das imagens do TXD e coloque a imagem invisível no TXD com O **MESMO NOME** que você colocou no DFF pelo 3DS. Por exemplo, se você colocou uma imagem chamada `colete.padrao.png` no DFF, você terá que colocar uma **IMAGEM INVISÍVEL** (IMPORTANTE!)
+no TXD chamado de `colete.padrao`.
+
+2 - Adicione a textura visível , a textura original do objeto nas pastas de texturas **assets/textures/male/NomeDoObjeto/1.png **. Exemplo: `assets/textures/male/colete.padrao/1.png`
+
+3 - Adicione no meta a textura visível que você acabou de colocar nas pastas de texturas.
+Exemplo: `<file src="assets/textures/male/colete.padrao/1.png" />`
+
+4 - Compile a modelagem. Primeiro, desligue o script, **APAGUE OS ARQUIVOS .3D DA PASTA LOADER (APENAS DA SKIN QUE VOCÊ QUER TROCAR, MASCULINO OU FEMININO)** troque no meta de .3D para .txd e .dff, coloque os arquivos descompilados que você editou na pasta loader, **COM OS SEGUINTES NOMES:** `Male.txd` e `Male.dff` para o masculino e `Female.txd` e `Female.dff` para a skin feminina. Ligue o script, é normal dar error, agora você pode desligar o script novamente e voltar para a pasta loader. Verifique se criou os novos arquivos .3D (Caso não tenha aparecido ainda no seu filezilla, basta dar um F5). Troque novamente no meta.xml de .txd e .dff para **.3D**, após isso basta iniciar o script. Caso não tenha funcionado, repita o processo.
+[19:49:59 7th abr. 21] [Tiago Vieira#2008] :> ._.
+[22:58:40 7th abr. 21] [JoohnWiick#2547] :> @​Tiago Vieira podemos ajudar em algo mais?
+[23:01:58 7th abr. 21] [Tiago Vieira#2008] :> N mano vlw
+[23:02:19 7th abr. 21] [JoohnWiick#2547] :> !close
+[23:02:20 7th abr. 21] [Squash#4343] :> 

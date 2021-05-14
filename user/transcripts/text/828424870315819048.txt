@@ -1,0 +1,43 @@
+[21:24:40 4th abr. 21] [Squash#4343] :> @STAFF @​Eslo
+[21:24:40 4th abr. 21] [Squash#4343] :> 
+[21:25:00 4th abr. 21] [Eslo#9709] :> Caros, boa noite!
+[21:25:05 4th abr. 21] [Eslo#9709] :> Adquiri o produto de vocês
+[21:25:17 4th abr. 21] [Eslo#9709] :> Porém, quando vou incluir no game o personagem fica invisivel
+[21:25:22 4th abr. 21] [Eslo#9709] :> Todos os dados foram inclusos nas pastas
+[21:25:26 4th abr. 21] [Eslo#9709] :> E ja tentamos relogar
+[21:25:33 4th abr. 21] [Eslo#9709] :> Todas as possibilidades foram testadas
+[21:25:37 4th abr. 21] [Chorão#3666] :> certo, qual o nome do seu servidor?
+[21:25:37 4th abr. 21] [Eslo#9709] :> Podem nos ajudar?
+[21:25:40 4th abr. 21] [Eslo#9709] :> BNFF
+[21:26:05 4th abr. 21] [JoohnWiick#2547] :> Poderia me informar se tem algum erro no seu debug?
+[21:26:47 4th abr. 21] [Eslo#9709] :> Estamos tentando colocar novamente a pasta do jogo, só um momento
+[21:33:23 4th abr. 21] [Eslo#9709] :> [21-04-04 21:32:32] WARNING: sqh_characters/system/engine/Server.lua:464: Bad argument @ 'isObjectInACLGroup' [Expected acl-group at argument 2, got boolean]
+[21:33:40 4th abr. 21] [Eslo#9709] :> Apresentou esse erro
+[21:37:04 4th abr. 21] [JoohnWiick#2547] :> deu reconnect?
+[21:37:12 4th abr. 21] [Eslo#9709] :> Sim
+[21:37:16 4th abr. 21] [Eslo#9709] :> Ja tentamos
+[21:37:17 4th abr. 21] [JoohnWiick#2547] :> agora?
+[21:37:28 4th abr. 21] [Eslo#9709] :> Vou tentar novamente
+[21:38:10 4th abr. 21] [Eslo#9709] :> Mesma coisa...
+[21:38:19 4th abr. 21] [JoohnWiick#2547] :> qual o nome do seu servidor no jogo?
+[21:38:32 4th abr. 21] [Eslo#9709] :> BNFF
+[21:38:39 4th abr. 21] [JoohnWiick#2547] :> estranho
+[21:38:41 4th abr. 21] [JoohnWiick#2547] :> faz o seguinte
+[21:38:47 4th abr. 21] [JoohnWiick#2547] :> Olá, vi que o erro está acontecendo no seu arquivo server-side. Para resolver este erro, substitua sua `Server.lua` por este seguinte arquivo:
+https://cdn.discordapp.com/attachments/789561868385124423/812745420714541096/Server.lua
+[21:38:50 4th abr. 21] [JoohnWiick#2547] :> coloca esse arquivo ai
+[21:39:31 4th abr. 21] [Eslo#9709] :> Em qual pasta?
+[21:39:39 4th abr. 21] [Eslo#9709] :> system>config?
+[21:39:52 4th abr. 21] [JoohnWiick#2547] :> system>engine
+[21:41:01 4th abr. 21] [Eslo#9709] :> Coloquei e dei restart
+[21:41:05 4th abr. 21] [Eslo#9709] :> Foi dar reconnect pra ver
+[21:42:22 4th abr. 21] [Eslo#9709] :> Deu certo
+[21:42:30 4th abr. 21] [JoohnWiick#2547] :> Mais alguma dúvida?
+[21:42:37 4th abr. 21] [Eslo#9709] :> Não, muito obrigado!
+[21:42:39 4th abr. 21] [Eslo#9709] :> Preciso avaliar?
+[21:42:47 4th abr. 21] [JoohnWiick#2547] :> precisa não, posso encerrar o ticket?
+[21:42:58 4th abr. 21] [Eslo#9709] :> Pode sim, valeu
+[21:43:19 4th abr. 21] [JoohnWiick#2547] :> !close
+[21:43:19 4th abr. 21] [Squash#4343] :> 
+[08:07:33 5th abr. 21] [dutra#0069] :> !close
+[08:07:33 5th abr. 21] [Squash#4343] :> 

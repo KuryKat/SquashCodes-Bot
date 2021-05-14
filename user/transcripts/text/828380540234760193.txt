@@ -1,0 +1,110 @@
+[18:28:31 4th abr. 21] [Squash#4343] :> @STAFF @​! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛
+[18:28:31 4th abr. 21] [Squash#4343] :> 
+[18:28:35 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> sarve
+[18:29:42 4th abr. 21] [Tyurin#6675] :> Opa, boa tarde
+[18:29:47 4th abr. 21] [Tyurin#6675] :> Como podemos ajudar?
+[18:30:38 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> Então é que eu coloquei umas mochila no personagem, ai queria ver se tem como explicar como faz pra colocar no script depois
+[18:31:45 4th abr. 21] [Tyurin#6675] :> Certo, você colocou a DFF e a TXD no sistema de personagem e no caso você quer saber como faz pra colocar na loja ou painel das organizações?
+[18:31:59 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> exatamente
+[18:32:20 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> na verdade a txd ainda n coloquei
+[18:32:28 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> pq n sei com que nome tenho que colocar
+[18:33:19 4th abr. 21] [Tyurin#6675] :> **COMO ADICIONAR MODELAGENS NO SCRIPT**
+
+**OBS:** Não damos suporte para adicionar a modelagem no DFF, não temos conhecimento nesta área.
+**OBS²:** Importante! O tamanho do DFF não pode passar de 4.7mb's, caso passe irá dar erro de replace por conta que o MTA não suporta modelagens tão grandes, o DFF já está no limite, então coloque modelos leves ou retire um para por outro!
+
+1 - Após adicionar os modelos no DFF, exporte uma das imagens do TXD e coloque a imagem invisível no TXD com O **MESMO NOME** que você colocou no DFF pelo 3DS. Por exemplo, se você colocou uma imagem chamada `colete.padrao.png` no DFF, você terá que colocar uma **IMAGEM INVISÍVEL** (IMPORTANTE!)
+no TXD chamado de `colete.padrao`.
+
+2 - Adicione a textura visível , a textura original do objeto nas pastas de texturas **assets/textures/male/NomeDoObjeto/1.png **. Exemplo: `assets/textures/male/colete.padrao/1.png`
+
+3 - Adicione no meta a textura visível que você acabou de colocar nas pastas de texturas.
+Exemplo: `<file src="assets/textures/male/colete.padrao/1.png" />`
+
+4 - Compile a modelagem. Primeiro, desligue o script, **APAGUE OS ARQUIVOS .3D DA PASTA LOADER (APENAS DA SKIN QUE VOCÊ QUER TROCAR, MASCULINO OU FEMININO)** troque no meta de .3D para .txd e .dff, coloque os arquivos descompilados que você editou na pasta loader, **COM OS SEGUINTES NOMES:** `Male.txd` e `Male.dff` para o masculino e `Female.txd` e `Female.dff` para a skin feminina. Ligue o script, é normal dar error, agora você pode desligar o script novamente e voltar para a pasta loader. Verifique se criou os novos arquivos .3D (Caso não tenha aparecido ainda no seu filezilla, basta dar um F5). Troque novamente no meta.xml de .txd e .dff para **.3D**, após isso basta iniciar o script. Caso não tenha funcionado, repita o processo.
+[18:33:23 4th abr. 21] [Tyurin#6675] :> @​! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛
+[18:34:54 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> tendeu
+[18:34:56 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> vlw ai mano
+[18:35:01 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> vou ver o que sai aqui
+[18:35:19 4th abr. 21] [Tyurin#6675] :> Certo
+[20:12:12 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> é normal na hora de compilar aumentar muito o peso?
+[20:16:32 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> 
+https://cdn.discordapp.com/attachments/828380540234760193/828407720851144734/unknown.png
+[20:16:36 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> ta dando isso ai mano
+[20:16:39 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> mas n passou do peso
+[20:17:06 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> 
+https://cdn.discordapp.com/attachments/828380540234760193/828407862643654706/unknown.png
+[20:34:43 4th abr. 21] [dutra#0069] :> @​! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛 esse erro geralmente acontece quando passa do tempo
+[20:34:52 4th abr. 21] [dutra#0069] :> mas não faz sentido
+[20:34:55 4th abr. 21] [dutra#0069] :> você compilou certinho?
+[20:35:01 4th abr. 21] [dutra#0069] :> foi pra quantos mbs quando compilou?
+[20:35:24 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> 3.81 mano
+[20:40:58 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> 
+https://cdn.discordapp.com/attachments/828380540234760193/828413871169470495/unknown.png
+[20:40:59 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> olha ai
+[20:47:11 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> quiser posso ir no sup pra vc ver
+[20:47:24 4th abr. 21] [dutra#0069] :> ent o problema deve ser no dff
+[23:47:35 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> deu certo aqui mano mas não to conseguindo por na loja :-:
+[23:47:38 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> ta vindo todo bugado
+[23:48:07 4th abr. 21] [JoohnWiick#2547] :> bugado como
+[23:52:06 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> não é que ta bugado so n ta vindo o negocio
+[23:52:31 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> 
+https://cdn.discordapp.com/attachments/828380540234760193/828462074471383111/unknown.png
+[23:52:34 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> tem que ser assim?
+[23:52:54 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> 
+https://cdn.discordapp.com/attachments/828380540234760193/828462172668559360/unknown.png
+[23:53:17 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> 
+https://cdn.discordapp.com/attachments/828380540234760193/828462268672114708/unknown.png
+[23:53:18 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> ?
+[23:54:00 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> 
+https://cdn.discordapp.com/attachments/828380540234760193/828462451355811840/unknown.png
+[23:54:04 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> coloquei na txd certinho tb
+[23:54:07 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> e na dff
+[23:54:49 4th abr. 21] [JoohnWiick#2547] :> mostra a textura
+[23:54:50 4th abr. 21] [JoohnWiick#2547] :> .png
+[23:55:13 4th abr. 21] [dutra#0069] :> coloca como extra4 em vez de torso
+[23:55:19 4th abr. 21] [dutra#0069] :> se não vai tirar a camisa quando colocar a mochila
+[23:55:41 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> https://cdn.discordapp.com/attachments/804064391426211870/828458836045987901/bag.costas.png
+[23:55:49 4th abr. 21] [JoohnWiick#2547] :> mostra na pasta
+[23:55:55 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> ai eu criei uma pasta bag.costas
+[23:55:58 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> e coloquei 1
+[23:56:11 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> blz
+[23:56:20 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> dmr
+[23:56:37 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> 
+https://cdn.discordapp.com/attachments/828380540234760193/828463106807955486/unknown.png
+[23:57:03 4th abr. 21] [JoohnWiick#2547] :> da erro?
+[23:57:53 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> da nada
+[23:57:59 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> se quiser posso te mostrar em call
+[23:58:45 4th abr. 21] [JoohnWiick#2547] :> oq acontece?
+[23:58:46 4th abr. 21] [JoohnWiick#2547] :> '-
+[23:59:03 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> nada só não aparece nada kkkkkkk
+[23:59:04 4th abr. 21] [dutra#0069] :> botou no meta a textura?
+[23:59:08 4th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> sim
+[23:59:55 4th abr. 21] [dutra#0069] :> tira isso aqui daqui
+https://cdn.discordapp.com/attachments/828380540234760193/828463939952181248/unknown.png
+[00:00:06 5th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> coloca nada?
+[00:00:13 5th abr. 21] [dutra#0069] :> sim
+[00:00:14 5th abr. 21] [dutra#0069] :> só tirar
+[00:00:16 5th abr. 21] [dutra#0069] :> isso ai é outra ocisa
+[00:00:30 5th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> dmr
+[00:00:53 5th abr. 21] [dutra#0069] :> aparece a mochila na loja
+[00:00:55 5th abr. 21] [dutra#0069] :> e quando vc clica
+[00:00:56 5th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> n vai por nada
+[00:00:57 5th abr. 21] [dutra#0069] :> n acontece nada?
+[00:01:17 5th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> é tipo eu compro ela
+[00:01:20 5th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> mas n aparece ela
+[00:01:27 5th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> sera que pode ser alguma coisa na dff?
+[00:01:31 5th abr. 21] [dutra#0069] :> qnd compra ou quando clica?
+[00:01:35 5th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> mas ai daria algum erro eu acho
+[00:01:40 5th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> calma ai
+[00:01:48 5th abr. 21] [dutra#0069] :> ctz q tu compilou a modelagem com a camisa?
+[00:02:29 5th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> sim
+[00:02:31 5th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> vou faezr de novo
+[00:02:35 5th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> fazer*
+[00:02:36 5th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> 
+https://cdn.discordapp.com/attachments/828380540234760193/828464611523035176/2021.04.04-23.56.mp4
+[00:06:24 5th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> agora tô é crashando :-:
+[00:07:49 5th abr. 21] [dutra#0069] :> '-
+[00:17:06 5th abr. 21] [! [𝑣]𝑖𝑛𝑖𝑐𝑖𝑛#7901] :> pode encerrar ai mano depois vejo isso ai
+[08:07:27 5th abr. 21] [dutra#0069] :> !close
+[08:07:27 5th abr. 21] [Squash#4343] :> 

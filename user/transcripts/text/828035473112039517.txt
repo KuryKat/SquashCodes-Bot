@@ -1,0 +1,11 @@
+[19:37:21 3rd abr. 21] [Squash#4343] :> @STAFF @​ssky
+[19:37:21 3rd abr. 21] [Squash#4343] :> 
+[19:37:26 3rd abr. 21] [ssky#0001] :> Progamam em HTML tbm?
+[19:37:31 3rd abr. 21] [dutra#0069] :> Não
+[19:37:43 3rd abr. 21] [ssky#0001] :> <:rtwet:808066034731974717>
+[19:37:45 3rd abr. 21] [ssky#0001] :> Ok
+[19:37:47 3rd abr. 21] [ssky#0001] :> Obrigado
+[19:37:55 3rd abr. 21] [dutra#0069] :> Por nada, posso fechar seu ticket?
+[19:38:01 3rd abr. 21] [ssky#0001] :> Sim
+[19:38:04 3rd abr. 21] [dutra#0069] :> !delete
+[19:38:04 3rd abr. 21] [Squash#4343] :> 

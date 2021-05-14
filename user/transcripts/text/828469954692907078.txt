@@ -1,0 +1,34 @@
+[00:23:50 5th abr. 21] [Squash#4343] :> @STAFF @​Gabriel🐊
+[00:23:50 5th abr. 21] [Squash#4343] :> 
+[00:24:07 5th abr. 21] [Gabriel🐊#2222] :> Os players estão ficando invisíveis
+[08:07:55 5th abr. 21] [dutra#0069] :> @​Gabriel🐊 como assimw
+[08:29:21 5th abr. 21] [Gabriel🐊#2222] :> Eles entram no servidor e alguns ficam invisíveis do nada
+[08:29:29 5th abr. 21] [Gabriel🐊#2222] :> Tem que ficar entrando na loja de roupa e saindo
+[09:48:18 5th abr. 21] [Tyurin#6675] :> Você colocou o exports pra quando o jogador logar? @​Gabriel🐊
+[11:08:36 5th abr. 21] [Gabriel🐊#2222] :> Mano o outro dono disse que isso não tem nada haver
+[12:57:37 5th abr. 21] [Gabriel🐊#2222] :> ?
+[12:57:46 5th abr. 21] [Gabriel🐊#2222] :> Não
+[12:58:36 5th abr. 21] [JoohnWiick#2547] :> todos jogadores invisiveis?
+[13:37:19 5th abr. 21] [Tyurin#6675] :> Tenta usar o mesmo exports pra quando o jogador logar e vê se o problema foi corrigido @​Gabriel🐊
+[13:37:36 5th abr. 21] [Gabriel🐊#2222] :> Não algunssó
+[13:37:46 5th abr. 21] [Gabriel🐊#2222] :> Ok
+[15:33:05 5th abr. 21] [Gabriel🐊#2222] :> Qual export é pra dd?
+[15:33:09 5th abr. 21] [Gabriel🐊#2222] :> @STAFF
+[15:43:12 5th abr. 21] [Gabriel🐊#2222] :> ??
+[16:01:59 5th abr. 21] [Gabriel🐊#2222] :> @​dutra
+[16:03:43 5th abr. 21] [dutra#0069] :> loadSkin
+[16:03:45 5th abr. 21] [dutra#0069] :> @​Gabriel🐊
+[16:04:11 5th abr. 21] [Gabriel🐊#2222] :> Blzz mano
+[16:04:12 5th abr. 21] [Gabriel🐊#2222] :> Vlww
+[16:18:41 5th abr. 21] [Gabriel🐊#2222] :> Qual são os parametros
+[16:19:05 5th abr. 21] [Gabriel🐊#2222] :> Do exports
+[16:21:54 5th abr. 21] [Gabriel🐊#2222] :> @​dutra
+[16:21:58 5th abr. 21] [JoohnWiick#2547] :> só o jogador
+[16:22:10 5th abr. 21] [JoohnWiick#2547] :> `exports[sqh_characters]:loadSkin(element)`
+[12:27:01 6th abr. 21] [Gabriel🐊#2222] :> Não tô ocnseguindo comprar roupa
+[12:27:05 6th abr. 21] [Gabriel🐊#2222] :> @STAFF
+[12:29:53 6th abr. 21] [JoohnWiick#2547] :> como assim '-'
+[12:35:02 6th abr. 21] [Gabriel🐊#2222] :> Foi resolvido
+[12:35:08 6th abr. 21] [Gabriel🐊#2222] :> Desculpa o incomodo
+[12:45:40 6th abr. 21] [Gabriel🐊#2222] :> !close
+[12:45:41 6th abr. 21] [Squash#4343] :> 

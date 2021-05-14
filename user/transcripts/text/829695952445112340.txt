@@ -1,0 +1,23 @@
+[09:35:30 8th abr. 21] [Betina#2704] :> @T 1, @​dutra
+[09:35:30 8th abr. 21] [Betina#2704] :> 
+https://cdn.discordapp.com/attachments/829695952445112340/829695954943737876/help.png
+[09:35:30 8th abr. 21] [Betina#2704] :> 
+[09:35:32 8th abr. 21] [dutra#3978] :> !rename oii
+[09:35:32 8th abr. 21] [Betina#2704] :> 
+[09:35:36 8th abr. 21] [dutra#3978] :> !rename 622
+[09:35:36 8th abr. 21] [Betina#2704] :> 
+[09:35:45 8th abr. 21] [dutra#3978] :> !rename oii
+[09:35:45 8th abr. 21] [Betina#2704] :> 
+[09:52:24 8th abr. 21] [dutra#3978] :> !add f0reach
+[09:52:24 8th abr. 21] [Betina#2704] :> 
+[09:52:37 8th abr. 21] [dutra#3978] :> !add 666343359186599947
+[09:52:37 8th abr. 21] [Betina#2704] :> 
+[09:52:42 8th abr. 21] [dutra#3978] :> !add @​f0reach
+[09:52:42 8th abr. 21] [Betina#2704] :> 
+[09:53:01 8th abr. 21] [dutra#3978] :> !remove @<666343359186599947>
+[09:53:01 8th abr. 21] [Betina#2704] :> 
+[09:53:08 8th abr. 21] [dutra#3978] :> !remove @​f0reach
+[09:53:09 8th abr. 21] [Betina#2704] :> 
+[09:58:49 8th abr. 21] [dutra#3978] :> !closeall
+[09:58:49 8th abr. 21] [Betina#2704] :> 
+[09:58:51 8th abr. 21] [Betina#2704] :> 

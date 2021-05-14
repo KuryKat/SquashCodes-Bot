@@ -1,0 +1,24 @@
+[23:40:21 7th abr. 21] [Squash#4343] :> @STAFF @​!Mr.L1P3
+[23:40:21 7th abr. 21] [Squash#4343] :> 
+[23:40:28 7th abr. 21] [!Mr.L1P3#5341] :> Opa boa
+[23:40:33 7th abr. 21] [!Mr.L1P3#5341] :> meu amigo foi cria conta
+[23:40:35 7th abr. 21] [!Mr.L1P3#5341] :> fico assim
+[23:40:57 7th abr. 21] [!Mr.L1P3#5341] :> 
+https://cdn.discordapp.com/attachments/829546179074457601/829546327854809138/169289329_292136232347936_9172527018260413587_n.jpg
+[10:53:16 8th abr. 21] [!Mr.L1P3#5341] :> @​JoohnWiick
+[10:53:23 8th abr. 21] [!Mr.L1P3#5341] :> é um novo ticket ja
+[12:40:43 8th abr. 21] [Chorão#3666] :> Olá @​!Mr.L1P3, mesmo quando o mesmo relogou continua?
+[12:40:58 8th abr. 21] [!Mr.L1P3#5341] :> ele nem relogo
+[12:41:02 8th abr. 21] [!Mr.L1P3#5341] :> ele tento cria
+[12:41:05 8th abr. 21] [!Mr.L1P3#5341] :> fico invisivel
+[12:45:18 8th abr. 21] [Chorão#3666] :> pede pro mesmo reloga
+[15:28:12 8th abr. 21] [!Mr.L1P3#5341] :> opa
+[15:28:21 8th abr. 21] [!Mr.L1P3#5341] :> os players estão ficando invisivel
+[15:28:22 8th abr. 21] [!Mr.L1P3#5341] :> pelo mapa
+[16:20:49 8th abr. 21] [Chorão#3666] :> @​!Mr.L1P3  aparece algo no Debug?
+[16:21:02 8th abr. 21] [!Mr.L1P3#5341] :> aparece um negocio de acl
+[16:21:03 8th abr. 21] [!Mr.L1P3#5341] :> toda hr
+[16:21:13 8th abr. 21] [Chorão#3666] :> acl ?
+[16:21:18 8th abr. 21] [!Mr.L1P3#5341] :> ss
+[16:21:21 8th abr. 21] [!Mr.L1P3#5341] :> vou manda print
+[16:21:25 8th abr. 21] [Chorão#3666] :> Ok

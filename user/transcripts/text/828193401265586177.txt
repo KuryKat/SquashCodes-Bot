@@ -1,0 +1,66 @@
+[06:04:54 4th abr. 21] [Squash#4343] :> @STAFF @​João
+[06:04:54 4th abr. 21] [Squash#4343] :> 
+[10:33:14 4th abr. 21] [JoohnWiick#2547] :> tem sim
+[10:33:30 4th abr. 21] [JoohnWiick#2547] :> a dff só n pode passar de 4.7mb
+[10:34:48 4th abr. 21] [João#1000] :> O que acontece se passar?
+[10:49:23 4th abr. 21] [JoohnWiick#2547] :> n vai carregar no jogo
+[10:51:12 4th abr. 21] [João#1000] :> Entendi, e quantos MB tem atualmente a dff? @​JoohnWiick
+[11:48:53 4th abr. 21] [JoohnWiick#2547] :> não lembro
+[11:54:25 4th abr. 21] [João#1000] :> Em questão das fardas, tem pelo menos uma pronta ou vou ter que fazer todas?
+[11:54:27 4th abr. 21] [João#1000] :> @​JoohnWiick
+[11:57:17 4th abr. 21] [JoohnWiick#2547] :> tem q fazer
+[11:57:22 4th abr. 21] [JoohnWiick#2547] :> não disponibilizamos as fardas.
+[12:00:23 4th abr. 21] [João#1000] :> Ah de boa, isso aí eu sei fazer
+[12:00:40 4th abr. 21] [João#1000] :> Tem algum bug que eu precise ficar sabendo antes de comprar?
+[12:01:45 4th abr. 21] [JoohnWiick#2547] :> unico bugzinho q tem, q será corrigido na próxima atualização é q quando vc escolhe a farda e um jogador entra depois, vc aparece sem farda pra ele
+[12:01:57 4th abr. 21] [JoohnWiick#2547] :> mas na próxima att já será corrigido
+[12:02:06 4th abr. 21] [JoohnWiick#2547] :> e além de corrigido, será adicionado novas coisas.
+[12:05:03 4th abr. 21] [João#1000] :> Puts, aí os players vão ficar meio confusos na hora de ser abordado
+[12:05:15 4th abr. 21] [João#1000] :> Me fala uma coisa, vai demorar essa nova atualização?
+[12:05:22 4th abr. 21] [JoohnWiick#2547] :> não
+[12:05:28 4th abr. 21] [JoohnWiick#2547] :> estamos tentando lançar até domingo que vem.
+[12:05:49 4th abr. 21] [JoohnWiick#2547] :> Se você quiser, nesse curto periodo você pode usar skins normais do jogo
+[12:05:53 4th abr. 21] [JoohnWiick#2547] :> de farda no caso
+[12:06:14 4th abr. 21] [JoohnWiick#2547] :> quando o cara for iniciar serviço ele pegar uma skin do jogo mesmo, sem ser customizável
+[12:08:30 4th abr. 21] [João#1000] :> Ah sim, se lançar a nova atualização até domingo já é ótimo
+[12:09:01 4th abr. 21] [João#1000] :> Bom, vou esperar o outro dono do servidor ficar online pra eu conversar com ele e então comprar o custom
+[12:09:10 4th abr. 21] [João#1000] :> Gostamos do sistema e do design
+[12:09:52 4th abr. 21] [João#1000] :> Vi também que vai lançar esse outro sistema de customizar armas, você sabe por quantos $$ ele vai sair na pré-venda?
+[12:19:25 4th abr. 21] [JoohnWiick#2547] :> não tenho essa informação ainda.
+[12:19:42 4th abr. 21] [JoohnWiick#2547] :> estamos fazendo alguns cálculos aidna
+[17:29:17 4th abr. 21] [João#1000] :> Ah sim
+[17:32:15 4th abr. 21] [Tyurin#6675] :> Boa tarde @​João, podemos ajudar em algo mais?
+[17:36:16 4th abr. 21] [João#1000] :> Sim, sobre a parte das roupas para facção, como funciona? Tem algo separado ou é na loja mesmo?
+[18:02:43 4th abr. 21] [JoohnWiick#2547] :> só fazer que nem o painel de corp
+[18:02:58 4th abr. 21] [JoohnWiick#2547] :> só mudar o nome da corp/fac etc..
+[18:07:09 4th abr. 21] [João#1000] :> @​JoohnWiick mas aí iria ficar com o mesmo bug que a farda tem?
+[18:07:22 4th abr. 21] [JoohnWiick#2547] :> sim.
+[20:38:56 4th abr. 21] [João#1000] :> Após a compra, eu consigo colocar no meu server local pra configurar e testar ou só da pra colocar na hospedagem?
+[20:40:43 4th abr. 21] [JoohnWiick#2547] :> consegue sim
+[21:43:32 4th abr. 21] [João#1000] :> Mas ai @​JoohnWiick, é certeza absoluta que esse bug vai ser resolvido?
+[21:43:41 4th abr. 21] [JoohnWiick#2547] :> sim.
+[21:45:00 4th abr. 21] [JoohnWiick#2547] :> 100%
+[22:07:41 4th abr. 21] [João#1000] :> Vou comprar
+[22:07:47 4th abr. 21] [João#1000] :> Quanto tempo demora pra ser entregue?
+[22:07:55 4th abr. 21] [dutra#0069] :> Entrega automática pelo site
+[22:08:00 4th abr. 21] [dutra#0069] :> Comprou, baixou
+[22:08:18 4th abr. 21] [João#1000] :> Ótimo
+[23:22:18 4th abr. 21] [João#1000] :> Aqui no registro, o IP que eu colocar aqui vai ser o que o custom vai ser liberado?
+https://cdn.discordapp.com/attachments/828193401265586177/828454470132170772/unknown.png
+[23:24:50 4th abr. 21] [JoohnWiick#2547] :> SIM
+[23:24:55 4th abr. 21] [JoohnWiick#2547] :> mas vc consegue trocar
+[23:24:57 4th abr. 21] [JoohnWiick#2547] :> pelo bot
+[23:50:00 4th abr. 21] [João#1000] :> Gente, muito obrigado pelo suporte
+[23:50:06 4th abr. 21] [João#1000] :> Me ajudou bastante
+[23:50:10 4th abr. 21] [João#1000] :> Podem fechar o ticket
+[23:51:03 4th abr. 21] [JoohnWiick#2547] :> Fez a compra @​João ?
+[23:51:11 4th abr. 21] [JoohnWiick#2547] :> para eu setar a tag
+[23:51:38 4th abr. 21] [João#1000] :> Quando eu fazer a compra eu aviso vocês
+[23:51:41 4th abr. 21] [João#1000] :> Se pá vou dormir agora
+[23:51:49 4th abr. 21] [JoohnWiick#2547] :> ok
+[08:07:03 5th abr. 21] [dutra#0069] :> Podemos ajudar em mais alguma coisa?
+[08:07:06 5th abr. 21] [dutra#0069] :> @​João
+[14:50:40 5th abr. 21] [João#1000] :> Pode fechar o ticket
+[14:50:46 5th abr. 21] [João#1000] :> Já tiraram todas as minhas dúvidas
+[14:50:55 5th abr. 21] [dutra#0069] :> !close
+[14:50:55 5th abr. 21] [Squash#4343] :> 

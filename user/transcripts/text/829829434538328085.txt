@@ -1,0 +1,226 @@
+[18:25:55 8th abr. 21] [Squash#4343] :> @STAFF @​Pedro_Araujo
+[18:25:55 8th abr. 21] [Squash#4343] :> 
+[18:26:05 8th abr. 21] [Pedro_Araujo#3089] :> Opa
+[18:26:10 8th abr. 21] [Pedro_Araujo#3089] :> Aqui estamos mais um dia
+[18:29:25 8th abr. 21] [Tyurin#6675] :> Opa, como podemos ajudar?
+[18:29:45 8th abr. 21] [Pedro_Araujo#3089] :> Adicionando o sky no ticket pls
+[18:29:57 8th abr. 21] [Tyurin#6675] :> Puts, não tenho permissão
+[18:30:17 8th abr. 21] [Pedro_Araujo#3089] :> Vish
+[18:30:24 8th abr. 21] [Pedro_Araujo#3089] :> Vou esperar o dutra voltar ent
+[18:30:26 8th abr. 21] [Pedro_Araujo#3089] :> Pode fechar ai
+[18:30:29 8th abr. 21] [Pedro_Araujo#3089] :> dsclp
+[18:30:44 8th abr. 21] [JoohnWiick#2547] :> vou add
+[18:31:20 8th abr. 21] [Tyurin#6675] :> @​ssky @​Pedro_Araujo
+[18:31:22 8th abr. 21] [JoohnWiick#2547] :> pronto
+[18:32:00 8th abr. 21] [Pedro_Araujo#3089] :> Opa
+[18:32:07 8th abr. 21] [Tyurin#6675] :> Opa, pode falar
+[18:32:10 8th abr. 21] [Pedro_Araujo#3089] :> Então
+[18:32:21 8th abr. 21] [Pedro_Araujo#3089] :> A gente já tem um colete adicionado
+[18:32:40 8th abr. 21] [Pedro_Araujo#3089] :> mas queremos apenas alterar a PNG dele
+[18:32:44 8th abr. 21] [Pedro_Araujo#3089] :> pra poder fazer o colete da PC
+[18:32:46 8th abr. 21] [Pedro_Araujo#3089] :> Da PM
+[18:32:47 8th abr. 21] [Pedro_Araujo#3089] :> PF
+[18:32:49 8th abr. 21] [Pedro_Araujo#3089] :> Sabe?
+[18:32:52 8th abr. 21] [Tyurin#6675] :> Sim, sim
+[18:32:58 8th abr. 21] [Pedro_Araujo#3089] :> A gente tentou fazer isso
+[18:33:00 8th abr. 21] [Pedro_Araujo#3089] :> N deu certo
+[18:33:08 8th abr. 21] [Pedro_Araujo#3089] :> O dutra pediu pra gente refazer a linha do script
+[18:33:15 8th abr. 21] [Pedro_Araujo#3089] :> aí o sky refez
+[18:33:20 8th abr. 21] [Pedro_Araujo#3089] :> mas ai ele sumiu
+[18:33:38 8th abr. 21] [Tyurin#6675] :> No caso vocês querem alterar a textura do colete?
+[18:33:55 8th abr. 21] [Tyurin#6675] :> Tem um colete existente, mas vocês querem adicionar o mesmo colete com texturas diferentes no caso?
+[18:34:03 8th abr. 21] [Pedro_Araujo#3089] :> Isso, perfeitamente
+[18:34:20 8th abr. 21] [Tyurin#6675] :> Você já tentou usar o Magic TXD pra exportar a textura do colete?
+[18:34:36 8th abr. 21] [Pedro_Araujo#3089] :> A única coisa q eu fiz foi editar a PNG do colete
+[18:34:47 8th abr. 21] [Tyurin#6675] :> Agora você quer repor em um novo colete, certo?
+[18:35:00 8th abr. 21] [Pedro_Araujo#3089] :> Sim
+[18:35:04 8th abr. 21] [Pedro_Araujo#3089] :> Mas mantendo o mesmo
+[18:35:14 8th abr. 21] [Pedro_Araujo#3089] :> Só q várias vezes, entendeu?
+[18:35:22 8th abr. 21] [Tyurin#6675] :> Sim, sim, rapidinho
+[18:36:52 8th abr. 21] [Pedro_Araujo#3089] :> Beleza
+[18:39:08 8th abr. 21] [Tyurin#6675] :> Você converteu a textura nova pra .txd ?
+[18:39:25 8th abr. 21] [Pedro_Araujo#3089] :> Não, é só um png mesmo
+[18:39:39 8th abr. 21] [Tyurin#6675] :> Ok, no caso é o PNG exportado que você editou, correto?
+[18:40:08 8th abr. 21] [Pedro_Araujo#3089] :> Sim, o PNG  original
+[18:40:13 8th abr. 21] [Pedro_Araujo#3089] :> O que já tem no jogo
+[18:40:30 8th abr. 21] [Pedro_Araujo#3089] :> Inclusive qdo subtituimos pelo original
+[18:40:32 8th abr. 21] [Pedro_Araujo#3089] :> deu certo
+[18:40:51 8th abr. 21] [Pedro_Araujo#3089] :> mas qdo colocamos pra serem 2 coletes
+[18:40:54 8th abr. 21] [Pedro_Araujo#3089] :> ai setou um coldre kkk
+[18:41:05 8th abr. 21] [Tyurin#6675] :> Você consegue importar a textura do novo colete pro Magic TXD, substituir o antigo e exportar com um nome diferente?
+[18:41:17 8th abr. 21] [Pedro_Araujo#3089] :> Aí é com o sky
+[18:41:19 8th abr. 21] [Tyurin#6675] :> E exportar como .txd
+[18:41:34 8th abr. 21] [Tyurin#6675] :> Isso seria o .txd do novo colete de vocês, de outra corporação acredito
+[18:42:14 8th abr. 21] [Pedro_Araujo#3089] :> Mas aí tem q fazer toda a questão de por txd invisivel?
+[18:43:07 8th abr. 21] [Tyurin#6675] :> Calma aí rapidinho
+[18:43:15 8th abr. 21] [ssky#0001] :> Tipo, temos o colete normal
+[18:43:18 8th abr. 21] [ssky#0001] :> ja dentro do jogo
+[18:43:18 8th abr. 21] [ssky#0001] :> dai
+[18:43:19 8th abr. 21] [ssky#0001] :> tipo
+[18:43:23 8th abr. 21] [ssky#0001] :> queriamos saber com adicionar
+[18:43:29 8th abr. 21] [ssky#0001] :> outro
+[18:43:30 8th abr. 21] [ssky#0001] :> colete
+[18:43:33 8th abr. 21] [ssky#0001] :> que é png
+[18:44:28 8th abr. 21] [Tyurin#6675] :> É isso que eu estou tentando entender, no caso vocês possuem a PNG do novo colete e querem adicionar no mesmo DFF do colete que vocês já tem?
+[18:44:57 8th abr. 21] [Tyurin#6675] :> Querem adicionar no mesmo modelo, no caso?
+[18:45:02 8th abr. 21] [Tyurin#6675] :> Só alterando a PNG/textura?
+[18:45:07 8th abr. 21] [Pedro_Araujo#3089] :> Sim
+[18:45:12 8th abr. 21] [Pedro_Araujo#3089] :> É isso sky?
+[18:50:10 8th abr. 21] [ssky#0001] :> Tipo isso ai
+[18:50:14 8th abr. 21] [ssky#0001] :> é como se fosse
+[18:50:19 8th abr. 21] [ssky#0001] :> adicionar uma nova cmisa
+[18:50:25 8th abr. 21] [ssky#0001] :> porem no colete
+[18:50:27 8th abr. 21] [ssky#0001] :> manja
+[18:51:02 8th abr. 21] [Tyurin#6675] :> A textura de vocês do colete anterior ela está em .txd ou em .png?
+[18:51:08 8th abr. 21] [Tyurin#6675] :> Dentro da pasta do sistema de personagem, noc aso?
+[18:51:13 8th abr. 21] [ssky#0001] :> Sim
+[18:51:24 8th abr. 21] [ssky#0001] :> Ela esta na dff do personagem
+[18:51:32 8th abr. 21] [ssky#0001] :> como se fosse adicionar sem ter outra
+[18:51:36 8th abr. 21] [ssky#0001] :> agora a gnt quer add
+[18:51:37 8th abr. 21] [ssky#0001] :> uma png
+[18:51:45 8th abr. 21] [ssky#0001] :> para ficar 2 coletes
+[18:51:47 8th abr. 21] [ssky#0001] :> tlg?
+[18:51:51 8th abr. 21] [Pedro_Araujo#3089] :> Png
+[18:52:01 8th abr. 21] [Pedro_Araujo#3089] :> Né sky?
+[18:52:04 8th abr. 21] [Pedro_Araujo#3089] :> São aquelas pngs lá
+[18:53:26 8th abr. 21] [Tyurin#6675] :> Como tá o nome do colete de vocês?
+[18:53:35 8th abr. 21] [Tyurin#6675] :> Exemplo: 'camisa.padrao'
+[18:54:35 8th abr. 21] [ssky#0001] :> Deixa só eu verficar aqui
+[18:54:38 8th abr. 21] [ssky#0001] :> pera aeee
+[19:10:04 8th abr. 21] [Pedro_Araujo#3089] :> confere nunk?
+[19:17:22 8th abr. 21] [Pedro_Araujo#3089] :> É Colete.Bradock
+[19:25:45 8th abr. 21] [Tyurin#6675] :> @​Pedro_Araujo Já tentou?
+https://cdn.discordapp.com/attachments/829829434538328085/829844492390498345/unknown.png
+[19:26:48 8th abr. 21] [Pedro_Araujo#3089] :> @​ssky tentou?
+[19:28:16 8th abr. 21] [ssky#0001] :> voltei
+[19:28:28 8th abr. 21] [ssky#0001] :> Pera ae
+[19:28:29 8th abr. 21] [ssky#0001] :> vou testar
+[19:28:31 8th abr. 21] [Pedro_Araujo#3089] :> tenta ai
+[19:33:09 8th abr. 21] [ssky#0001] :> 
+https://cdn.discordapp.com/attachments/829829434538328085/829846353131339826/unknown.png
+[19:33:14 8th abr. 21] [ssky#0001] :> Assim no caso né?
+[19:38:49 8th abr. 21] [JoohnWiick#2547] :> opamano
+[19:38:51 8th abr. 21] [JoohnWiick#2547] :> mano
+[19:38:56 8th abr. 21] [JoohnWiick#2547] :> me mostra sua pasta
+[19:38:59 8th abr. 21] [JoohnWiick#2547] :> onde ta os .png
+[19:40:10 8th abr. 21] [ssky#0001] :> Ok
+[19:40:31 8th abr. 21] [ssky#0001] :> 
+https://cdn.discordapp.com/attachments/829829434538328085/829848210180145172/unknown.png
+[19:40:41 8th abr. 21] [ssky#0001] :> Dutra que pediu para colocar em 1.png e 2.png
+[19:41:00 8th abr. 21] [ssky#0001] :> esse aqui ta funfando
+https://cdn.discordapp.com/attachments/829829434538328085/829848326161563710/unknown.png
+[19:41:02 8th abr. 21] [JoohnWiick#2547] :> tá
+[19:41:02 8th abr. 21] [ssky#0001] :> que é o 1.png
+[19:41:09 8th abr. 21] [JoohnWiick#2547] :> e oq n ta indo?
+[19:41:13 8th abr. 21] [ssky#0001] :> n vai
+[19:41:22 8th abr. 21] [Pedro_Araujo#3089] :> O 2° colete
+[19:42:50 8th abr. 21] [dutra#3978] :> 🤨 🤨 🤨 🤨
+[19:42:56 8th abr. 21] [dutra#3978] :> calma ae
+[19:42:59 8th abr. 21] [dutra#3978] :> vc tá clicando em farda completa
+[19:43:02 8th abr. 21] [dutra#3978] :> e ta indo o colete?
+[19:43:26 8th abr. 21] [dutra#3978] :> tem q colocar o opentable true man
+https://cdn.discordapp.com/attachments/829829434538328085/829848940009881630/unknown.png
+[19:44:08 8th abr. 21] [ssky#0001] :> nnn
+[19:44:11 8th abr. 21] [ssky#0001] :> isso ai n fui eu
+[19:44:11 8th abr. 21] [dutra#3978] :> openTable false = Clica e vai todas as roupas que vc botar dentro da tabela tableOptions
+openTable true = Clica e abre uma outra parte na loja que dentro tem todos os itens que tá dentro da tabela tableOptions (ai vai clicando 1 por 1 pra setar)
+[19:44:37 8th abr. 21] [dutra#3978] :> isso tá explicado la em cima no codigo
+[19:44:41 8th abr. 21] [dutra#3978] :> nos comentários da tabela
+[19:44:45 8th abr. 21] [dutra#3978] :> só ler
+[19:44:47 8th abr. 21] [ssky#0001] :> ```lua
+                        ['Farda Investigador'] = {        
+                            openTable = true,
+                            tableOptions = {
+                                {'Colete', 'Colete.Bradock', 1, 'extra2'}, -- Modelo TRUE: {Nome da roupa, Modelo na TXD, Textura, Parte do corpo}
+                                {'Chapeu Pescador', 'ChapeuPescador', 1, 'head'}, -- Modelo TRUE: {Nome da roupa, Modelo na TXD, Textura, Parte do corpo}    
+                                {'Coldre', 'Coldre_Bradock', 1, 'extra3'}, -- Modelo TRUE: {Nome da roupa, Modelo na TXD, Textura, Parte do corpo}
+                                {'Blusa', 'Blusao.military', 1, 'torso'}, -- Modelo TRUE: {Nome da roupa, Modelo na TXD, Textura, Parte do corpo}
+                                {'Bandana', 'bandana', 1, 'extra4'}, -- Modelo TRUE: {Nome da roupa, Modelo na TXD, Textura, Parte do corpo}    
+                                {'Boina', 'boina', 1, 'head'}, -- Modelo TRUE: {Nome da roupa, Modelo na TXD, Textura, Parte do corpo}    
+                                {'Destintivo', 'distintivo', 1, 'extra5'}, -- Modelo TRUE: {Nome da roupa, Modelo na TXD, Textura, Parte do corpo}    
+                                {'Bota', 'feet_bradock', 1, 'feet'}, -- Modelo TRUE: {Nome da roupa, Modelo na TXD, Textura, Parte do corpo}                                                                                                                                                                                                                            
+                                {'Calça PM', 'calca.jeans', 1, 'legs'}, -- Modelo TRUE: {Nome da roupa, Modelo na TXD, Textura, Parte do corpo}
+                            }, 
+                        },
+```
+[19:44:50 8th abr. 21] [ssky#0001] :> um colete ta aqui
+[19:45:02 8th abr. 21] [ssky#0001] :> ```lua
+                        ['Farda Sky'] = {        
+                            openTable = true,
+                            tableOptions = {
+                                {'Colete 2', 'Colete.Bradock', 2, 'torso'}, -- Modelo TRUE: {Nome da roupa, Modelo na TXD, Textura, Parte do corpo}
+                                -- -- Modelo TRUE: {Nome da roupa, Modelo na TXD, Textura, Parte do corpo}}
+
+                            }, 
+                        },
+```
+[19:45:06 8th abr. 21] [ssky#0001] :> a outra ta aqui
+[19:45:10 8th abr. 21] [ssky#0001] :> nao ta em farda completa
+[19:45:19 8th abr. 21] [dutra#3978] :> e n ta indo?
+[19:46:51 8th abr. 21] [ssky#0001] :> n vai
+[19:46:55 8th abr. 21] [ssky#0001] :> ta setando outro bagulho
+[19:46:57 8th abr. 21] [ssky#0001] :> nada ve
+[19:46:57 8th abr. 21] [ssky#0001] :> tlg
+[19:47:00 8th abr. 21] [ssky#0001] :> seta uma camisa
+[19:47:02 8th abr. 21] [dutra#3978] :> só uma duvida
+[19:47:04 8th abr. 21] [dutra#3978] :> tá no meta?
+[19:47:06 8th abr. 21] [dutra#3978] :> a textura 1 e 2?
+[19:47:13 8th abr. 21] [dutra#3978] :> salvou o codigo e deu restart?
+[19:47:14 8th abr. 21] [ssky#0001] :> 
+https://cdn.discordapp.com/attachments/829829434538328085/829849899256119407/unknown.png
+[19:47:28 8th abr. 21] [ssky#0001] :> Sim , até alterei o nome do painel para painel sky
+[19:47:29 8th abr. 21] [Tyurin#6675] :> Isso foi eu, só usei de exemplo
+[19:49:21 8th abr. 21] [ssky#0001] :> só gravar um video aqui
+[19:49:25 8th abr. 21] [ssky#0001] :> p mostrar
+[19:49:36 8th abr. 21] [dutra#3978] :> manda tua config ai
+[19:49:38 8th abr. 21] [dutra#3978] :> todinha
+[19:49:39 8th abr. 21] [dutra#3978] :> a interface
+[19:49:45 8th abr. 21] [dutra#3978] :> só pra eu averiguar uma coisa
+[19:50:25 8th abr. 21] [ssky#0001] :> Ok
+[19:50:28 8th abr. 21] [ssky#0001] :> 
+https://cdn.discordapp.com/attachments/829829434538328085/829850708341686323/2021-04-08_19-49-35.mp4
+[19:50:29 8th abr. 21] [ssky#0001] :> vou pegar aki
+[19:51:19 8th abr. 21] [ssky#0001] :> 
+https://cdn.discordapp.com/attachments/829829434538328085/829850930143821834/Interface.lua
+[19:53:35 8th abr. 21] [dutra#3978] :> 
+https://cdn.discordapp.com/attachments/829829434538328085/829851497885204560/Interface.lua
+[19:53:35 8th abr. 21] [dutra#3978] :> testa ai
+[19:53:38 8th abr. 21] [dutra#3978] :> testa gravando
+[19:54:24 8th abr. 21] [ssky#0001] :> Ok
+[19:55:23 8th abr. 21] [ssky#0001] :> foi
+[19:55:25 8th abr. 21] [ssky#0001] :> funfo
+[19:55:33 8th abr. 21] [ssky#0001] :> tem que ser no mesmo painel?
+[19:55:39 8th abr. 21] [dutra#3978] :> n
+[19:55:44 8th abr. 21] [dutra#3978] :> alguma coisa errada vc tava fazendo
+[19:55:45 8th abr. 21] [dutra#3978] :> calma ia
+[19:55:58 8th abr. 21] [ssky#0001] :> Ok
+[19:56:49 8th abr. 21] [dutra#3978] :> 
+https://cdn.discordapp.com/attachments/829829434538328085/829852313471549531/Interface.lua
+[19:56:50 8th abr. 21] [dutra#3978] :> testa
+[19:59:16 8th abr. 21] [ssky#0001] :> Ok
+[20:00:23 8th abr. 21] [ssky#0001] :> foi n
+[20:00:29 8th abr. 21] [ssky#0001] :> desse jeito n foi
+[20:15:41 8th abr. 21] [ssky#0001] :> @​dutra
+[20:16:03 8th abr. 21] [dutra#3978] :> 🤔
+[20:16:26 8th abr. 21] [dutra#3978] :> 
+https://cdn.discordapp.com/attachments/829829434538328085/829857250188853308/Interface.lua
+[20:16:27 8th abr. 21] [dutra#3978] :> testa assim
+[20:20:19 8th abr. 21] [ssky#0001] :> Ok
+[20:21:10 8th abr. 21] [ssky#0001] :> foi tbm n
+[20:21:17 8th abr. 21] [ssky#0001] :> esse aqui foi o unico que foi
+[20:21:29 8th abr. 21] [dutra#3978] :> aconteceu oq?
+[20:21:31 8th abr. 21] [dutra#3978] :> foi o coldre?
+[20:23:40 8th abr. 21] [ssky#0001] :> Nesse novo que vc me mandou.
+[20:23:57 8th abr. 21] [ssky#0001] :> Só não vai mesmo.
+[20:24:36 8th abr. 21] [ssky#0001] :> 
+https://cdn.discordapp.com/attachments/829829434538328085/829859302328107008/2021-04-08_20-24-11.mp4
+[20:37:03 8th abr. 21] [dutra#3978] :> tenta abrir o colete 2
+[20:37:08 8th abr. 21] [dutra#3978] :> antes do colete 1
+[20:37:27 8th abr. 21] [ssky#0001] :> Ok
+[20:38:12 8th abr. 21] [ssky#0001] :> Tipo
+[20:38:13 8th abr. 21] [ssky#0001] :> foi
+[20:38:18 8th abr. 21] [ssky#0001] :> acho que os dois
+[20:38:22 8th abr. 21] [ssky#0001] :> estão dando o colete da PMERJ
+[20:39:24 8th abr. 21] [dutra#3978] :> é
+[20:39:32 8th abr. 21] [dutra#3978] :> ja conferiu se n é a msm textura q vc botou?
+[20:39:41 8th abr. 21] [dutra#3978] :> se o 1 e 2 n sao texturas iguais

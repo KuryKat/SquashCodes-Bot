@@ -1,0 +1,37 @@
+[20:24:18 6th abr. 21] [Squash#4343] :> @STAFF @​DOM
+[20:24:18 6th abr. 21] [Squash#4343] :> 
+[20:25:53 6th abr. 21] [DOM#5170] :> Olá eu queria qnd entrar nesse marker: eu ir para outra post, pois estou usando interior aberto ou seja qnd eu entro o interior map, o map some e buga
+https://cdn.discordapp.com/attachments/829134452810317964/829134852413456444/unknown.png
+[20:26:01 6th abr. 21] [DOM#5170] :> 
+https://cdn.discordapp.com/attachments/829134452810317964/829134880982040616/unknown.png
+[20:27:57 6th abr. 21] [DOM#5170] :> 
+https://cdn.discordapp.com/attachments/829134452810317964/829135371467620362/unknown.png
+[20:32:19 6th abr. 21] [Chorão#3666] :> *Olá* @​DOM,
+
+Bom esse problema pode esta ocorrendo porque esta te mandando pra outra dimi que o int não esta
+[20:32:36 6th abr. 21] [DOM#5170] :> Sim
+[20:32:42 6th abr. 21] [DOM#5170] :> oque devo fazer?
+[20:32:52 6th abr. 21] [DOM#5170] :> tem como mudar a position
+[20:32:59 6th abr. 21] [DOM#5170] :> ou tirar as dimensao
+[20:33:02 6th abr. 21] [Chorão#3666] :> bom vai ate onde você mudou o mak de pos é tenta deixo pra te manda pro int 0
+[20:33:11 6th abr. 21] [Chorão#3666] :> pode ser tambem que você fez algo de errado nãos ei
+[20:33:40 6th abr. 21] [DOM#5170] :> ['openMarker'] = {1568.5065917969,-1684.6081542969,16.191499710083, 0, 0, {129, 89, 247, 200}}, -- posX, posY, posZ, interior, dimensão {r, g, b, alpha}
+[20:33:47 6th abr. 21] [DOM#5170] :> mas ja esta na dimen 0
+[20:33:52 6th abr. 21] [DOM#5170] :> e interior 0
+[20:34:21 6th abr. 21] [Chorão#3666] :> estranho...
+[20:34:37 6th abr. 21] [DOM#5170] :> ele vai automaticamente para as dimensao aleatoria
+[20:34:41 6th abr. 21] [DOM#5170] :> poderia chamar o dutra?
+[20:34:49 6th abr. 21] [Chorão#3666] :> claro @​dutra .
+[20:35:03 6th abr. 21] [DOM#5170] :> eu vi q ele leva vc para dimensoes diferente.
+[20:35:05 6th abr. 21] [JoohnWiick#2547] :> ai toda pessoa q entrar no marker vai bugar
+[20:35:18 6th abr. 21] [JoohnWiick#2547] :> não tem nada pra fazer em relação as dimensões
+[20:35:21 6th abr. 21] [DOM#5170] :> mas tem como tirar a pos joohn?
+[20:35:27 6th abr. 21] [dutra#0069] :> tem que setar a modelagem em todas as dimensões
+[20:35:30 6th abr. 21] [JoohnWiick#2547] :> você pode fazer o seguinte
+[20:35:34 6th abr. 21] [JoohnWiick#2547] :> isso aqui
+[20:35:39 6th abr. 21] [dutra#0069] :> na dimensão -1 ele já seta em todas as dimensões
+[20:36:18 6th abr. 21] [DOM#5170] :> Entendi.
+[20:53:53 6th abr. 21] [Chorão#3666] :> Precisa de ajuda com mais alguma coisa @​DOM ?
+[20:54:09 6th abr. 21] [DOM#5170] :> Não. Obrigado!!
+[20:54:35 6th abr. 21] [Chorão#3666] :> !close
+[20:54:36 6th abr. 21] [Squash#4343] :> 

@@ -1,0 +1,79 @@
+[14:05:41 6th abr. 21] [Squash#4343] :> @STAFF @​🌲 ραтяση
+[14:05:41 6th abr. 21] [Squash#4343] :> 
+[14:06:01 6th abr. 21] [🌲 ραтяση#5268] :> Olá boa tarde, gostaria de está mudando o ip do meu servidor
+[14:06:12 6th abr. 21] [🌲 ραтяση#5268] :> Mudei de ip e quero saber como faço para mudar
+[14:06:58 6th abr. 21] [Chorão#3666] :> Olá @​🌲 ραтяση, poderia manda foto da sua área do cliente ?
+[14:07:08 6th abr. 21] [🌲 ραтяση#5268] :> Do site ?
+[14:07:11 6th abr. 21] [Chorão#3666] :> sim
+[14:07:17 6th abr. 21] [🌲 ραтяση#5268] :> 
+https://cdn.discordapp.com/attachments/829039170848161822/829039572230864957/unknown.png
+[14:07:51 6th abr. 21] [JoohnWiick#2547] :> pq ta sem tag?
+[14:08:06 6th abr. 21] [🌲 ραтяση#5268] :> Eu só entrei no discord
+[14:08:08 6th abr. 21] [🌲 ραтяση#5268] :> Por um colega meu
+[14:08:12 6th abr. 21] [🌲 ραтяση#5268] :> Ai comprei
+[14:08:22 6th abr. 21] [🌲 ραтяση#5268] :> Mas não tive nenhum contato no discord com ninguém antes
+[16:32:18 6th abr. 21] [🌲 ραтяση#5268] :> ?
+[16:32:22 6th abr. 21] [🌲 ραтяση#5268] :> Tem como mudar o ip ?
+[16:39:20 6th abr. 21] [Chorão#3666] :> *Olá*  @​🌲 ραтяση,
+
+Sim o senhor pode mudar seu IP sim mas ate  o momento devemos espera o Joohn ou o Dutra para poder setar sua tag.
+[16:39:26 6th abr. 21] [Chorão#3666] :> @​dutra @​JoohnWiick
+[16:40:10 6th abr. 21] [🌲 ραтяση#5268] :> Ah ok, como mudo ?
+[16:40:27 6th abr. 21] [Chorão#3666] :> Pronto
+[16:40:27 6th abr. 21] [🌲 ραтяση#5268] :> Dando !changemyip ?
+[16:40:41 6th abr. 21] [Chorão#3666] :> Olha o canal *ip-faq*
+[16:43:42 6th abr. 21] [🌲 ραтяση#5268] :> Consegui, muito obrigado
+[16:43:51 6th abr. 21] [🌲 ραтяση#5268] :> Só mais uma duvida que to querendo tirar a muito tempo
+[16:44:10 6th abr. 21] [🌲 ραтяση#5268] :> Para ligar o mod, tem alguma especificação ?
+[16:44:21 6th abr. 21] [🌲 ραтяση#5268] :> Por exemplo. ligar o mod depois de tal mod
+[16:44:48 6th abr. 21] [Chorão#3666] :> não
+[16:44:51 6th abr. 21] [Chorão#3666] :> so liga mesmo
+[16:44:53 6th abr. 21] [dutra#0069] :> #📑・license
+[16:45:22 6th abr. 21] [dutra#0069] :> somente tem que por a licença e o email na config
+[16:45:24 6th abr. 21] [🌲 ραтяση#5268] :> Pq não sei se era a host que eu usava
+[16:45:31 6th abr. 21] [🌲 ραтяση#5268] :> Que o personagem ficava invisivel
+[16:45:37 6th abr. 21] [🌲 ραтяση#5268] :> Ss, eu fiz isso
+[16:52:32 6th abr. 21] [🌲 ραтяση#5268] :> 
+https://cdn.discordapp.com/attachments/829039170848161822/829081158636929064/Capturar.PNG
+[16:52:50 6th abr. 21] [🌲 ραтяση#5268] :> A License não está disponivel
+[16:59:03 6th abr. 21] [dutra#0069] :> verifica agora
+[17:25:02 6th abr. 21] [Chorão#3666] :> Olá @​🌲 ραтяση,
+
+Bom esta mensagem é "*automática*" isso é para deixa nosso suporte mais ordenado, então caso o seu problema *não tenha resolvido* peço que responda esta mensagem informando o que precisa... caso ao contrário o seu suporte sera fechado `automaticamente`.
+
+
+**Squash codes.**
+[19:01:11 6th abr. 21] [🌲 ραтяση#5268] :> Liguei o sistema
+[19:01:21 6th abr. 21] [🌲 ραтяση#5268] :> Mas o boneco está invisível
+[19:02:09 6th abr. 21] [🌲 ραтяση#5268] :> 
+https://cdn.discordapp.com/attachments/829039170848161822/829113777684873226/unknown.png
+[19:02:18 6th abr. 21] [🌲 ραтяση#5268] :> Coloquei o email e a License
+[19:07:32 6th abr. 21] [🌲 ραтяση#5268] :> 
+https://cdn.discordapp.com/attachments/829039170848161822/829115131287568384/mta-screen_2021-04-06_18-06-04.png
+[19:07:44 6th abr. 21] [🌲 ραтяση#5268] :> @​Chorão.₪
+[19:08:34 6th abr. 21] [Chorão#3666] :> deu permissão pro script ?
+[19:08:41 6th abr. 21] [🌲 ραтяση#5268] :> Sim
+[19:09:01 6th abr. 21] [Chorão#3666] :> debug aparece algo?
+[19:09:10 6th abr. 21] [🌲 ραтяση#5268] :> Uso Resource.*
+[19:09:29 6th abr. 21] [Chorão#3666] :> não seria resource.*
+[19:10:43 6th abr. 21] [🌲 ραтяση#5268] :> Usando resource.* no grupo Admin
+[19:10:51 6th abr. 21] [🌲 ραтяση#5268] :> Ele da acesso a todos os mods
+[19:10:59 6th abr. 21] [🌲 ραтяση#5268] :> 
+https://cdn.discordapp.com/attachments/829039170848161822/829115999839453244/mta-screen_2021-04-06_18-10-16.png
+[19:11:01 6th abr. 21] [🌲 ραтяση#5268] :> Debugscript
+[19:12:31 6th abr. 21] [🌲 ραтяση#5268] :> system > engine > Server.lua
+[19:12:36 6th abr. 21] [🌲 ραтяση#5268] :> Mas não posso acessar
+[19:12:43 6th abr. 21] [Chorão#3666] :> ok
+[19:12:46 6th abr. 21] [Chorão#3666] :> 1 minuto
+[19:12:51 6th abr. 21] [🌲 ραтяση#5268] :> 
+https://cdn.discordapp.com/attachments/829039170848161822/829116471615422504/unknown.png
+[19:12:52 6th abr. 21] [🌲 ραтяση#5268] :> ok
+[19:12:56 6th abr. 21] [Chorão#3666] :> Olá, vi que o erro está acontecendo no seu arquivo server-side. Para resolver este erro, substitua sua `Server.lua` por este seguinte arquivo:
+https://cdn.discordapp.com/attachments/789561868385124423/812745420714541096/Server.lua
+[19:14:31 6th abr. 21] [🌲 ραтяση#5268] :> Esse Modelos foram bloqueados
+[19:14:33 6th abr. 21] [🌲 ραтяση#5268] :> Está certo ?
+[19:16:52 6th abr. 21] [🌲 ραтяση#5268] :> Deu certo, Obg ❤️
+[19:16:57 6th abr. 21] [Chorão#3666] :> e noixx
+[19:17:02 6th abr. 21] [Chorão#3666] :> precisa de ajuda em mais alguma coisa?
+[20:01:32 6th abr. 21] [Chorão#3666] :> !close
+[20:01:32 6th abr. 21] [Squash#4343] :> 

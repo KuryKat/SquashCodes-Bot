@@ -1,0 +1,54 @@
+[23:08:04 4th abr. 21] [Squash#4343] :> @STAFF @​4NDR3
+[23:08:04 4th abr. 21] [Squash#4343] :> 
+[23:08:23 4th abr. 21] [4NDR3#1934] :> opa boa noite estou com um pequeno bug no custom que e tipo
+[23:08:36 4th abr. 21] [4NDR3#1934] :> quando eu entro na loja ou de roupas ou na barbearia o painel some do nd
+[23:08:47 4th abr. 21] [4NDR3#1934] :> e tipo se escolhe a cor do tenis preta vem azul tlg
+[23:09:00 4th abr. 21] [4NDR3#1934] :> tem hr que esta comprando algumas coisas sozinhas
+[23:09:01 4th abr. 21] [4NDR3#1934] :> https://www.youtube.com/watch?v=ge-EPnScZQg
+[23:09:10 4th abr. 21] [4NDR3#1934] :> mandei um staff meu gravar um video
+[23:09:15 4th abr. 21] [4NDR3#1934] :> pra mostrar melhor
+[23:10:00 4th abr. 21] [4NDR3#1934] :> https://www.youtube.com/watch?v=d0mtuvEKva0
+[23:10:05 4th abr. 21] [4NDR3#1934] :> o da barbearia
+[23:10:42 4th abr. 21] [Chorão#3666] :> *Olá* @​4NDR3,
+
+Bom, antes de tudo o senhor poderia informa se modificou algo?
+[23:10:57 4th abr. 21] [4NDR3#1934] :> pior que nao modifiquei nd
+[23:11:11 4th abr. 21] [JoohnWiick#2547] :> n mudou nada na config? 🤔
+[23:12:10 4th abr. 21] [4NDR3#1934] :> tbm não
+[23:12:28 4th abr. 21] [JoohnWiick#2547] :> eu recomendo vc baixar o resource novamente no site
+[23:12:32 4th abr. 21] [JoohnWiick#2547] :> para ver se continua
+[23:12:36 4th abr. 21] [JoohnWiick#2547] :> se continuar nos avise
+[23:12:40 4th abr. 21] [4NDR3#1934] :> blz irmao
+[08:07:39 5th abr. 21] [dutra#0069] :> Podemos ajudar em mais alguma coisa?
+[08:07:40 5th abr. 21] [dutra#0069] :> @​4NDR3
+[18:42:19 5th abr. 21] [4NDR3#1934] :> so uma duvida
+[18:42:26 5th abr. 21] [4NDR3#1934] :> pra glr do servidor refazer seus personagem
+[18:42:29 5th abr. 21] [4NDR3#1934] :> e so deletar a db?
+[18:44:49 5th abr. 21] [Tyurin#6675] :> Sim @​4NDR3
+[19:04:25 5th abr. 21] [4NDR3#1934] :> tipo eu apaguei e tals mais nao apareceu nd pra mim criar e fiquei invisivel kkkk
+[19:09:28 5th abr. 21] [4NDR3#1934] :> alguem consegue me da um help´?
+[19:10:36 5th abr. 21] [4NDR3#1934] :> e tipo quando eu logava antes ja tinha com a skin 1 , agr esta vindo com o cj
+[19:14:28 5th abr. 21] [4NDR3#1934] :> 
+https://cdn.discordapp.com/attachments/828450891396677632/828754490081017866/unknown.png
+[19:22:29 5th abr. 21] [Tyurin#6675] :> Você deu restart na resource?
+[19:22:40 5th abr. 21] [Tyurin#6675] :> E a conta já está criada?
+[19:23:25 5th abr. 21] [4NDR3#1934] :> deu certo aq irmao
+[19:32:34 5th abr. 21] [4NDR3#1934] :> 
+https://cdn.discordapp.com/attachments/828450891396677632/828759040729153556/unknown.png
+[19:32:42 5th abr. 21] [4NDR3#1934] :> esta subindo mt esse aviso
+[20:05:04 5th abr. 21] [JoohnWiick#2547] :> mexeu na config ?
+[21:33:19 5th abr. 21] [4NDR3#1934] :> 
+https://cdn.discordapp.com/attachments/828450891396677632/828789432147771432/unknown.png
+[21:33:30 5th abr. 21] [4NDR3#1934] :> so mechi para aparecer o painel pra geral que entrasse tlg
+[21:36:24 5th abr. 21] [JoohnWiick#2547] :> cara
+[21:36:29 5th abr. 21] [JoohnWiick#2547] :> pra ta dando erro até na client
+[21:36:34 5th abr. 21] [JoohnWiick#2547] :> você mexeu na config
+[21:36:35 5th abr. 21] [JoohnWiick#2547] :> em alguma coisa
+[21:36:53 5th abr. 21] [JoohnWiick#2547] :> se n sabe oq foi, recomendo baixar a config la do site de novo
+[14:34:18 6th abr. 21] [Tyurin#6675] :> Boa tarde @​4NDR3, seu problema foi corrigido?
+[10:44:46 7th abr. 21] [Tyurin#6675] :> Bom dia, com a intenção de prosseguir com o atendimento precisamos que o Sr. responda até hoje às **16:00**.
+
+Caso contrário, iremos encerrar esse ticket. 🙂
+@​4NDR3
+[17:38:25 7th abr. 21] [Tyurin#6675] :> !close
+[17:38:26 7th abr. 21] [Squash#4343] :> 

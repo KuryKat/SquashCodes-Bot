@@ -1,0 +1,346 @@
+[00:03:39 8th abr. 21] [Squash#4343] :> @STAFF @​Pedro_Araujo
+[00:03:39 8th abr. 21] [Squash#4343] :> 
+[00:03:52 8th abr. 21] [Pedro_Araujo#3089] :> Opa
+[00:03:54 8th abr. 21] [Pedro_Araujo#3089] :> Boa noite
+[00:06:25 8th abr. 21] [JoohnWiick#2547] :> como podemos ajudar?
+[00:07:15 8th abr. 21] [Pedro_Araujo#3089] :> John
+[00:07:19 8th abr. 21] [Pedro_Araujo#3089] :> Salva a gente aí
+[00:07:31 8th abr. 21] [JoohnWiick#2547] :> ?
+[00:08:35 8th abr. 21] [Pedro_Araujo#3089] :> Te mandei no pv aí
+[00:08:37 8th abr. 21] [Pedro_Araujo#3089] :> A siruacao
+[00:08:41 8th abr. 21] [Pedro_Araujo#3089] :> Situação*
+[00:08:43 8th abr. 21] [JoohnWiick#2547] :> manda aqui
+[00:08:51 8th abr. 21] [Pedro_Araujo#3089] :> Beleza
+[00:09:17 8th abr. 21] [Pedro_Araujo#3089] :> O Dutra ficou de ajudar eu e o sky a ensinar como instala os mods no servidor
+[00:09:22 8th abr. 21] [Pedro_Araujo#3089] :> Pq esse custom é meio complicado
+[00:09:30 8th abr. 21] [Pedro_Araujo#3089] :> Aí agr estamos com tudo pronto já
+[00:09:34 8th abr. 21] [Pedro_Araujo#3089] :> Mas n sabemos por
+[00:09:39 8th abr. 21] [Pedro_Araujo#3089] :> Vc consegue nos ensinar pfv?
+[00:09:46 8th abr. 21] [Pedro_Araujo#3089] :> O Dutra foi dormir
+[00:09:50 8th abr. 21] [JoohnWiick#2547] :> **COMO ADICIONAR MODELAGENS NO SCRIPT**
+
+**OBS:** Não damos suporte para adicionar a modelagem no DFF, não temos conhecimento nesta área.
+**OBS²:** Importante! O tamanho do DFF não pode passar de 4.7mb's, caso passe irá dar erro de replace por conta que o MTA não suporta modelagens tão grandes, o DFF já está no limite, então coloque modelos leves ou retire um para por outro!
+
+1 - Após adicionar os modelos no DFF, exporte uma das imagens do TXD e coloque a imagem invisível no TXD com O **MESMO NOME** que você colocou no DFF pelo 3DS. Por exemplo, se você colocou uma imagem chamada `colete.padrao.png` no DFF, você terá que colocar uma **IMAGEM INVISÍVEL** (IMPORTANTE!)
+no TXD chamado de `colete.padrao`.
+
+2 - Adicione a textura visível , a textura original do objeto nas pastas de texturas **assets/textures/male/NomeDoObjeto/1.png **. Exemplo: `assets/textures/male/colete.padrao/1.png`
+
+3 - Adicione no meta a textura visível que você acabou de colocar nas pastas de texturas.
+Exemplo: `<file src="assets/textures/male/colete.padrao/1.png" />`
+
+4 - Compile a modelagem. Primeiro, desligue o script, **APAGUE OS ARQUIVOS .3D DA PASTA LOADER (APENAS DA SKIN QUE VOCÊ QUER TROCAR, MASCULINO OU FEMININO)** troque no meta de .3D para .txd e .dff, coloque os arquivos descompilados que você editou na pasta loader, **COM OS SEGUINTES NOMES:** `Male.txd` e `Male.dff` para o masculino e `Female.txd` e `Female.dff` para a skin feminina. Ligue o script, é normal dar error, agora você pode desligar o script novamente e voltar para a pasta loader. Verifique se criou os novos arquivos .3D (Caso não tenha aparecido ainda no seu filezilla, basta dar um F5). Troque novamente no meta.xml de .txd e .dff para **.3D**, após isso basta iniciar o script. Caso não tenha funcionado, repita o processo.
+[00:09:53 8th abr. 21] [Pedro_Araujo#3089] :> Logo na hora q nossos mods chegaram
+[00:09:55 8th abr. 21] [Pedro_Araujo#3089] :> Ent
+[00:09:59 8th abr. 21] [Pedro_Araujo#3089] :> Esse texto tá confuso
+[00:10:04 8th abr. 21] [Pedro_Araujo#3089] :> Ele disse q a gente ia mandando print
+[00:10:04 8th abr. 21] [JoohnWiick#2547] :> oq tá confuso?
+[00:10:08 8th abr. 21] [Pedro_Araujo#3089] :> E ele ia explicando
+[00:10:15 8th abr. 21] [Pedro_Araujo#3089] :> Tudo
+[00:10:17 8th abr. 21] [JoohnWiick#2547] :> '-'
+[00:10:18 8th abr. 21] [Pedro_Araujo#3089] :> Tudo mesmo
+[00:10:21 8th abr. 21] [JoohnWiick#2547] :> só ler com calma mano
+[00:10:26 8th abr. 21] [JoohnWiick#2547] :> vai fazendo passo a passo
+[00:10:30 8th abr. 21] [Pedro_Araujo#3089] :> A gente lá leu e releu
+[00:10:31 8th abr. 21] [Pedro_Araujo#3089] :> John
+[00:10:35 8th abr. 21] [Pedro_Araujo#3089] :> 10ão
+[00:10:37 8th abr. 21] [Pedro_Araujo#3089] :> Na mao
+[00:10:40 8th abr. 21] [Pedro_Araujo#3089] :> Pra ajudar
+[00:10:42 8th abr. 21] [Pedro_Araujo#3089] :> Sério msm
+[00:10:46 8th abr. 21] [Pedro_Araujo#3089] :> Tô desesperado
+[00:10:47 8th abr. 21] [Pedro_Araujo#3089] :> Kkkkkkkkkkkk
+[00:10:54 8th abr. 21] [JoohnWiick#2547] :> eu ainda n entendi com oq vc precisa de ajuda
+[00:10:58 8th abr. 21] [JoohnWiick#2547] :> com o texto já pronto
+[00:10:59 8th abr. 21] [JoohnWiick#2547] :> '-'
+[00:11:07 8th abr. 21] [Pedro_Araujo#3089] :> A gente já tá com tudo pronto
+[00:11:14 8th abr. 21] [Pedro_Araujo#3089] :> Mas n sabemos fazer as substituíveis
+[00:11:19 8th abr. 21] [Pedro_Araujo#3089] :> Substituições*
+[00:11:21 8th abr. 21] [Pedro_Araujo#3089] :> E mesmo lendo
+[00:11:25 8th abr. 21] [Pedro_Araujo#3089] :> N ficou claro
+[00:11:47 8th abr. 21] [JoohnWiick#2547] :> substiuição d q?
+[00:12:13 8th abr. 21] [Pedro_Araujo#3089] :> Pq a gente comprou com o bradock
+[00:12:16 8th abr. 21] [Pedro_Araujo#3089] :> O fardamento
+[00:12:18 8th abr. 21] [Pedro_Araujo#3089] :> Colete
+[00:12:19 8th abr. 21] [Pedro_Araujo#3089] :> Tudo
+[00:12:25 8th abr. 21] [Pedro_Araujo#3089] :> Aí ele fez tudo
+[00:12:28 8th abr. 21] [Pedro_Araujo#3089] :> Tudo pronto na
+[00:12:29 8th abr. 21] [Pedro_Araujo#3089] :> Já*
+[00:12:36 8th abr. 21] [Pedro_Araujo#3089] :> Só n sabemos colocar dentro do jogo
+[00:12:48 8th abr. 21] [JoohnWiick#2547] :> Lê o texto, segue os passos do texto
+[00:12:52 8th abr. 21] [JoohnWiick#2547] :> onde vc travar vc avisa
+[00:13:04 8th abr. 21] [JoohnWiick#2547] :> 1 - Após adicionar os modelos no DFF, exporte uma das imagens do TXD e coloque a imagem invisível no TXD com O MESMO NOME que você colocou no DFF pelo 3DS. Por exemplo, se você colocou uma imagem chamada colete.padrao.png no DFF, você terá que colocar uma IMAGEM INVISÍVEL (IMPORTANTE!)
+no TXD chamado de colete.padrao.
+[00:13:09 8th abr. 21] [JoohnWiick#2547] :> Ja fez isso?
+[00:13:25 8th abr. 21] [Pedro_Araujo#3089] :> Ent
+[00:13:37 8th abr. 21] [Pedro_Araujo#3089] :> Deixa eu ver oq veio
+[00:14:10 8th abr. 21] [Pedro_Araujo#3089] :> 
+https://cdn.discordapp.com/attachments/829552042179690526/829554677594587136/image0.png
+https://cdn.discordapp.com/attachments/829552042179690526/829554677897101382/image1.png
+https://cdn.discordapp.com/attachments/829552042179690526/829554678349692938/image2.png
+[00:14:19 8th abr. 21] [JoohnWiick#2547] :> kkkk
+[00:14:22 8th abr. 21] [JoohnWiick#2547] :> tu vai fzr pelo celular?
+[00:14:26 8th abr. 21] [Pedro_Araujo#3089] :> Não pô
+[00:14:34 8th abr. 21] [Pedro_Araujo#3089] :> Só pra te mostrar os arquivos
+[00:14:36 8th abr. 21] [Pedro_Araujo#3089] :> Relaxa
+[00:15:06 8th abr. 21] [JoohnWiick#2547] :> ta mais isso n respondeu minha prngta ainda
+[00:15:27 8th abr. 21] [Pedro_Araujo#3089] :> Não
+[00:15:31 8th abr. 21] [JoohnWiick#2547] :> então faz
+[00:15:40 8th abr. 21] [Pedro_Araujo#3089] :> Calma ae
+[00:16:05 8th abr. 21] [Pedro_Araujo#3089] :> Tu n pode me adicionar e tu explicar pra mim e pro sky num grupo do dc não?
+[00:16:10 8th abr. 21] [Pedro_Araujo#3089] :> A gente já tem um com o Dutra
+[00:16:16 8th abr. 21] [Pedro_Araujo#3089] :> É pq tu tá explicando pra mim
+[00:16:19 8th abr. 21] [Pedro_Araujo#3089] :> Mas é ele q vai fazer
+[00:16:22 8th abr. 21] [Pedro_Araujo#3089] :> Pode ser?
+[00:16:47 8th abr. 21] [JoohnWiick#2547] :> é o ssky?
+[00:16:51 8th abr. 21] [Pedro_Araujo#3089] :> Isso
+[00:16:53 8th abr. 21] [Pedro_Araujo#3089] :> Skyzito
+[00:16:59 8th abr. 21] [Pedro_Araujo#3089] :> Conhece?
+[00:17:08 8th abr. 21] [JoohnWiick#2547] :> pronto
+[00:17:11 8th abr. 21] [JoohnWiick#2547] :> botei ele no ticket
+[00:17:16 8th abr. 21] [JoohnWiick#2547] :> 1 - Após adicionar os modelos no DFF, exporte uma das imagens do TXD e coloque a imagem invisível no TXD com O MESMO NOME que você colocou no DFF pelo 3DS. Por exemplo, se você colocou uma imagem chamada colete.padrao.png no DFF, você terá que colocar uma IMAGEM INVISÍVEL (IMPORTANTE!)
+no TXD chamado de colete.padrao.
+[00:17:17 8th abr. 21] [JoohnWiick#2547] :> só fzr ai
+[00:17:39 8th abr. 21] [Pedro_Araujo#3089] :> @​ssky bora
+[00:18:30 8th abr. 21] [ssky#0001] :> Tipo
+[00:18:31 8th abr. 21] [ssky#0001] :> pera
+[00:18:35 8th abr. 21] [ssky#0001] :> so entender o texto
+[00:18:35 8th abr. 21] [ssky#0001] :> kk
+[00:18:40 8th abr. 21] [Pedro_Araujo#3089] :> Me atende antes né sky
+[00:18:44 8th abr. 21] [Pedro_Araujo#3089] :> Eu vou te explicando tb
+[00:19:38 8th abr. 21] [Pedro_Araujo#3089] :> Essa parte do colete invisível q fode a gente
+[00:19:42 8th abr. 21] [Pedro_Araujo#3089] :> Imagem*
+[00:19:55 8th abr. 21] [ssky#0001] :> não entendemos  a parte da imagem invisivel
+[00:19:56 8th abr. 21] [ssky#0001] :> tipo
+[00:19:59 8th abr. 21] [ssky#0001] :> o personagem
+[00:20:00 8th abr. 21] [ssky#0001] :> ja ta pronto
+[00:20:01 8th abr. 21] [ssky#0001] :> saca?
+[00:20:17 8th abr. 21] [ssky#0001] :> ai eu altero o personagemmm
+[00:20:19 8th abr. 21] [JoohnWiick#2547] :> cara
+[00:20:23 8th abr. 21] [JoohnWiick#2547] :> deixa eu fazer uma prgnta simples aqui
+[00:20:27 8th abr. 21] [ssky#0001] :> claro
+[00:20:31 8th abr. 21] [Pedro_Araujo#3089] :> Diga
+[00:20:37 8th abr. 21] [JoohnWiick#2547] :> vocês encomendaram um novo personagem com o bradock, só com os objetos de pm?
+[00:20:46 8th abr. 21] [Pedro_Araujo#3089] :> Como assim?
+[00:20:49 8th abr. 21] [ssky#0001] :> veio com personagem tbm
+[00:20:50 8th abr. 21] [JoohnWiick#2547] :> ou vocês pediram pro bradock colocar os objetos de pm no personagem?
+[00:20:58 8th abr. 21] [JoohnWiick#2547] :> ta mais que personagem?
+[00:20:58 8th abr. 21] [ssky#0001] :> 
+https://cdn.discordapp.com/attachments/829552042179690526/829556400120135720/unknown.png
+[00:21:03 8th abr. 21] [Pedro_Araujo#3089] :> A gente pediu pra ele recriar aquele gif dele
+[00:21:04 8th abr. 21] [ssky#0001] :> ele coloco no personagem
+[00:21:13 8th abr. 21] [JoohnWiick#2547] :> ta então calmai
+[00:21:16 8th abr. 21] [Pedro_Araujo#3089] :> Q tu vai selecionando
+[00:21:18 8th abr. 21] [JoohnWiick#2547] :> vocês encomendaram novos personagens com tudo?
+[00:21:18 8th abr. 21] [Pedro_Araujo#3089] :> Oq tu quer
+[00:21:23 8th abr. 21] [ssky#0001] :> Sim
+[00:21:26 8th abr. 21] [JoohnWiick#2547] :> camisas
+[00:21:28 8th abr. 21] [JoohnWiick#2547] :> calças?
+[00:21:29 8th abr. 21] [ssky#0001] :> Simmmm
+[00:21:30 8th abr. 21] [JoohnWiick#2547] :> tudo?
+[00:21:35 8th abr. 21] [ssky#0001] :> 
+https://cdn.discordapp.com/attachments/829552042179690526/829556555367055391/unknown.png
+[00:21:36 8th abr. 21] [ssky#0001] :> tudo.
+[00:21:43 8th abr. 21] [JoohnWiick#2547] :> mais ai eu to vendo só objetos de pm
+[00:21:48 8th abr. 21] [JoohnWiick#2547] :> e os objetos das pessoas normais?
+[00:21:49 8th abr. 21] [JoohnWiick#2547] :> '-'
+[00:21:54 8th abr. 21] [Pedro_Araujo#3089] :> Mas é isso msm, é só a parte de pm
+[00:21:56 8th abr. 21] [Pedro_Araujo#3089] :> Q a gente quer
+[00:21:59 8th abr. 21] [ssky#0001] :> é só da parte da pm
+[00:22:09 8th abr. 21] [JoohnWiick#2547] :> ai é foda msm
+[00:22:15 8th abr. 21] [Pedro_Araujo#3089] :> Pq foda?
+[00:22:17 8th abr. 21] [Pedro_Araujo#3089] :> Qdo compramos
+[00:22:23 8th abr. 21] [Pedro_Araujo#3089] :> Vcs falaram q poderia ser feito isso
+[00:22:34 8th abr. 21] [JoohnWiick#2547] :> '-'
+[00:22:39 8th abr. 21] [ssky#0001] :> num to entendendo
+[00:22:39 8th abr. 21] [JoohnWiick#2547] :> falaram isso onde?
+[00:22:41 8th abr. 21] [JoohnWiick#2547] :> ticket?
+[00:22:45 8th abr. 21] [JoohnWiick#2547] :> mano é pq é o seguinte
+[00:22:51 8th abr. 21] [JoohnWiick#2547] :> não era pra fazer um novo personagem
+[00:22:54 8th abr. 21] [Pedro_Araujo#3089] :> https://images-ext-2.discordapp.net/external/05gt8GxuBZrdoemePPvZj0e6dFAgMHoqYGTfNwF_H74/https/i.imgur.com/OZ3ZVNW.mp4
+[00:23:00 8th abr. 21] [JoohnWiick#2547] :> mais isso dia
+[00:23:04 8th abr. 21] [ssky#0001] :> ele não fez um novo
+[00:23:06 8th abr. 21] [ssky#0001] :> ele fez em cima
+[00:23:07 8th abr. 21] [ssky#0001] :> do teuu...
+[00:23:09 8th abr. 21] [JoohnWiick#2547] :> '-'
+[00:23:16 8th abr. 21] [Pedro_Araujo#3089] :> Ele só renomeou o arquivo
+[00:23:18 8th abr. 21] [ssky#0001] :> ele fez normal porem adicionou
+[00:23:21 8th abr. 21] [ssky#0001] :> as pecas no personagem
+[00:23:24 8th abr. 21] [JoohnWiick#2547] :> então ta com nossas roupas?
+[00:23:25 8th abr. 21] [Pedro_Araujo#3089] :> Mas esse arquivo é o Male
+[00:23:28 8th abr. 21] [Pedro_Araujo#3089] :> Entendeu?
+[00:23:29 8th abr. 21] [JoohnWiick#2547] :> e com as roupas d pm?
+[00:23:32 8th abr. 21] [ssky#0001] :> sss
+[00:23:37 8th abr. 21] [ssky#0001] :> ta com as suas roupas
+[00:23:41 8th abr. 21] [JoohnWiick#2547] :> mostra o txd ai
+[00:23:52 8th abr. 21] [ssky#0001] :> 
+https://cdn.discordapp.com/attachments/829552042179690526/829557124811063346/unknown.png
+[00:24:02 8th abr. 21] [ssky#0001] :> <:flushed2:752054076681748544>
+[00:24:03 8th abr. 21] [JoohnWiick#2547] :> só tem isso no txd?
+[00:24:04 8th abr. 21] [JoohnWiick#2547] :> '-'
+[00:24:18 8th abr. 21] [ssky#0001] :> No que ele mandou sim
+[00:24:21 8th abr. 21] [JoohnWiick#2547] :> abre com o magic txd
+[00:24:23 8th abr. 21] [ssky#0001] :> Ok
+[00:24:51 8th abr. 21] [ssky#0001] :> To baixando aqui
+[00:24:54 8th abr. 21] [ssky#0001] :> o magic
+[00:24:58 8th abr. 21] [ssky#0001] :> pelo que eu vi aqui
+[00:25:02 8th abr. 21] [ssky#0001] :> o oq vcs liberaram
+[00:25:11 8th abr. 21] [ssky#0001] :> para download
+[00:25:13 8th abr. 21] [ssky#0001] :> so tem 1 tbm
+[00:25:29 8th abr. 21] [JoohnWiick#2547] :> com o txd workshop buga
+[00:26:43 8th abr. 21] [ssky#0001] :> 
+https://cdn.discordapp.com/attachments/829552042179690526/829557846907420683/unknown.png
+[00:26:48 8th abr. 21] [ssky#0001] :> 
+https://cdn.discordapp.com/attachments/829552042179690526/829557867849187408/unknown.png
+[00:27:00 8th abr. 21] [ssky#0001] :> 
+https://cdn.discordapp.com/attachments/829552042179690526/829557916368371722/unknown.png
+[00:27:05 8th abr. 21] [ssky#0001] :> é o seus
+[00:27:13 8th abr. 21] [ssky#0001] :> <:rtwet:808066034731974717>
+[00:27:35 8th abr. 21] [ssky#0001] :> @​JoohnWiick
+[00:27:37 8th abr. 21] [JoohnWiick#2547] :> 
+https://cdn.discordapp.com/attachments/829552042179690526/829558071436771378/unknown.png
+[00:27:38 8th abr. 21] [JoohnWiick#2547] :> clica aqui
+[00:27:53 8th abr. 21] [JoohnWiick#2547] :> e manda print
+[00:28:04 8th abr. 21] [ssky#0001] :> 
+https://cdn.discordapp.com/attachments/829552042179690526/829558185844277279/unknown.png
+[00:28:32 8th abr. 21] [JoohnWiick#2547] :> ok
+[00:28:35 8th abr. 21] [JoohnWiick#2547] :> 1 passo concluido
+[00:28:38 8th abr. 21] [ssky#0001] :> o gloria
+[00:28:39 8th abr. 21] [ssky#0001] :> kk
+[00:28:43 8th abr. 21] [ssky#0001] :> rsrsrs
+[00:28:47 8th abr. 21] [ssky#0001] :> qual proximo passo?
+[00:28:50 8th abr. 21] [JoohnWiick#2547] :> 2 - Adicione a textura visível , a textura original do objeto nas pastas de texturas assets/textures/male/NomeDoObjeto/1.png . Exemplo: assets/textures/male/colete.padrao/1.png
+[00:28:53 8th abr. 21] [JoohnWiick#2547] :> Agora faz isso
+[00:29:05 8th abr. 21] [ssky#0001] :> Ok
+[00:29:10 8th abr. 21] [JoohnWiick#2547] :> qnd fizer manda print
+[00:29:12 8th abr. 21] [ssky#0001] :> Ok
+[00:29:34 8th abr. 21] [Pedro_Araujo#3089] :> Tem q por essa invisível na visível
+[00:29:38 8th abr. 21] [Pedro_Araujo#3089] :> De grosso modo falando
+[00:29:42 8th abr. 21] [JoohnWiick#2547] :> ?
+[00:29:43 8th abr. 21] [ssky#0001] :> ja entendi como é
+[00:29:46 8th abr. 21] [JoohnWiick#2547] :> ok
+[00:29:49 8th abr. 21] [Pedro_Araujo#3089] :> Confio no sky
+[00:29:51 8th abr. 21] [JoohnWiick#2547] :> só faz e manda print
+[00:29:52 8th abr. 21] [Pedro_Araujo#3089] :> Ele tá me xingando
+[00:30:02 8th abr. 21] [ssky#0001] :> ok
+[00:32:04 8th abr. 21] [ssky#0001] :> Criei a pasta com seus respectivos nomes dos objetos, agora irei colocar cada png em cada pasta
+[00:32:04 8th abr. 21] [ssky#0001] :> .
+[00:34:20 8th abr. 21] [ssky#0001] :> 
+https://cdn.discordapp.com/attachments/829552042179690526/829559762646859826/unknown.png
+[00:34:31 8th abr. 21] [ssky#0001] :> 
+https://cdn.discordapp.com/attachments/829552042179690526/829559808100925470/unknown.png
+[00:34:32 8th abr. 21] [ssky#0001] :> protno
+[00:34:34 8th abr. 21] [ssky#0001] :> agora no meta?
+[00:34:53 8th abr. 21] [ssky#0001] :> @​JoohnWiick
+[00:35:29 8th abr. 21] [JoohnWiick#2547] :> mostra os png
+[00:36:15 8th abr. 21] [ssky#0001] :> 
+https://cdn.discordapp.com/attachments/829552042179690526/829560247193436170/unknown.png
+[00:36:42 8th abr. 21] [JoohnWiick#2547] :> ok
+[00:36:45 8th abr. 21] [JoohnWiick#2547] :> bota dentro das pastas
+[00:36:47 8th abr. 21] [JoohnWiick#2547] :> e depois bota no meta
+[00:36:50 8th abr. 21] [ssky#0001] :> ja coloquei nas pastas
+[00:36:53 8th abr. 21] [ssky#0001] :> agora vou colocar no meta
+[00:37:17 8th abr. 21] [JoohnWiick#2547] :> ok
+[00:41:08 8th abr. 21] [ssky#0001] :> 
+https://cdn.discordapp.com/attachments/829552042179690526/829561474057371678/unknown.png
+[00:41:09 8th abr. 21] [ssky#0001] :> pronto
+[00:41:10 8th abr. 21] [ssky#0001] :> @​JoohnWiick
+[00:42:23 8th abr. 21] [Pedro_Araujo#3089] :> E agora? @​JoohnWiick
+[00:42:28 8th abr. 21] [Pedro_Araujo#3089] :> 👁👄👁
+[00:48:16 8th abr. 21] [JoohnWiick#2547] :> 4 - Compile a modelagem. Primeiro, desligue o script, APAGUE OS ARQUIVOS .3D DA PASTA LOADER (APENAS DA SKIN QUE VOCÊ QUER TROCAR, MASCULINO OU FEMININO) troque no meta de .3D para .txd e .dff, coloque os arquivos descompilados que você editou na pasta loader, COM OS SEGUINTES NOMES: Male.txd e Male.dff para o masculino e Female.txd e Female.dff para a skin feminina. Ligue o script, é normal dar error, agora você pode desligar o script novamente e voltar para a pasta loader. Verifique se criou os novos arquivos .3D (Caso não tenha aparecido ainda no seu filezilla, basta dar um F5). Troque novamente no meta.xml de .txd e .dff para .3D, após isso basta iniciar o script. Caso não tenha funcionado, repita o processo.
+[00:49:00 8th abr. 21] [ssky#0001] :> 
+https://cdn.discordapp.com/attachments/829552042179690526/829563452221161522/unknown.png
+[00:49:01 8th abr. 21] [ssky#0001] :> na pasta loader
+[00:49:05 8th abr. 21] [ssky#0001] :> eu boto assim né?
+[00:49:42 8th abr. 21] [ssky#0001] :> ai aqui eu altero
+https://cdn.discordapp.com/attachments/829552042179690526/829563629925171200/unknown.png
+[00:50:36 8th abr. 21] [ssky#0001] :> Como assim compilar a modelagem..
+[00:50:39 8th abr. 21] [ssky#0001] :> n entendi essa parte.
+[00:50:44 8th abr. 21] [ssky#0001] :> @​JoohnWiick
+[00:50:55 8th abr. 21] [ssky#0001] :> tipo compilar no rwanalaiser?
+[00:50:59 8th abr. 21] [JoohnWiick#2547] :> 
+https://cdn.discordapp.com/attachments/829552042179690526/829563955088982046/unknown.png
+[00:51:02 8th abr. 21] [JoohnWiick#2547] :> cara
+[00:51:03 8th abr. 21] [JoohnWiick#2547] :> lê
+[00:51:12 8th abr. 21] [JoohnWiick#2547] :> no texto n tem nada sobre rwanalaiser
+[00:51:23 8th abr. 21] [JoohnWiick#2547] :> é uma coisa tão simplles, vc ta complicando
+[00:51:38 8th abr. 21] [ssky#0001] :> Sim eu li, porém só perguntei da parte de compilar modelagem....
+[00:51:40 8th abr. 21] [ssky#0001] :> mas ok
+[00:52:33 8th abr. 21] [JoohnWiick#2547] :> vc apagou?
+[00:52:36 8th abr. 21] [JoohnWiick#2547] :> .
+[00:52:53 8th abr. 21] [Pedro_Araujo#3089] :> Apagou
+[00:52:58 8th abr. 21] [Pedro_Araujo#3089] :> Tava vendo aqui
+[00:53:55 8th abr. 21] [ssky#0001] :> 
+https://cdn.discordapp.com/attachments/829552042179690526/829564692472397854/unknown.png
+[00:53:59 8th abr. 21] [ssky#0001] :> agora é só dar start novamente.
+[00:54:33 8th abr. 21] [JoohnWiick#2547] :> sim
+[00:54:33 8th abr. 21] [ssky#0001] :> apareceu la no firezilla 3d
+[00:54:36 8th abr. 21] [ssky#0001] :> fiz o procedimento
+[00:54:38 8th abr. 21] [ssky#0001] :> vou testar aki
+[00:54:43 8th abr. 21] [JoohnWiick#2547] :> na verdade
+[00:54:44 8th abr. 21] [JoohnWiick#2547] :> nao
+[00:54:49 8th abr. 21] [ssky#0001] :> oqw
+[00:54:54 8th abr. 21] [JoohnWiick#2547] :> 
+https://cdn.discordapp.com/attachments/829552042179690526/829564939383472148/unknown.png
+[00:54:58 8th abr. 21] [ssky#0001] :> ent
+[00:55:07 8th abr. 21] [ssky#0001] :> sim po
+[00:55:17 8th abr. 21] [ssky#0001] :> 
+https://cdn.discordapp.com/attachments/829552042179690526/829565035482841148/unknown.png
+[00:55:28 8th abr. 21] [ssky#0001] :> é para apgar aquele Male.dff e o txd?
+[00:55:30 8th abr. 21] [ssky#0001] :> e deixar so os 3d?
+[00:55:40 8th abr. 21] [ssky#0001] :> ou não muda nada
+[00:55:51 8th abr. 21] [JoohnWiick#2547] :> 
+https://cdn.discordapp.com/attachments/829552042179690526/829565180219883520/unknown.png
+[00:57:59 8th abr. 21] [ssky#0001] :> Funcionou
+[00:58:17 8th abr. 21] [ssky#0001] :> Quais são as partes dos corpo memo?
+[00:58:23 8th abr. 21] [ssky#0001] :> que é de cada um??
+[00:58:39 8th abr. 21] [ssky#0001] :> torso, essa parada
+[00:58:41 8th abr. 21] [ssky#0001] :> tu sabe
+[00:58:42 8th abr. 21] [ssky#0001] :> ?
+[01:00:20 8th abr. 21] [JoohnWiick#2547] :> vc n usa torso pra isso
+[01:00:25 8th abr. 21] [JoohnWiick#2547] :> vc usa extra
+[01:00:32 8th abr. 21] [JoohnWiick#2547] :> se n me engano pode usar do extra2 até o extra10
+[01:00:36 8th abr. 21] [ssky#0001] :> 
+https://cdn.discordapp.com/attachments/829552042179690526/829566374598148136/unknown.png
+[01:00:38 8th abr. 21] [ssky#0001] :> tipo aqui
+[01:00:40 8th abr. 21] [JoohnWiick#2547] :> cada objeto vc bota um extra
+[01:00:40 8th abr. 21] [ssky#0001] :> no head ali
+[01:00:43 8th abr. 21] [ssky#0001] :> OOok
+[01:00:45 8th abr. 21] [JoohnWiick#2547] :> bota extra2
+[01:03:24 8th abr. 21] [ssky#0001] :> 
+https://cdn.discordapp.com/attachments/829552042179690526/829567075017687050/unknown.png
+[01:03:27 8th abr. 21] [ssky#0001] :> 
+https://cdn.discordapp.com/attachments/829552042179690526/829567092076314644/unknown.png
+[01:03:39 8th abr. 21] [ssky#0001] :> naun foi .-.
+[01:04:57 8th abr. 21] [ssky#0001] :> @​JoohnWiick
+[01:05:49 8th abr. 21] [JoohnWiick#2547] :> 
+https://cdn.discordapp.com/attachments/829552042179690526/829567685687115786/unknown.png
+[01:06:13 8th abr. 21] [JoohnWiick#2547] :> coloca o nome da textura ai
+[01:06:22 8th abr. 21] [JoohnWiick#2547] :> do .png
+[01:07:07 8th abr. 21] [ssky#0001] :> 
+https://cdn.discordapp.com/attachments/829552042179690526/829568011660034068/unknown.png
+[01:07:07 8th abr. 21] [ssky#0001] :> assim??
+[01:07:37 8th abr. 21] [ssky#0001] :> 
+https://cdn.discordapp.com/attachments/829552042179690526/829568137761652736/unknown.png
+[01:07:42 8th abr. 21] [ssky#0001] :> ou precisa do .png tbm?
+[01:07:51 8th abr. 21] [ssky#0001] :> @​JoohnWiick
+[01:09:08 8th abr. 21] [JoohnWiick#2547] :> tem  q botar as aspas
+[01:09:18 8th abr. 21] [JoohnWiick#2547] :> 'Colete.Bradock'
+[01:09:41 8th abr. 21] [ssky#0001] :> FOI
+[01:09:43 8th abr. 21] [ssky#0001] :> GRAÇAS A DEUS
+[01:09:49 8th abr. 21] [ssky#0001] :> EU TE AMO JOOHN
+[01:09:50 8th abr. 21] [ssky#0001] :> PPRT
+[01:09:58 8th abr. 21] [JoohnWiick#2547] :> precisa de ajuda com mais alguma coisa?
+[01:10:01 8th abr. 21] [ssky#0001] :> Nãoo
+[01:10:13 8th abr. 21] [ssky#0001] :> tmj ❤️
+[01:10:21 8th abr. 21] [ssky#0001] :> tem algum lugar
+[01:10:23 8th abr. 21] [ssky#0001] :> para avaliar??
+[01:10:30 8th abr. 21] [JoohnWiick#2547] :> #🎲・feedback
+[01:10:57 8th abr. 21] [ssky#0001] :> Obrigadão ❤️
+[01:11:06 8th abr. 21] [ssky#0001] :> Tenha um bot trabalho e uma boa noite meu rei
+[01:11:10 8th abr. 21] [ssky#0001] :> https://tenor.com/view/minion-bye-takecare-gif-10859314
+[01:11:13 8th abr. 21] [Pedro_Araujo#3089] :> TE AMO JOHN
+[07:48:22 8th abr. 21] [Tyurin#6675] :> Bom dia, podemos ajudar em mais alguma coisa? @​Pedro_Araujo @​ssky
+[08:19:11 8th abr. 21] [Pedro_Araujo#3089] :> Só isso mesmo
+[09:02:46 8th abr. 21] [Tyurin#6675] :> !close
+[09:02:46 8th abr. 21] [Squash#4343] :> 
