@@ -10,110 +10,111 @@
  *      Quick Start
  * ---------------------
  *
- * 	> For detailed instructions, visit the GitHub repository and read the documentation:
- * 	https://github.com/eartharoid/DiscordTickets/wiki
+ *  > For detailed instructions, visit the GitHub repository and read the documentation:
+ *  https://github.com/eartharoid/DiscordTickets/wiki
  *
- * 	> IMPORTANT: Also edit the TOKEN in 'user/.env'
+ *  > IMPORTANT: Also edit the TOKEN in 'user/.env'
  *
  * ---------------------
  *       Support
  * ---------------------
  *
- * 	> Information: https://github.com/eartharoid/DiscordTickets/#readme
- * 	> Discord Support Server: https://go.eartharoid.me/discord
- * 	> Wiki: https://github.com/eartharoid/DiscordTickets/wiki
+ *  > Information: https://github.com/eartharoid/DiscordTickets/#readme
+ *  > Discord Support Server: https://go.eartharoid.me/discord
+ *  > Wiki: https://github.com/eartharoid/DiscordTickets/wiki
  *
  * ###############################################################################################
  */
 
 module.exports = {
-	prefix: '!',
-	name: 'SquashCodes',
-	presences: [
-		{
-			activity: '%ssuporte',
-			type: 'PLAYING'
-		},
-		{
-			activity: 'Squash Codes',
-			type: 'WATCHING'
-		}
-	],
-	owners: ["373859023679913986", "752929476849172694"],
-	append_presence: ' | %sajuda',
-	colour: '#a852ff',
-	err_colour: '#ff5e52',
-	cooldown: 3,
-	guild: '827614605605994566', // ID of your guild (REQUIRED)
-	staff_role: '829521598910300190', // ID of your Support Team role (REQUIRED)
-	customers_role: '829521598910300190',
+  prefix: '!',
+  name: 'SquashCodes',
+  presences: [
+    {
+      activity: '%ssuporte',
+      type: 'PLAYING'
+    },
+    {
+      activity: 'Squash Codes',
+      type: 'WATCHING'
+    }
+  ],
+  owners: ['367425061122211843'],
+  append_presence: ' | %sajuda',
+  colour: '#a852ff',
+  err_colour: '#ff5e52',
+  cooldown: 3,
+  guild: '842658327883677726', // ID of your guild (REQUIRED)
+  staff_role: '842664147266174988', // ID of your Support Team role (REQUIRED)
+  customers_role: '844479914082041866',
+  ordersChannel: '845059039732826153',
 
-	tickets: {
-		category: '829528075884036116', // ID of your tickets category (REQUIRED)
-		send_img: true,
-		ping: 'staff',
-		text: `<:31:829543245792149507> | {{ tag }} um membro da equipe irá lhe atender em breve. Enquanto isso, descreva com detalhes o que deseja!`,
-		pin: false,
-		max: 1,
-		default_topic: {
-			command: 'Nenhum tópico definido',
-			panel: 'Creiado via painel'
-		}
-	},
+  tickets: {
+    category: '842664736305709056', // ID of your tickets category (REQUIRED)
+    send_img: true,
+    ping: 'staff',
+    text: '<:31:829543245792149507> | {{ tag }} um membro da equipe irá lhe atender em breve. Enquanto isso, descreva com detalhes o que deseja!',
+    pin: false,
+    max: 1,
+    default_topic: {
+      command: 'Nenhum tópico definido',
+      panel: 'Creiado via painel'
+    }
+  },
 
-	commands: {
-		close: {
-			confirmation: true,
-			send_transcripts: true
-		},
-		delete: {
-			confirmation: true
-		},
-		new: {
-			enabled: true
-		},
-		closeall: {
-			enabled: true,
-		},
-	},
+  commands: {
+    close: {
+      confirmation: true,
+      send_transcripts: true
+    },
+    delete: {
+      confirmation: true
+    },
+    new: {
+      enabled: true
+    },
+    closeall: {
+      enabled: true
+    }
+  },
 
-	transcripts: {
-		text: {
-			enabled: true,
-			keep_for: 90,
-		},
-		web: {
-			enabled: false,
-			server: 'https://tickets.example.com',
-		},
-		channel: '829748527214362694' // ID of your archives channel
-	},
+  transcripts: {
+    text: {
+      enabled: true,
+      keep_for: 90
+    },
+    web: {
+      enabled: false,
+      server: 'https://tickets.example.com'
+    },
+    channel: '842664870499188747' // ID of your archives channel
+  },
 
-	panel: {
-		title: '<:31:829543245792149507> | Ticket de suporte',
-		description: 'Reaja abaixo (<:3_:829543245318193182>) para abrir um canal de suporte.',
-		reaction: '829543245318193182'
-	},
+  panel: {
+    title: '<:older:843703298942828574> | Ticket de suporte',
+    description: 'Reaja abaixo (<:confirm:842975453701996564>) para abrir um canal de suporte.',
+    reaction: '842975453701996564'
+  },
 
-	storage: {
-		type: 'mysql'
-	},
+  storage: {
+    type: 'mysql'
+  },
 
-	logs: {
-		files: {
-			enabled: true,
-			keep_for: 7
-		},
-		discord: {
-			enabled: true,
-			channel: '829748515562455040'
-		},
-		console: {
-			enabled: true,
-			channel: '829722281689088001'
-		}
-	},
+  logs: {
+    files: {
+      enabled: true,
+      keep_for: 7
+    },
+    discord: {
+      enabled: true,
+      channel: '829748515562455040'
+    },
+    console: {
+      enabled: true,
+      channel: '829722281689088001'
+    }
+  },
 
-	debug: false,
-	updater: true
-};
+  debug: false,
+  updater: true
+}

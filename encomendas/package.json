@@ -1,0 +1,9 @@
+{
+    "name": "squashcodes-encomendas",
+    "version": "1.0.0",
+    "main": "src/index.js",
+    "repository": "https://github.com/KuryKat/SquashCodes-Bot",
+    "author": "KuryKat",
+    "license": "none",
+    "private": true
+}
