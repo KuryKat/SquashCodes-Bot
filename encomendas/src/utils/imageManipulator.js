@@ -70,7 +70,8 @@ async function createOrderImage (id) {
 }
 
 async function updateOrderImage (id, flag, content) {
-  // Pensar numa forma de referenciar o proximo local que ira ser escrito
+  // TODO: Função única para gerenciar e manipular as alterações na imagem de changelog e retornar o Buffer delas
+  // TODO: Pensar numa forma de referenciar o proximo local que ira ser escrito
   // Ideia: DB Config :)
 }
 

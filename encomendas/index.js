@@ -6,6 +6,11 @@ const { cacheRolesAndOrders } = require('./src/utils/manageStart')
 const { cleanUp } = require('./src/utils/cleanUp')
 const _commands = []
 
+// TODO: Ler todo o código e verificar tudo!
+// Testar mais de 3 vezes qualquer tipo de bug que pode ser causado
+// Tentar quebrar o comando de alguma forma (pedir ajuda ao shiba)
+// Verificar se a lógica está bem executada e se existem problemas de lógica (principalmente no "newOrder.js")
+
 const registerCommands = (log) => {
   glob('./encomendas/src/commands/**/*.js', {
     absolute: true
