@@ -107,7 +107,7 @@ module.exports = {
     },
     discord: {
       enabled: true,
-      channel: '829748515562455040'
+      channel: '845870381373194261'
     },
     console: {
       enabled: true,
