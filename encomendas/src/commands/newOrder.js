@@ -3,7 +3,7 @@ const { Client, Message, MessageEmbed, Constants, MessageAttachment } = require(
 
 const { join } = require('path')
 const { createOrder, updateOrder } = require('../utils/database/order')
-const { getUser } = require('../utils/database/user')
+const { getUser, updateUserOrders } = require('../utils/database/user')
 const { createOrderImage, cacheImage } = require('../utils/imageManipulator')
 const { Roles } = require('../utils/rolesEnum')
 const config = require(join(__dirname, '../../../user/', 'config.js'))
@@ -303,7 +303,11 @@ module.exports = {
                     const orderChannel = message.guild.channels.cache.get(config.ordersChannel)
                     const imageBuffer = await createOrderImage(order._id)
                     const orderImage = new MessageAttachment(imageBuffer, `order-${order._id}.png`)
+                    await orderChannel.send('╔══════════════════════════════════╗')
+                    updateUserOrders(orderCustomer.id, order._id)
+                    await orderChannel.send(`<@${orderCustomer.id}>`).then(m => m.delete())
                     const orderChangelogMessage = await orderChannel.send(orderImage)
+                    await orderChannel.send('╚══════════════════════════════════╝')
                     await updateOrder(order._id, 'messageID', orderChangelogMessage.id)
                     await cacheImage(imageBuffer, order._id)
 

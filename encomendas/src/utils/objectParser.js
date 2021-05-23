@@ -1,4 +1,10 @@
 class User {
+  /**
+   *
+   * @param {{_id: String, username: String, discriminator: String, orders: String[], details: UserDetails}} param0
+   * @param {Boolean} populateCustomer
+   * @param {Boolean} populateResponsibles
+   */
   constructor ({
     _id,
     username,

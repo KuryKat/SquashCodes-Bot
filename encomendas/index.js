@@ -2,7 +2,7 @@
 const { Client } = require('discord.js')
 const glob = require('glob')
 const { ConfigModel } = require('./src/modules/database')
-const { cacheRoles } = require('./src/utils/manageRoles')
+const { cacheRolesAndOrders } = require('./src/utils/manageStart')
 const { cleanUp } = require('./src/utils/cleanUp')
 const _commands = []
 
@@ -71,7 +71,7 @@ module.exports = async function encomendas (client, config, log) {
       started.save()
     }
 
-    await cacheRoles(members, log)
+    await cacheRolesAndOrders(members, log)
   }
 
   registerCommands(log)

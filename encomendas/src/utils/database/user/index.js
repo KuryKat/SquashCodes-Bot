@@ -24,12 +24,19 @@ async function getUser (id, populateOrders = false) {
   return new User(foundUser, populateOrders)
 }
 
-async function updateUser (id, newRole) {
+async function updateUserRole (id, newRole) {
   const user = await getUser(id)
   user.details.role = newRole
   return await UserModel.updateOne({ _id: id }, user)
 }
 
+async function updateUserOrders (id, orderID) {
+  const user = await getUser(id)
+  user.orders.push(orderID)
+  user.orders = [...new Set(user.orders)]
+  return await UserModel.updateOne({ _id: id }, user)
+}
+
 module.exports = {
-  createUser, getUser, updateUser
+  createUser, getUser, updateUserRole, updateUserOrders
 }

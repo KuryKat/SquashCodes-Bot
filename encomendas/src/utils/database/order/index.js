@@ -14,6 +14,10 @@ async function createOrder (newOrder) {
   return new Order(await createdOrder.save(), false, false)
 }
 
+async function getAllOrders () {
+  return (await OrderModel.find({})).map(order => new Order(order))
+}
+
 async function getOrder (id, populateCustomer, populateResponsibles) {
   let query = OrderModel.findById(id)
 
@@ -45,5 +49,9 @@ async function deleteOrder (id) {
 }
 
 module.exports = {
-  createOrder, getOrder, updateOrder, deleteOrder
+  createOrder,
+  getOrder,
+  updateOrder,
+  deleteOrder,
+  getAllOrders
 }

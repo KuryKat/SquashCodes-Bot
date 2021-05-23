@@ -10,6 +10,7 @@ module.exports = {
    * @param {Message} message
    */
   exe: function (client, args, message) {
-
+    // Modelo do comando:
+    // !uo [ID] "[Update Message]"
   }
 }

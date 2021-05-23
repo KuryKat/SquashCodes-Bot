@@ -3,7 +3,8 @@ const { Client, Message, Constants, MessageEmbed } = require('discord.js')
 const { unlink, readdir } = require('fs/promises')
 const { join } = require('path')
 const { OrderModel, UserModel, ConfigModel } = require('../modules/database')
-const config = require(join(__dirname, '../../../user/', 'config.js'))
+const { getUser } = require('../utils/database/user')
+const { Roles } = require('../utils/rolesEnum')
 
 module.exports = {
   names: ['deathend'],
@@ -14,7 +15,9 @@ module.exports = {
    * @param {Message} message
    */
   exe: async function (client, args, message) {
-    if (!config.owners.includes(message.author.id)) return
+    const member = await getUser(message.author.id)
+    if (member.details.role < Roles.OWNER) return
+
     await message.delete()
 
     const logEmbed = new MessageEmbed().setDescription('Aguarde...').setColor('GREEN')
