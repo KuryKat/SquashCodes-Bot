@@ -31,7 +31,10 @@ async function getOrder (id, populateCustomer, populateResponsibles) {
       .populate('responsibles')
   }
 
-  return new Order(await query.exec(), populateCustomer, populateResponsibles)
+  const foundOrder = await query.exec()
+  if (!foundOrder) return
+
+  return new Order(foundOrder, populateCustomer, populateResponsibles)
 }
 
 /**

@@ -13,6 +13,7 @@ module.exports = {
       ticket.save()
     }
 
+    if (!message.author) return
     if (message.author.bot || message.author.id === client.user.id) return // goodbye bots
 
     const regex = new RegExp(`^(<@!?${client.user.id}>|\\${config.prefix.toLowerCase()})\\s*`)
@@ -25,7 +26,7 @@ module.exports = {
 
     if (!command || commandName === 'none') return // not an existing command
 
-    if (message.guild.id !== guild.id) return message.reply(`Este bot só pode ser utilizado no servidor da  "${guild}"!`) // not in this server
+    if (message.guild.id !== guild.id) return message.reply(`Este bot só pode ser utilizado no servidor "${guild}"!`) // not in this server
 
     if (command.permission && !message.member.hasPermission(command.permission)) {
       log.console(`${message.author.tag} Tentou usar o comando '${command.name}' sem ter permissão para isso.`)

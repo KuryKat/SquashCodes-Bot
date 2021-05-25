@@ -217,7 +217,7 @@ client.db = db
 client.once('ready', () => {
   db.authenticate()
     .then(() => {
-      console.log('[DATABASE] CONECTADO A DATABASE')
+      log.info('[MYSQL] CONEXÃO REALIZADA COM SUCESSO')
       requireDir({ dir: './src/models/' }, (err, [file, path]) => {
         if (err) console.error(err)
 
@@ -244,15 +244,15 @@ mongoose.connect(process.env.MONGODB, {
   useUnifiedTopology: true
 })
 
-log.info('\n')
+log.console('\n')
 log.info('[ENCOMENDAS] - INICIANDO SISTEMA')
 const mongoDB = mongoose.connection
-mongoDB.on('open', () => log.info('Conexão ao MongoDB realizada com sucesso!'))
+mongoDB.on('open', () => log.info('[MONGODB] CONEXÃO REALIZADA COM SUCESSO'))
 mongoDB.on('error', console.error)
 
 module.exports.mongoDB = mongoDB
 
 setTimeout(async () => {
-  encomendas(client, config, log)
+  encomendas(client, config, log, leeks)
   client.login(process.env.TOKEN)
 }, 800)

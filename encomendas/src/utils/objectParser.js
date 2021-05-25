@@ -64,6 +64,13 @@ class Order {
   }
 }
 
+const CommandStatus = {
+  UNDEFINED: '❓',
+  ONLINE: '🟢',
+  WIP: '🟡',
+  FIX: '🔴'
+}
+
 module.exports = {
-  User, Order
+  User, Order, CommandStatus
 }

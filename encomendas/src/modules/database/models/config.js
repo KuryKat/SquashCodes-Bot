@@ -2,14 +2,14 @@ const { model, Schema } = require('mongoose')
 
 const configSchema = new Schema({
   _id: {
-    type: String
+    type: Schema.Types.String
   },
   type: {
-    type: String,
+    type: Schema.Types.String,
     default: null
   },
   value: {
-    type: Number
+    type: Schema.Types.Number
   }
 })
 

@@ -5,7 +5,8 @@ const cleanUp = (callback, log) => {
     process.exit()
   })
 
-  process.on('exit', () => {
+  process.on('exit', (code) => {
+    if (code === 69) log.info('ClearSystem was executed then this process will be exited soon.')
     log.info('Bye bye~!')
   })
 

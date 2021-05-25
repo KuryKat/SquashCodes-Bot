@@ -4,6 +4,7 @@ const { User } = require('../../objectParser')
 
 async function createUser (id) {
   const newUser = await getDiscordUser(id)
+  if (newUser.bot) return
   const createdUser = new UserModel({ _id: newUser.id, ...newUser })
   return new User(await createdUser.save())
 }

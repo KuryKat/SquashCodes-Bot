@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-const { Client } = require('discord.js')
+const { Client, MessageEmbed } = require('discord.js')
 const glob = require('glob')
 const { ConfigModel } = require('./src/modules/database')
 const { cacheRolesAndOrders } = require('./src/utils/manageStart')
@@ -21,16 +21,17 @@ const registerCommands = (log) => {
     if (files.length === 0) {
       return log.warn('Nenhum comando foi registrado.')
     }
-    log.info(`Serão carregados: ${files.length} comandos!`)
+    log.console(`Serão carregados: ${files.length} comandos!`)
     files.forEach((file, index) => {
       const cmd = require(file)
       _commands.push({
         commandNames: cmd.names,
-        Execute: cmd.exe
+        Execute: cmd.exe,
+        helpData: cmd.help
       })
-      log.info(`${index + 1}: ${file} carregado.`)
+      log.console(`${index + 1}: ${file} carregado.`)
     })
-    log.info('\n')
+    log.console('\n')
   })
 }
 
@@ -44,20 +45,22 @@ const registerEvents = (client, log) => {
     if (files.length === 0) {
       return log.warn('Nenhum evento foi registrado.')
     }
-    log.info(`Serão carregados: ${files.length} eventos!`)
+    log.console(`Serão carregados: ${files.length} eventos!`)
     files.forEach((file, index) => {
       require(file)(client)
-      log.info(`${index + 1}: ${file} carregado.`)
+      log.console(`${index + 1}: ${file} carregado.`)
     })
-    log.info('\n')
+    log.console('\n')
   })
 }
 
 /**
  *
  * @param {Client} client
+ * @param {import('leekslazylogger')} log
+ * @param {import('leeks.js')} leeks
  */
-module.exports = async function encomendas (client, config, log) {
+module.exports = async function encomendas (client, config, log, leeks) {
   async function start (members) {
     let started = await ConfigModel.findById('started')
     if (!started) {
@@ -86,10 +89,11 @@ module.exports = async function encomendas (client, config, log) {
     const guild = await client.guilds.fetch(config.guild)
     const members = await guild.members.fetch()
     start(members)
-    log.info('[ENCOMENDAS] SISTEMA ONLINE!')
+    log.info(leeks.colors.greenBright(leeks.styles.bold('[ENCOMENDAS] SISTEMA ONLINE!')))
   })
 
   client.on('message', async message => {
+    if (!message.author) return
     if (!message.content.startsWith(config.prefix) || message.author.bot) {
       return
     }
@@ -112,6 +116,10 @@ module.exports = async function encomendas (client, config, log) {
     }
 
     try {
+      if (commandFound.commandNames[0] === 'ehelp') {
+        return commandFound.Execute(client, args, message, { _commands })
+      }
+
       commandFound.Execute(client, args, message)
     } catch (error) {
       log.error(error)

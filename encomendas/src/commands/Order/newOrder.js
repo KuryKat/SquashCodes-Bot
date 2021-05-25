@@ -1,15 +1,23 @@
 // eslint-disable-next-line no-unused-vars
 const { Client, Message, MessageEmbed, Constants, MessageAttachment } = require('discord.js')
 
+const { createOrder, updateOrder } = require('../../utils/database/order')
+const { getUser, updateUserOrders } = require('../../utils/database/user')
+const { createOrderImage } = require('../../utils/imageManipulator')
+const { Roles } = require('../../utils/enums')
 const { join } = require('path')
-const { createOrder, updateOrder } = require('../utils/database/order')
-const { getUser, updateUserOrders } = require('../utils/database/user')
-const { createOrderImage, cacheImage } = require('../utils/imageManipulator')
-const { Roles } = require('../utils/rolesEnum')
-const config = require(join(__dirname, '../../../user/', 'config.js'))
+const { CommandStatus } = require('../../utils/objectParser')
+const config = require(join(__dirname, '../../../../user/', 'config.js'))
 
 module.exports = {
   names: ['newOrder', 'no', 'new'],
+  help: {
+    description: 'Cria uma nova encomenda com as informações fornecidas **[Necessário ser Staffer]**',
+    visible: true,
+    module: 'Order',
+    status: CommandStatus.ONLINE,
+    usage: ['"[Nome]" "[Descrição]" [Valor] @[Cliente] @[Responsáveis]']
+  },
   /**
    *
    * @param {Client} client
@@ -17,6 +25,9 @@ module.exports = {
    * @param {Message} message
    */
   exe: async function (client, args, message) {
+    // TODO: Validação de cargos para garantir melhor segurança na hora de criar a encomenda
+    // Exemplo: Verificar se os responsáveis mencionados tem o cargo da Staff
+
     const baseEmbed = new MessageEmbed()
       .setTitle('📝 SquashCodes - Encomenda')
       .setTimestamp()
@@ -33,7 +44,7 @@ module.exports = {
     if (member.details.role < Roles.SELLER) {
       return await message.channel.send(
         errorEmbed
-          .setDescription('**Você não está autorizado a utilizar esse comando!**')
+          .setDescription('**Você não está autorizado a utilizar esse comando! :(**')
       ).then(msg =>
         msg.delete({ timeout: 60000 })
           .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
@@ -46,14 +57,21 @@ module.exports = {
 
     const regex = /"[^"]+"|[\S]+/g
     const parsedArgs = []
-    const commandUse = `**Uso do comando:**\n${config.prefix}newOrder "[Nome]" "[Descrição]" [Valor] @[Cliente] @[Responsáveis]\n**Nota: Use as aspas para pode definir o nome ou descrição!!**`
+    const commandUse = `**Uso do comando:**\n${module.exports.names.map(name => `${config.prefix}${name}`).join('\n')}\n\n**Informações necessárias:**\n${module.exports.help.usage[0]}\n\n**Nota: Use as aspas para pode definir textos extensos contendo espaços!!**`
 
     const argsMatched = args.join(' ').match(regex)
 
     if (!argsMatched) {
       return await message.channel.send(
         errorEmbed
-          .setDescription(`**Você deve me fornecer as informações do pedido! :(**\n\n${commandUse}`)
+          .setDescription(`**Você deve me fornecer as informações necessárias! :(**\n\n${commandUse}`)
+      ).then(msg =>
+        msg.delete({ timeout: 60000 })
+          .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+          .then(() =>
+            message.delete({ timeout: 100 })
+              .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+          )
       )
     }
 
@@ -255,7 +273,9 @@ module.exports = {
                   ])
               )
               await confirmOrder.react('✅')
-              await confirmOrder.react('❌')
+              setTimeout(async () => {
+                await confirmOrder.react('❌')
+              }, 500)
               const filter = (_reaction, user) => user.id === message.author.id
               const confirmCollector = confirmOrder.createReactionCollector(filter)
               baseEmbed.fields = []
@@ -304,12 +324,11 @@ module.exports = {
                     const imageBuffer = await createOrderImage(order._id)
                     const orderImage = new MessageAttachment(imageBuffer, `order-${order._id}.png`)
                     await orderChannel.send('╔══════════════════════════════════╗')
-                    updateUserOrders(orderCustomer.id, order._id)
-                    await orderChannel.send(`<@${orderCustomer.id}>`).then(m => m.delete())
+                    await updateUserOrders(orderCustomer.id, order._id)
+                    await orderChannel.send(`<@${orderCustomer.id}>`).then(async m => await m.delete())
                     const orderChangelogMessage = await orderChannel.send(orderImage)
                     await orderChannel.send('╚══════════════════════════════════╝')
                     await updateOrder(order._id, 'messageID', orderChangelogMessage.id)
-                    await cacheImage(imageBuffer, order._id)
 
                     message.delete({ timeout: 1000 })
                       .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))

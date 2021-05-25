@@ -2,12 +2,15 @@
 const { Client, Message, Constants, MessageEmbed } = require('discord.js')
 const { unlink, readdir } = require('fs/promises')
 const { join } = require('path')
-const { OrderModel, UserModel, ConfigModel } = require('../modules/database')
-const { getUser } = require('../utils/database/user')
-const { Roles } = require('../utils/rolesEnum')
+const { OrderModel, UserModel, ConfigModel } = require('../../modules/database')
+const { getUser } = require('../../utils/database/user')
+const { Roles } = require('../../utils/enums')
 
 module.exports = {
   names: ['deathend'],
+  help: {
+    visible: false
+  },
   /**
    *
    * @param {Client} client
@@ -45,7 +48,7 @@ module.exports = {
     setTimeout(async () => {
       await logMessage.edit(logEmbed.setDescription('Obrigado pela paciência :)\nEste bot irá morrer daqui 3 segundos....'))
         .then(m => m.delete({ timeout: 3000 }).catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error)))
-      process.exit()
-    }, 3000)
+      process.exit(69)
+    }, 5000)
   }
 }

@@ -6,7 +6,7 @@
 
 const { Collection, GuildMember, Snowflake } = require('discord.js')
 const { updateUserRole, updateUserOrders } = require('./database/user')
-const { Roles } = require('./rolesEnum')
+const { Roles } = require('./enums')
 const { join } = require('path')
 const { getAllOrders } = require('./database/order')
 const config = require(join(__dirname, '../../../user/', 'config.js'))

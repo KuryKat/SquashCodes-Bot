@@ -2,10 +2,15 @@
 const { Client, Message, MessageEmbed } = require('discord.js')
 
 const { join } = require('path')
-const config = require(join(__dirname, '../../../user/', 'config.js'))
+const config = require(join(__dirname, '../../../../user/', 'config.js'))
+const { getUser } = require('../../utils/database/user')
+const { Roles } = require('../../utils/enums')
 
 module.exports = {
   names: ['eval', 'e'],
+  help: {
+    visible: false
+  },
   /**
    *
    * @param {Client} client
@@ -13,7 +18,9 @@ module.exports = {
    * @param {Message} message
    */
   exe: async function (client, args, message) {
-    // eslint-disable-next-line no-eval
+    const member = await getUser(message.author.id)
+    if (member.details.role < Roles.OWNER) return
+
     const evalContent = args.join(' ')
     const evalEmbed = new MessageEmbed()
       .setAuthor(message.author.username, message.author.displayAvatarURL())
