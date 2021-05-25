@@ -332,13 +332,24 @@ module.exports = {
                           }
                         ])
                     )
+
+                    const customer = await getUser(orderCustomer.id)
+
+                    if (customer.details.role < Roles.CUSTOMER) {
+                      await updateUserRole(orderCustomer.id, Roles.CUSTOMER)
+                    }
+
+                    if (!orderCustomer.roles.cache.has(config.customers_role)) {
+                      await updateDiscordRole(config.guild, orderCustomer.id, config.customers_role)
+                    }
+
+                    await updateUserOrders(orderCustomer.id, order._id)
+
                     const orderChannel = message.guild.channels.cache.get(config.ordersChannel)
                     const imageBuffer = await createOrderImage(order._id)
                     const orderImage = new MessageAttachment(imageBuffer, `order-${order._id}.png`)
+
                     await orderChannel.send('╔══════════════════════════════════╗')
-                    await updateUserOrders(orderCustomer.id, order._id)
-                    await updateUserRole(orderCustomer.id, Roles.CUSTOMER)
-                    await updateDiscordRole(config.guild, orderCustomer.id, config.customers_role)
                     await orderChannel.send(`<@${orderCustomer.id}>`).then(async m => await m.delete())
                     const orderChangelogMessage = await orderChannel.send(orderImage)
                     await orderChannel.send('╚══════════════════════════════════╝')
