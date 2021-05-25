@@ -7,6 +7,7 @@ const { createOrderImage } = require('../../utils/imageManipulator')
 const { Roles } = require('../../utils/enums')
 const { join } = require('path')
 const { CommandStatus } = require('../../utils/objectParser')
+const { updateRole: updateDiscordRole } = require('../../modules/discord-api')
 const config = require(join(__dirname, '../../../../user/', 'config.js'))
 
 module.exports = {
@@ -25,11 +26,6 @@ module.exports = {
    * @param {Message} message
    */
   exe: async function (client, args, message) {
-    // TODO: Validação de cargos para garantir melhor segurança na hora de criar a encomenda
-    // Exemplos:
-    // - Verificar se os responsáveis mencionados tem o cargo da Staff
-    // - Verificar o cliente e atualizar o cargo dele na DB e no servidor
-
     const baseEmbed = new MessageEmbed()
       .setTitle('📝 SquashCodes - Encomenda')
       .setTimestamp()
@@ -212,11 +208,25 @@ module.exports = {
                       ))
                 }
 
+                if (!responsible.roles.cache.has(config.staff_role)) {
+                  return await message.channel.send(
+                    errorEmbed
+                      .setDescription(`**O responsável "${responsible.user.username}" não é um vendedor autorizado! :(**\n\n${commandUse}`)
+                  ).then(msg =>
+                    msg.delete({ timeout: 60000 })
+                      .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+                      .then(() =>
+                        message.delete({ timeout: 100 })
+                          .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+                      )
+                  )
+                }
+
                 if (responsible.user.bot) {
                   responsibleBot = true
                   return await message.channel.send(
                     errorEmbed
-                      .setDescription(`**O responsável não pode ser um BOT, o ${responsible.user.username} é um! :(**\n\n${commandUse}`)
+                      .setDescription(`**O responsável não pode ser um BOT, o "${responsible.user.username}" é um! :(**\n\n${commandUse}`)
                   ).then(msg =>
                     msg.delete({ timeout: 60000 })
                       .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
@@ -328,6 +338,7 @@ module.exports = {
                     await orderChannel.send('╔══════════════════════════════════╗')
                     await updateUserOrders(orderCustomer.id, order._id)
                     await updateUserRole(orderCustomer.id, Roles.CUSTOMER)
+                    await updateDiscordRole(config.guild, orderCustomer.id, config.customers_role)
                     await orderChannel.send(`<@${orderCustomer.id}>`).then(async m => await m.delete())
                     const orderChangelogMessage = await orderChannel.send(orderImage)
                     await orderChannel.send('╚══════════════════════════════════╝')

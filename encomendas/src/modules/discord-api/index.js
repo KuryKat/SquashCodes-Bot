@@ -20,6 +20,10 @@ async function getUser (id) {
   return user
 }
 
+async function updateRole (guild, id, role) {
+  await api.put(`/guilds/${guild}/members/${id}/roles/${role}`)
+}
+
 module.exports = {
-  getUser
+  getUser, updateRole
 }
