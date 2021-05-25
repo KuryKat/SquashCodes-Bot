@@ -22,9 +22,12 @@ async function cacheRolesAndOrders (members, log) {
 
     if (m.roles.cache.has(config.staff_role)) {
       await updateUserRole(m.id, Roles.SELLER)
+    } else if (m.roles.cache.has(config.customers_role)) {
+      await updateUserRole(m.id, Roles.CUSTOMER)
     } else {
       await updateUserRole(m.id, Roles.MEMBER)
     }
+
     config.owners.forEach(async o => m.id === o ? await updateUserRole(m.id, Roles.OWNER) : null)
   })
 
@@ -33,8 +36,8 @@ async function cacheRolesAndOrders (members, log) {
   log.info('[ENCOMENDAS] CACHEANDO ENCOMENDAS')
   getAllOrders()
     .then(orders => {
-      orders.forEach(order => {
-        updateUserOrders(order.customer, order._id)
+      orders.forEach(async order => {
+        await updateUserOrders(order.customer, order._id)
       })
     })
   log.info('[ENCOMENDAS] ENCOMENDAS CACHEADAS')
@@ -46,6 +49,8 @@ async function cacheRolesAndOrders (members, log) {
 async function updateRole (member) {
   if (member.roles.cache.has(config.staff_role)) {
     await updateUserRole(member.id, Roles.SELLER)
+  } else if (member.roles.cache.has(config.customers_role)) {
+    await updateUserRole(member.id, Roles.CUSTOMER)
   } else {
     await updateUserRole(member.id, Roles.MEMBER)
   }

@@ -2,7 +2,7 @@
 const { Client, Message, MessageEmbed, Constants, MessageAttachment } = require('discord.js')
 
 const { createOrder, updateOrder } = require('../../utils/database/order')
-const { getUser, updateUserOrders } = require('../../utils/database/user')
+const { getUser, updateUserOrders, updateUserRole } = require('../../utils/database/user')
 const { createOrderImage } = require('../../utils/imageManipulator')
 const { Roles } = require('../../utils/enums')
 const { join } = require('path')
@@ -12,9 +12,9 @@ const config = require(join(__dirname, '../../../../user/', 'config.js'))
 module.exports = {
   names: ['newOrder', 'no', 'new'],
   help: {
-    description: 'Cria uma nova encomenda com as informações fornecidas **[Necessário ser Staffer]**',
+    description: 'Cria uma nova encomenda com as informações fornecidas \n**[Necessário ser Staffer]**',
     visible: true,
-    module: 'Order',
+    module: 'Encomendas',
     status: CommandStatus.ONLINE,
     usage: ['"[Nome]" "[Descrição]" [Valor] @[Cliente] @[Responsáveis]']
   },
@@ -26,7 +26,9 @@ module.exports = {
    */
   exe: async function (client, args, message) {
     // TODO: Validação de cargos para garantir melhor segurança na hora de criar a encomenda
-    // Exemplo: Verificar se os responsáveis mencionados tem o cargo da Staff
+    // Exemplos:
+    // - Verificar se os responsáveis mencionados tem o cargo da Staff
+    // - Verificar o cliente e atualizar o cargo dele na DB e no servidor
 
     const baseEmbed = new MessageEmbed()
       .setTitle('📝 SquashCodes - Encomenda')
@@ -325,6 +327,7 @@ module.exports = {
                     const orderImage = new MessageAttachment(imageBuffer, `order-${order._id}.png`)
                     await orderChannel.send('╔══════════════════════════════════╗')
                     await updateUserOrders(orderCustomer.id, order._id)
+                    await updateUserRole(orderCustomer.id, Roles.CUSTOMER)
                     await orderChannel.send(`<@${orderCustomer.id}>`).then(async m => await m.delete())
                     const orderChangelogMessage = await orderChannel.send(orderImage)
                     await orderChannel.send('╚══════════════════════════════════╝')

@@ -5,9 +5,9 @@ const { CommandStatus } = require('../../utils/objectParser')
 module.exports = {
   names: ['restoreOrder', 'ro', 'restore'],
   help: {
-    description: 'Restaura uma encomenda e atualiza/retoma ela **[Necessário ser Staffer]**',
+    description: 'Restaura uma encomenda e atualiza/retoma ela \n**[Necessário ser Staffer]**',
     visible: true,
-    module: 'Order',
+    module: 'Encomendas',
     status: CommandStatus.WIP,
     usage: ['[ID]']
   },

@@ -11,9 +11,9 @@ const config = require(join(__dirname, '../../../../user/', 'config.js'))
 module.exports = {
   names: ['orderStatus', 'os', 'status'],
   help: {
-    description: 'Verifica o status atual de uma encomenda **[Necessário ser Cliente]**',
+    description: 'Verifica o status atual de uma encomenda \n**[Necessário ser Cliente]**',
     visible: true,
-    module: 'Order',
+    module: 'Encomendas',
     status: CommandStatus.ONLINE,
     usage: ['[ID]']
   },

@@ -79,7 +79,7 @@ module.exports = {
     const BASE_URL = config.transcripts.web.server
     if (config.transcripts.web.enabled) embed.addField('Web archive', `${BASE_URL}/${ticket.creator}/${ticket.channel}`)
 
-    if (embed.fields.length < 1) embed.setDescription(`Nenhuma mensagem arquivada foi encontra para o ticket ${id}`)
+    if (embed.fields.length < 1) embed.setDescription(`Nenhuma mensagem arquivada foi encontrada para o ticket ${id}`)
 
     res.embed = embed
 

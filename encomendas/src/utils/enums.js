@@ -1,7 +1,8 @@
 const Roles = {
   MEMBER: 0,
-  SELLER: 1,
-  OWNER: 2
+  CUSTOMER: 1,
+  SELLER: 2,
+  OWNER: 3
 }
 
 Object.freeze(Roles)

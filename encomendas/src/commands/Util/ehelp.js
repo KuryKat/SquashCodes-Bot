@@ -29,7 +29,7 @@ module.exports = {
   help: {
     description: 'Mostra todos os comandos sobre o sistema de encomendas!',
     visible: true,
-    module: 'Util',
+    module: 'Utilidades',
     status: CommandStatus.ONLINE,
     usage: ['', '{comando}']
   },
@@ -38,7 +38,7 @@ module.exports = {
    * @param {Client} client
    * @param {string[]} args
    * @param {Message} message
-   * @param {{commandNames: String[], Execute: commandLike, helpData: HelpData}[]} _commands
+   * @param {{ _commands: {commandNames: String[], Execute: commandLike, helpData: HelpData}[]}} param3
    */
   exe: async function (client, args, message, { _commands }) {
     const baseEmbed = new MessageEmbed()
@@ -74,7 +74,7 @@ module.exports = {
         cmdMetadata = new HelpData()
       }
 
-      if (cmdMetadata.visible === false) {
+      if (!cmdMetadata.visible) {
         hasCmd = false
       }
 
@@ -92,10 +92,14 @@ module.exports = {
         )
       }
 
-      const embed = baseEmbed
-        .setDescription(`**Comando: ${cmd.commandNames[0]}**\n${cmdMetadata?.description}`)
+      if (!cmdMetadata.description) {
+        cmdMetadata.description = ''
+      }
 
-      if (cmdMetadata?.usage === undefined) {
+      const embed = baseEmbed
+        .setDescription(`**Comando: ${cmd.commandNames[0]}**\n${cmdMetadata.description}`)
+
+      if (!cmdMetadata.usage) {
         cmdMetadata.usage = ['']
       }
       let usage = ''
@@ -103,7 +107,7 @@ module.exports = {
         usage += prefix + (cmd?.commandNames[0]) + ' ' + argusage + '\n'
       }
 
-      if (cmdMetadata.status === undefined) {
+      if (!cmdMetadata.status) {
         cmdMetadata.status = CommandStatus.UNDEFINED
       }
 

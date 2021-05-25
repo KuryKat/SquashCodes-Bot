@@ -13,9 +13,9 @@ const config = require(join(__dirname, '../../../../user/', 'config.js'))
 module.exports = {
   names: ['updateOrder', 'uo', 'update'],
   help: {
-    description: 'Atualiza uma encomenda e adiciona um novo changelog **[Necessário ser Staffer]**',
+    description: 'Atualiza uma encomenda e adiciona um novo changelog \n**[Necessário ser Staffer]**',
     visible: true,
-    module: 'Order',
+    module: 'Encomendas',
     status: CommandStatus.WIP,
     usage: ['[ID] [Cabeçalho] "[Atualização]"']
   },

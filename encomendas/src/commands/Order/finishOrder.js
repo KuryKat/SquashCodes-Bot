@@ -5,9 +5,9 @@ const { CommandStatus } = require('../../utils/objectParser')
 module.exports = {
   names: ['finishOrder', 'fo', 'finish'],
   help: {
-    description: 'Finaliza uma encomenda e define ela como entregue ou cancelada **[Necessário ser Staffer]**',
+    description: 'Finaliza uma encomenda e arquiva ela como "entregue" ou "cancelada"\n**[Necessário ser Staffer]**',
     visible: true,
-    module: 'Order',
+    module: 'Encomendas',
     status: CommandStatus.WIP,
     usage: ['[ID] [\'Entregue\' | \'Cancelada\']']
   },
