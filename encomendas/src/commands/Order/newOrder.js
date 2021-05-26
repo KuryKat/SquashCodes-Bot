@@ -11,12 +11,12 @@ const { updateRole: updateDiscordRole } = require('../../modules/discord-api')
 const config = require(join(__dirname, '../../../../user/', 'config.js'))
 
 module.exports = {
-  names: ['newOrder', 'no', 'new'],
+  names: ['neworder', 'no', 'new'],
   help: {
     description: 'Cria uma nova encomenda com as informações fornecidas \n**[Necessário ser Staffer]**',
     visible: true,
     module: 'Encomendas',
-    status: CommandStatus.ONLINE,
+    status: CommandStatus.FIX,
     usage: ['"[Nome]" "[Descrição]" [Valor] @[Cliente] @[Responsáveis]']
   },
   /**
@@ -55,7 +55,7 @@ module.exports = {
 
     const regex = /"[^"]+"|[\S]+/g
     const parsedArgs = []
-    const commandUse = `**Uso do comando:**\n${module.exports.names.map(name => `${config.prefix}${name}`).join('\n')}\n\n**Informações necessárias:**\n${module.exports.help.usage[0]}\n\n**Nota: Use as aspas para pode definir textos extensos contendo espaços!!**`
+    const commandUse = `**Uso(s) do comando:**\n${module.exports.names.map(name => `${config.prefix}${name}`).join('\n')}\n\n**Informações necessárias:**\n${module.exports.help.usage[0]}\n\n**Nota: Use as aspas para pode definir textos extensos contendo espaços!!**`
 
     const argsMatched = args.join(' ').match(regex)
 

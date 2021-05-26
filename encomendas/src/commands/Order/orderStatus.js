@@ -9,12 +9,12 @@ const { CommandStatus } = require('../../utils/objectParser')
 const config = require(join(__dirname, '../../../../user/', 'config.js'))
 
 module.exports = {
-  names: ['orderStatus', 'os', 'status'],
+  names: ['orderstatus', 'os', 'status'],
   help: {
     description: 'Verifica o status atual de uma encomenda \n**[Necessário ser Cliente]**',
     visible: true,
     module: 'Encomendas',
-    status: CommandStatus.ONLINE,
+    status: CommandStatus.FIX,
     usage: ['[ID]']
   },
   /**
@@ -32,7 +32,7 @@ module.exports = {
 
     const regex = /"[^"]+"|[\S]+/g
     const parsedArgs = []
-    const commandUse = `**Uso do comando:**\n${module.exports.names.map(name => `${config.prefix}${name}`).join('\n')}\n\n**Informações necessárias:**\n${module.exports.usage}\n\n**Nota: Use as aspas para pode definir textos extensos contendo espaços!!**`
+    const commandUse = `**Uso(s) do comando:**\n${module.exports.names.map(name => `${config.prefix}${name}`).join('\n')}\n\n**Informações necessárias:**\n${module.exports.help.usage[0]}\n\n**Nota: Use as aspas para pode definir textos extensos contendo espaços!!**`
 
     const argsMatched = args.join(' ').match(regex)
 

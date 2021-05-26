@@ -3,7 +3,7 @@ const { Client, Message } = require('discord.js')
 const { CommandStatus } = require('../../utils/objectParser')
 
 module.exports = {
-  names: ['restoreOrder', 'ro', 'restore'],
+  names: ['restoreorder', 'ro', 'restore'],
   help: {
     description: 'Restaura uma encomenda e atualiza/retoma ela \n**[Necessário ser Staffer]**',
     visible: true,

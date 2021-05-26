@@ -3,7 +3,7 @@ const { Client, Message } = require('discord.js')
 const { CommandStatus } = require('../../utils/objectParser')
 
 module.exports = {
-  names: ['finishOrder', 'fo', 'finish'],
+  names: ['finishorder', 'fo', 'finish'],
   help: {
     description: 'Finaliza uma encomenda e arquiva ela como "entregue" ou "cancelada"\n**[Necessário ser Staffer]**',
     visible: true,

@@ -42,12 +42,13 @@ module.exports = {
   owners: ['367425061122211843'],
   append_presence: ' | %sajuda',
   colour: '#a852ff',
+  warn_colour: '#ffcc00',
   err_colour: '#ff5e52',
   cooldown: 3,
-  guild: '842658327883677726', // ID of your guild (REQUIRED)
-  staff_role: '842664147266174988', // ID of your Support Team role (REQUIRED)
-  customers_role: '844479914082041866',
-  ordersChannel: '845059039732826153',
+  guild: '846728206697758731', // ID of your guild (REQUIRED)
+  staff_role: '846755035400503327', // ID of your Support Team role (REQUIRED)
+  customers_role: '846755008090865704', // ID of your customers role
+  ordersCategory: '847077722253688862', /// ID of your orders category
 
   tickets: {
     category: '842664736305709056', // ID of your tickets category (REQUIRED)

@@ -127,7 +127,7 @@ module.exports = {
 
     async function allCommands () {
       const embed = baseEmbed
-        .setDescription('**Comandos do sistema de encomendas:**\nUse: `' + prefix + 'help {nome do comando}` para mais informações.')
+        .setDescription('**Comandos do sistema de encomendas:**\nUse: `' + prefix + module.exports.names[0] + ' {nome do comando}` para mais informações.')
 
       const commandModules = []
 
