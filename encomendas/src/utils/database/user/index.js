@@ -39,5 +39,5 @@ async function updateUserOrders (id, orderID) {
 }
 
 module.exports = {
-  createUser, getUser, updateUserRole, updateUserOrders
+  getUser, updateUserRole, updateUserOrders
 }

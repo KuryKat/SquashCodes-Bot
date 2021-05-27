@@ -6,16 +6,17 @@ const { getUser } = require('../../utils/database/user')
 const { getOrder } = require('../../utils/database/order')
 const { getFromCache } = require('../../utils/imageManipulator')
 const { CommandStatus } = require('../../utils/objectParser')
+const { Roles } = require('../../utils/enums')
 const config = require(join(__dirname, '../../../../user/', 'config.js'))
 
 module.exports = {
   names: ['orderstatus', 'os', 'status'],
   help: {
-    description: 'Verifica o status atual de uma encomenda \n**[Necessário ser Cliente]**',
+    description: 'Verifica o status atual de uma encomenda \n**[Necessário ser o Cliente ou Staffer]**',
     visible: true,
     module: 'Encomendas',
     status: CommandStatus.FIX,
-    usage: ['[ID]']
+    usage: ['', '[ID]']
   },
   /**
    *
@@ -71,10 +72,31 @@ module.exports = {
           )
       )
     }
-    if (member._id !== order.customer) {
+
+    const imageCache = await getFromCache(order._id)
+    const orderImage = new MessageAttachment(imageCache, `order-${order._id}.png`)
+
+    if (member.details.role === Roles.CUSTOMER) {
+      if (message.channel.id !== order.logImage.channel) {
+        return await message.channel.send(
+          errorEmbed
+            .setDescription(`**Você não pode utilizar esse comando aqui! :(**\n\n**Utilize em <#${order.logImage.channel}> para ver o status de sua encomenda!**`)
+        ).then(msg =>
+          msg.delete({ timeout: 60000 })
+            .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+            .then(() =>
+              message.delete({ timeout: 100 })
+                .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+            )
+        )
+      }
+      await message.reply(`Aqui está o status da encomenda #${order._id}`, orderImage)
+    } else if (member.details.role > Roles.CUSTOMER) {
+      await message.reply(`Aqui está o status da encomenda #${order._id}`, orderImage)
+    } else {
       return await message.channel.send(
         errorEmbed
-          .setDescription(`**Você não é o cliente dessa encomenda! :(**\n\n**Suas encomendas:** \n${member.orders.length < 1 ? '*Você não possui nenhuma encomenda!*\nAbra um ticket usando ``!suporte`` para encomendar algo com nossa equipe!' : member.orders.map(order => `ID: ${order._id} | Nome: ${order.name}`).join('\n')}`)
+          .setDescription('**Você não pode utilizar esse comando! :(**')
       ).then(msg =>
         msg.delete({ timeout: 60000 })
           .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
@@ -84,9 +106,5 @@ module.exports = {
           )
       )
     }
-
-    const imageCache = await getFromCache(order._id)
-    const orderImage = new MessageAttachment(imageCache, `order-${order._id}.png`)
-    await message.reply(`Aqui está o status de sua encomenda #${order._id}`, orderImage)
   }
 }

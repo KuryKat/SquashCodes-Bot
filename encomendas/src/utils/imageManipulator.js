@@ -6,8 +6,8 @@ const { ConfigModel } = require('../modules/database')
 const { OrderHeaders } = require('./enums')
 
 // TODO: FUNÇÃO PARA AUMENTAR TAMANHO DA IMAGEM CASO O TEXTO PASSE DO HEIGHT MÁXIMO
-// LEMBRAR QUE O BACKGROUND TEM UM INNER SHADOW EFFECT
-// IDEIA PRA A SHADOW: https://stackoverflow.com/questions/41122611/canvas-path2d-inner-shadow
+// Referenciar o height máximo na database
+// **Inner shadow removido**
 
 const headers = {
   MAKEORDER: 'Primeira fase de desenvolvimento - Encomendar pedido',

@@ -7,12 +7,6 @@ const orderSchema = new Schema({
     minlength: [1, 'Minimum length of ID is 1'],
     maxlength: [18, 'Maximum length of ID is 18']
   },
-  messageID: {
-    type: Schema.Types.String,
-    default: null,
-    minlength: [1, 'Minimum length of ID is 1'],
-    maxlength: [18, 'Maximum length of ID is 18']
-  },
   name: {
     type: Schema.Types.String,
     required: [true, 'Order Name is required (String)'],
@@ -24,6 +18,20 @@ const orderSchema = new Schema({
     required: [true, 'Order Description is required (String)'],
     minlength: [1, 'Minimum length of Order Description is 1'],
     maxlength: [100, 'Maximum length of Order Description is 100']
+  },
+  logImage: {
+    channel: {
+      type: Schema.Types.String,
+      default: null,
+      minlength: [1, 'Minimum length of ID is 1'],
+      maxlength: [18, 'Maximum length of ID is 18']
+    },
+    message: {
+      type: Schema.Types.String,
+      default: null,
+      minlength: [1, 'Minimum length of ID is 1'],
+      maxlength: [18, 'Maximum length of ID is 18']
+    }
   },
   status: {
     type: Schema.Types.String,

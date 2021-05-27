@@ -193,9 +193,10 @@ module.exports = {
                 )
               }
 
-              let responsibleBot = false
+              let errorInResponsibles = false
               orderResponsibles.map(async responsible => {
                 if (responsible.id === orderCustomer.id) {
+                  errorInResponsibles = true
                   return await message.channel.send(
                     errorEmbed
                       .setDescription(`**O responsável e o cliente não podem ser as mesmas pessoas! :(**\n\n${commandUse}`)
@@ -209,6 +210,7 @@ module.exports = {
                 }
 
                 if (!responsible.roles.cache.has(config.staff_role)) {
+                  errorInResponsibles = true
                   return await message.channel.send(
                     errorEmbed
                       .setDescription(`**O responsável "${responsible.user.username}" não é um vendedor autorizado! :(**\n\n${commandUse}`)
@@ -223,7 +225,7 @@ module.exports = {
                 }
 
                 if (responsible.user.bot) {
-                  responsibleBot = true
+                  errorInResponsibles = true
                   return await message.channel.send(
                     errorEmbed
                       .setDescription(`**O responsável não pode ser um BOT, o "${responsible.user.username}" é um! :(**\n\n${commandUse}`)
@@ -238,7 +240,7 @@ module.exports = {
                 }
               })
 
-              if (responsibleBot) return
+              if (errorInResponsibles) return
 
               if (orderResponsibles.length === 0 || !orderResponsibles) {
                 return await message.channel.send(
@@ -345,15 +347,33 @@ module.exports = {
 
                     await updateUserOrders(orderCustomer.id, order._id)
 
-                    const orderChannel = message.guild.channels.cache.get(config.ordersChannel)
+                    const channelName = `encomenda-de-${customer.username}`
+                    const logImageChannel = await message.guild.channels.create(channelName, {
+                      permissionOverwrites: [
+                        {
+                          id: message.guild.id,
+                          deny: 'VIEW_CHANNEL'
+                        },
+                        {
+                          id: customer._id,
+                          allow: 'VIEW_CHANNEL',
+                          deny: ['ADD_REACTIONS']
+                        }
+                      ],
+                      parent: config.ordersCategory,
+                      type: 'text',
+                      reason: `Encomenda de ${customer.username}`
+                    })
+
                     const imageBuffer = await createOrderImage(order._id)
                     const orderImage = new MessageAttachment(imageBuffer, `order-${order._id}.png`)
 
-                    await orderChannel.send('╔══════════════════════════════════╗')
-                    await orderChannel.send(`<@${orderCustomer.id}>`).then(async m => await m.delete())
-                    const orderChangelogMessage = await orderChannel.send(orderImage)
-                    await orderChannel.send('╚══════════════════════════════════╝')
-                    await updateOrder(order._id, 'messageID', orderChangelogMessage.id)
+                    await logImageChannel.send('╔══════════════════════════════════╗')
+                    await logImageChannel.send(`<@${customer._id}>`).then(async m => await m.delete())
+                    const logImageMessage = await logImageChannel.send(orderImage)
+                    await logImageChannel.send('╚══════════════════════════════════╝')
+                    await updateOrder(order._id, 'logImage:channel', logImageChannel.id)
+                    await updateOrder(order._id, 'logImage:message', logImageMessage.id)
 
                     message.delete({ timeout: 1000 })
                       .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))

@@ -2,8 +2,7 @@ class User {
   /**
    *
    * @param {{_id: String, username: String, discriminator: String, orders: String[], details: UserDetails}} param0
-   * @param {Boolean} populateCustomer
-   * @param {Boolean} populateResponsibles
+   * @param {Boolean} populateOrders
    */
   constructor ({
     _id,
@@ -25,6 +24,10 @@ class User {
 }
 
 class UserDetails {
+  /**
+   *
+   * @param {{role: Number}} param0
+   */
   constructor ({ role }) {
     this.role = role
   }
@@ -33,23 +36,25 @@ class UserDetails {
 class Order {
   /**
    *
-   * @param {{_id: String, name: String, description: String, customer: String, price: String, responsibles: String[]}} param0
+   * @param {{_id: String, name: String, description: String, logImage: OrderLogImage, status: 'open' | 'closed' | 'development' | 'delivered' | 'canceled', customer: String, price: String, responsibles: String[]}} param0
    * @param {Boolean} populateCustomer
    * @param {Boolean} populateResponsibles
    */
   constructor ({
     _id,
-    messageID,
     name,
     description,
+    logImage,
+    status,
     customer,
     price,
     responsibles
   }, populateCustomer, populateResponsibles) {
     this._id = _id
-    this.messageID = messageID
     this.name = name
     this.description = description
+    this.logImage = new OrderLogImage(logImage)
+    this.status = status
     if (populateCustomer) {
       this.customer = new User(customer, false)
     } else {
@@ -61,6 +66,17 @@ class Order {
     } else {
       this.responsibles = responsibles
     }
+  }
+}
+
+class OrderLogImage {
+  /**
+   *
+   * @param {{channel: String, message: String}} param0
+   */
+  constructor ({ channel, message }) {
+    this.channel = channel
+    this.message = message
   }
 }
 

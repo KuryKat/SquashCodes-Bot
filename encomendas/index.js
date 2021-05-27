@@ -1,15 +1,11 @@
 // eslint-disable-next-line no-unused-vars
-const { Client, MessageEmbed } = require('discord.js')
+const { Client, MessageEmbed, Constants } = require('discord.js')
 const glob = require('glob')
 const { ConfigModel } = require('./src/modules/database')
 const { cacheRolesAndOrders } = require('./src/utils/manageStart')
 const { cleanUp } = require('./src/utils/cleanUp')
 const { CommandStatus } = require('./src/utils/objectParser')
 const _commands = []
-
-// TODO: pedido do cliente, atualizar regras de negócio:
-//  - Todas encomendas devem ser criadas em canais separados
-//  - o Comando de status pode ser utilizado pelos staffers em qualquer canal e pelo cliente no canal da encomenda!
 
 // TODO: Ler todo o código e verificar tudo!
 // Testar mais de 3 vezes qualquer tipo de bug que pode ser causado
@@ -38,6 +34,7 @@ const registerCommands = (log) => {
     })
 
     _commands.forEach(command => {
+      if (!command.helpData.visible) return
       if (!command.helpData.status) {
         command.helpData.status = CommandStatus.UNDEFINED
       }
@@ -152,9 +149,16 @@ module.exports = async function encomendas (client, config, log, leeks) {
           .setFooter('SquashCodes', message.guild.iconURL({ dynamic: true }))
           .setColor(config.warn_colour)
 
-        await message.channel.send(
+        message.channel.send(
           baseEmbed
             .setDescription(`**Aviso**\nO comando: "\`\`${command}\`\`" retornou um alerta sobre sua execução!\n\n**Alerta:** *${alert}*`)
+        ).then(msg =>
+          msg.delete({ timeout: 60000 })
+            .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+            .then(() =>
+              message.delete({ timeout: 100 })
+                .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+            )
         )
       }
 

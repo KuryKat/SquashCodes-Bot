@@ -39,22 +39,24 @@ async function getOrder (id, populateCustomer, populateResponsibles) {
 
 /**
  * @param {String} id
- * @param {'messageID' | 'name' | 'description' | 'price' | 'responsibles'} updateItem Item that gonna be updated
+ * @param {'logImage:message' | 'logImage:channel' | 'name' | 'description' | 'price' | 'responsibles'} updateItem Item that gonna be updated
  */
 async function updateOrder (id, updateItem, newValue) {
   const itemToUpdate = await OrderModel.findById(id).exec()
+
+  if (updateItem.startsWith('logImage')) {
+    updateItem = updateItem.slice(updateItem.indexOf(':')).replace(':', '')
+    itemToUpdate.logImage[updateItem] = newValue
+    return new Order(await itemToUpdate.save())
+  }
+
   itemToUpdate[updateItem] = newValue
   return new Order(await itemToUpdate.save())
-}
-
-async function deleteOrder (id) {
-  throw new Error('Not Implemented')
 }
 
 module.exports = {
   createOrder,
   getOrder,
   updateOrder,
-  deleteOrder,
   getAllOrders
 }
