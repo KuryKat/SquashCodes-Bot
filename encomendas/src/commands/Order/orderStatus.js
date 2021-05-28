@@ -57,7 +57,7 @@ module.exports = {
           msg.delete({ timeout: 60000 })
             .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
             .then(() =>
-              message.delete({ timeout: 100 })
+              message.delete({ timeout: 2000 })
                 .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
             )
         )
@@ -73,7 +73,7 @@ module.exports = {
           msg.delete({ timeout: 60000 })
             .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
             .then(() =>
-              message.delete({ timeout: 100 })
+              message.delete({ timeout: 2000 })
                 .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
             )
         )
@@ -95,7 +95,7 @@ module.exports = {
         msg.delete({ timeout: 60000 })
           .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
           .then(() =>
-            message.delete({ timeout: 100 })
+            message.delete({ timeout: 2000 })
               .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
           )
       )
