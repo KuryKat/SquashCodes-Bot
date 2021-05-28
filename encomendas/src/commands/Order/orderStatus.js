@@ -43,7 +43,7 @@ module.exports = {
         return await message.channel.send(
           errorEmbed
             .setDescription(
-          `**Você não pode utilizar esse comando aqui! :(**\n\nVocê precisa utilizar no canal de alguma encomenda sua:\n${
+          `**Você não pode utilizar esse comando neste canal! :(**\n\nVocê precisa utilizar no canal de alguma encomenda sua:\n${
             member.orders.length < 1
             ? '*Você não possui nenhuma encomenda!*\nAbra um ticket usando ``!suporte`` para encomendar algo com nossa equipe!'
             : member.orders.map(order => `<#${order.logImage.channel}>`).join('\n')
@@ -52,7 +52,7 @@ module.exports = {
       } else if (member.details.role < Roles.CUSTOMER) {
         return await message.channel.send(
           errorEmbed
-            .setDescription('**Você não pode utilizar esse comando! :(**')
+            .setDescription('**Você não está autorizado a utilizar esse comando! :(**')
         ).then(msg =>
           msg.delete({ timeout: 60000 })
             .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))

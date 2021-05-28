@@ -110,7 +110,7 @@ async function updateOrderImage (id, header, content) {
   ctx.drawImage(cachedImage, 0, 0, canvas.width, canvas.height)
 
   // Import config values
-  const dbReferencesManager = await ImageReferencesModel.findOne({ _id: id })
+  const dbReferencesManager = await ImageReferencesModel.findOne({ _id: id }).exec()
   const subtitleY = dbReferencesManager.references.nextY.value
 
   const lineLimitY = dbReferencesManager.references.lineLimit.value
@@ -193,7 +193,7 @@ async function finishOrderImage (id) {
   const ctx = canvas.getContext('2d')
   const cachedImage = await Canvas.loadImage(`${cacheDirectory}${id}.png`)
   ctx.drawImage(cachedImage, 0, 0, canvas.width, canvas.height)
-  const dbReferencesManager = await ImageReferencesModel.findOne({ _id: id })
+  const dbReferencesManager = await ImageReferencesModel.findOne({ _id: id }).exec()
   const subtitleY = dbReferencesManager.references.nextY.value
   const updateDate = moment().utcOffset(-3).format('- HH:mm DD/MM/YYYY')
   ctx.font = subTitleFont

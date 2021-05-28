@@ -106,7 +106,7 @@ module.exports = {
       )
     }
 
-    const dbReferencesManager = await ImageReferencesModel.findById({ _id: orderID })
+    const dbReferencesManager = await ImageReferencesModel.findById({ _id: orderID }).exec()
     const currentHeader = dbReferencesManager.references.header.value
 
     if (headerEnum < currentHeader) {

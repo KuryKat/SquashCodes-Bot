@@ -26,16 +26,28 @@ async function getUser (id, populateOrders = false) {
 }
 
 async function updateUserRole (id, newRole) {
-  const user = await getUser(id)
-  user.details.role = newRole
-  return await UserModel.updateOne({ _id: id }, user)
+  try {
+    const user = await getUser(id)
+    user.details.role = newRole
+    await UserModel.updateOne({ _id: id }, user).exec()
+    return true
+  } catch (err) {
+    console.error(err)
+    return false
+  }
 }
 
 async function updateUserOrders (id, orderID) {
-  const user = await getUser(id)
-  user.orders.push(orderID)
-  user.orders = [...new Set(user.orders)]
-  return await UserModel.updateOne({ _id: id }, user)
+  try {
+    const user = await getUser(id)
+    user.orders.push(orderID)
+    user.orders = [...new Set(user.orders)]
+    await UserModel.updateOne({ _id: id }, user).exec()
+    return true
+  } catch (err) {
+    console.error(err)
+    return false
+  }
 }
 
 module.exports = {

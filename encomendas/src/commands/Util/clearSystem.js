@@ -37,7 +37,7 @@ module.exports = {
         await logMessage.edit(logEmbed.setDescription(aidString))
         setTimeout(async () => {
           aidString += 'Limpando "Referências de Imagens" da Database\n'
-          await ImageReferencesModel.deleteMany({})
+          await ImageReferencesModel.deleteMany({}).exec()
           await logMessage.edit(logEmbed.setDescription(aidString))
 
           setTimeout(async () => {
@@ -58,17 +58,17 @@ module.exports = {
 
             setTimeout(async () => {
               aidString += 'Limpando Encomendas da Database\n'
-              await OrderModel.deleteMany({})
+              await OrderModel.deleteMany({}).exec()
               await logMessage.edit(logEmbed.setDescription(aidString))
 
               setTimeout(async () => {
                 aidString += 'Limpando Usuários da Database\n'
-                await UserModel.deleteMany({})
+                await UserModel.deleteMany({}).exec()
                 await logMessage.edit(logEmbed.setDescription(aidString))
 
                 setTimeout(async () => {
                   aidString += 'Limpando Configurações da Database\n'
-                  await ConfigModel.deleteMany({})
+                  await ConfigModel.deleteMany({}).exec()
                   await logMessage.edit(logEmbed.setDescription(aidString))
 
                   setTimeout(async () => {

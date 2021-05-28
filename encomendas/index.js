@@ -75,7 +75,7 @@ const registerEvents = (client, log) => {
  */
 module.exports = async function encomendas (client, config, log, leeks) {
   async function start (members) {
-    let started = await ConfigModel.findById('started')
+    let started = await ConfigModel.findById('started').exec()
     if (!started) {
       started = new ConfigModel({ _id: 'started' })
       started.value = 1
