@@ -49,7 +49,7 @@ module.exports = {
 
     const regex = /"[^"]+"|[\S]+/g
     const parsedArgs = []
-    const commandUse = `**Uso(s) do comando:**\n${module.exports.names.map(name => `${config.prefix}${name}`).join('\n')}\n\n**Informações necessárias:**\n${module.exports.help.usage[0]}\n\n**Cabeçalhos:**\n${Object.keys(OrderHeaders).map((header, index) => `${header} - ${Object.values(OrderHeaders)[index]}`).join('\n')}\n\n**Nota: Use as aspas para pode definir textos extensos contendo espaços!!**`
+    const commandUse = `**Informações necessárias:**\n${module.exports.help.usage[0]}\n\n**Cabeçalhos:**\n${Object.keys(OrderHeaders).map((header, index) => `${header} - ${Object.values(OrderHeaders)[index]}`).join('\n')}\n\n**Nota: Use as aspas para pode definir textos extensos contendo espaços!!**`
 
     const argsMatched = args.join(' ').match(regex)
 
