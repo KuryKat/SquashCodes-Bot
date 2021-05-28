@@ -1,6 +1,6 @@
 const { getUser: getDiscordUser } = require('../../../modules/discord-api')
 const { UserModel } = require('../../../modules/database')
-const { User } = require('../../objectParser')
+const { User } = require('../../usefulObjects')
 
 async function createUser (id) {
   const newUser = await getDiscordUser(id)

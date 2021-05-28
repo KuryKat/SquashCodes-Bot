@@ -1,6 +1,7 @@
 const { UserModel, userSchema } = require('./models/user')
 const { OrderModel, orderSchema } = require('./models/order')
 const { ConfigModel, configSchema } = require('./models/config')
+const { ImageReferencesModel, imageReferencesSchema } = require('./models/imageReferences')
 
 module.exports = {
   UserModel,
@@ -8,5 +9,7 @@ module.exports = {
   OrderModel,
   orderSchema,
   ConfigModel,
-  configSchema
+  configSchema,
+  ImageReferencesModel,
+  imageReferencesSchema
 }

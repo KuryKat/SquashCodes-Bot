@@ -1,22 +1,22 @@
 // eslint-disable-next-line no-unused-vars
-const { Client, Message, MessageEmbed, Constants } = require('discord.js')
+const { Client, Message, MessageEmbed, Constants, MessageAttachment, TextChannel } = require('discord.js')
 const { Roles, OrderHeaders } = require('../../utils/enums')
-// const { updateOrderImage } = require('../../utils/imageManipulator')
+const { updateOrderImage } = require('../../utils/imageManipulator')
 
 const { join } = require('path')
 const { getUser } = require('../../utils/database/user')
-const { ConfigModel } = require('../../modules/database')
-const { getOrder } = require('../../utils/database/order')
-const { CommandStatus } = require('../../utils/objectParser')
+const { ImageReferencesModel } = require('../../modules/database')
+const { getOrder, updateOrder } = require('../../utils/database/order')
+const { CommandStatus } = require('../../utils/usefulObjects')
 const config = require(join(__dirname, '../../../../user/', 'config.js'))
 
 module.exports = {
-  names: ['updateorder', 'uo', 'update'],
+  names: ['updateOrder', 'uo', 'update'],
   help: {
     description: 'Atualiza uma encomenda e adiciona um novo changelog \n**[Necessário ser Staffer]**',
     visible: true,
     module: 'Encomendas',
-    status: CommandStatus.WIP,
+    status: CommandStatus.FIX,
     usage: ['[ID] [Cabeçalho] "[Atualização]"']
   },
   /**
@@ -26,16 +26,6 @@ module.exports = {
    * @param {Message} message
    */
   exe: async function (client, args, message) {
-    // TODO: comando para atualizar as encomendas e adicionar novos changelogs
-    // Modelo do comando:
-    // !uo [ID] [Header Enum] "[Update Message]"
-
-    // const baseEmbed = new MessageEmbed()
-    //   .setTitle('📝 SquashCodes - Encomenda')
-    //   .setTimestamp()
-    //   .setFooter('SquashCodes', message.guild.iconURL({ dynamic: true }))
-    //   .setColor(config.colour)
-
     const errorEmbed = new MessageEmbed()
       .setTitle('📝 SquashCodes - Encomenda')
       .setTimestamp()
@@ -116,8 +106,8 @@ module.exports = {
       )
     }
 
-    const dbHeader = ConfigModel.findById({ _id: orderID, type: 'header' })
-    const currentHeader = dbHeader.value
+    const dbReferencesManager = await ImageReferencesModel.findById({ _id: orderID })
+    const currentHeader = dbReferencesManager.references.header.value
 
     if (headerEnum < currentHeader) {
       return await message.channel.send(
@@ -133,6 +123,20 @@ module.exports = {
       )
     }
 
-    // TODO: Continuar comando de atualizar encomendas!
+    const updatedImageBuffer = await updateOrderImage(order._id, Number(headerEnum), changelog)
+    const updatedOrderImage = new MessageAttachment(updatedImageBuffer, `order-${order._id}.png`)
+
+    /**
+     * @type {TextChannel}
+     */
+    const logChannel = message.guild.channels.cache.get(order.logImage.channel)
+    const logMessage = (await logChannel.messages.fetch()).get(order.logImage.message)
+
+    setTimeout(async () => {
+      await logChannel.send(`<@${order.customer}>`).then(async m => await m.delete())
+      await logMessage.delete()
+      const logImageMessage = await logChannel.send(updatedOrderImage)
+      await updateOrder(order._id, 'logImage:message', logImageMessage.id)
+    }, 900)
   }
 }

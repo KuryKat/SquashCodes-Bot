@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 const { Client, Message, MessageEmbed, Constants } = require('discord.js')
 const { join } = require('path')
-const { CommandStatus } = require('../../utils/objectParser')
+const { CommandStatus } = require('../../utils/usefulObjects')
 const config = require(join(__dirname, '../../../../user/', 'config.js'))
 
 /**
@@ -53,6 +53,20 @@ module.exports = {
       .setFooter('SquashCodes', message.guild.iconURL({ dynamic: true }))
       .setColor(config.err_colour)
 
+    async function unknownCommand () {
+      return await message.channel.send(
+        errorEmbed
+          .setDescription('**Comando Desconhecido! :(**')
+      ).then(msg =>
+        msg.delete({ timeout: 60000 })
+          .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+          .then(() =>
+            message.delete({ timeout: 100 })
+              .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+          )
+      )
+    }
+
     if (args.length === 0) {
       await allCommands()
     } else {
@@ -60,12 +74,11 @@ module.exports = {
     }
 
     async function specificCommand () {
-      const cmd = _commands.find(x => x.commandNames.findIndex(name => name === args[0]) !== -1)
-
-      let hasCmd = true
+      const command = args.shift().toLowerCase()
+      const cmd = _commands.find(x => x.commandNames.findIndex(name => name.toLowerCase() === command) !== -1)
 
       if (!cmd) {
-        hasCmd = false
+        await unknownCommand()
       }
 
       let cmdMetadata = cmd.helpData
@@ -75,21 +88,7 @@ module.exports = {
       }
 
       if (!cmdMetadata.visible) {
-        hasCmd = false
-      }
-
-      if (!hasCmd) {
-        return await message.channel.send(
-          errorEmbed
-            .setDescription('**Comando Desconhecido! :(**')
-        ).then(msg =>
-          msg.delete({ timeout: 60000 })
-            .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
-            .then(() =>
-              message.delete({ timeout: 100 })
-                .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
-            )
-        )
+        await unknownCommand()
       }
 
       if (!cmdMetadata.description) {

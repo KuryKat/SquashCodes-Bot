@@ -4,8 +4,12 @@ const glob = require('glob')
 const { ConfigModel } = require('./src/modules/database')
 const { cacheRolesAndOrders } = require('./src/utils/manageStart')
 const { cleanUp } = require('./src/utils/cleanUp')
-const { CommandStatus } = require('./src/utils/objectParser')
+const { CommandStatus } = require('./src/utils/usefulObjects')
 const _commands = []
+
+// TODO: Validar encomenda pelo status dela
+// - em comandos como "update" por exemplo, verificar se ela está finalizada ou arquivada
+// - em comandos como "finish" verificar isso tbm, e etc
 
 // TODO: Ler todo o código e verificar tudo!
 // Testar mais de 3 vezes qualquer tipo de bug que pode ser causado
@@ -120,7 +124,7 @@ module.exports = async function encomendas (client, config, log, leeks) {
     }
 
     const commandFound = _commands.find(commandObj =>
-      commandObj.commandNames.findIndex(name => name === command) !== -1)
+      commandObj.commandNames.findIndex(name => name.toLowerCase() === command) !== -1)
 
     if (commandFound === undefined) {
       return
@@ -143,14 +147,12 @@ module.exports = async function encomendas (client, config, log, leeks) {
       }
 
       if (alert) {
-        const baseEmbed = new MessageEmbed()
-          .setTitle('📝 SquashCodes - Encomenda')
-          .setTimestamp()
-          .setFooter('SquashCodes', message.guild.iconURL({ dynamic: true }))
-          .setColor(config.warn_colour)
-
         message.channel.send(
-          baseEmbed
+          new MessageEmbed()
+            .setTitle('📝 SquashCodes - Encomenda')
+            .setTimestamp()
+            .setFooter('SquashCodes', message.guild.iconURL({ dynamic: true }))
+            .setColor(config.warn_colour)
             .setDescription(`**Aviso**\nO comando: "\`\`${command}\`\`" retornou um alerta sobre sua execução!\n\n**Alerta:** *${alert}*`)
         ).then(msg =>
           msg.delete({ timeout: 60000 })

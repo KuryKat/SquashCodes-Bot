@@ -1,9 +1,9 @@
 // eslint-disable-next-line no-unused-vars
 const { Client, Message } = require('discord.js')
-const { CommandStatus } = require('../../utils/objectParser')
+const { CommandStatus } = require('../../utils/usefulObjects')
 
 module.exports = {
-  names: ['restoreorder', 'ro', 'restore'],
+  names: ['restoreOrder', 'ro', 'restore'],
   help: {
     description: 'Restaura uma encomenda e atualiza/retoma ela \n**[Necessário ser Staffer]**',
     visible: true,

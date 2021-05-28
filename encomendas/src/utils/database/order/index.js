@@ -1,7 +1,7 @@
 const { getUser } = require('../user')
 const { OrderModel } = require('../../../modules/database')
 const IDGenerator = require('../../IDgenerator')
-const { Order } = require('../../objectParser')
+const { Order } = require('../../usefulObjects')
 
 const IDManager = new IDGenerator(1)
 

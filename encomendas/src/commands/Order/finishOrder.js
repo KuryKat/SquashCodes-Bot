@@ -1,9 +1,9 @@
 // eslint-disable-next-line no-unused-vars
 const { Client, Message } = require('discord.js')
-const { CommandStatus } = require('../../utils/objectParser')
+const { CommandStatus } = require('../../utils/usefulObjects')
 
 module.exports = {
-  names: ['finishorder', 'fo', 'finish'],
+  names: ['finishOrder', 'fo', 'finish'],
   help: {
     description: 'Finaliza uma encomenda e arquiva ela como "entregue" ou "cancelada"\n**[Necessário ser Staffer]**',
     visible: true,

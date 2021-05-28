@@ -91,7 +91,6 @@ const headers = {
   MAKEORDER: 'Primeira fase de desenvolvimento - Encomendar pedido',
   DEVELOPMENT: 'Segunda fase de desenvolvimento - Desenvolver pedido',
   DELIVER: 'Terceira fase de desenvolvimento - Entregar pedido',
-  FINISH: 'Entregamos seu pedido, a Squash Codes agradece',
   OTHER: 'Outros'
 }
 

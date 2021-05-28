@@ -6,17 +6,17 @@ const { getUser, updateUserOrders, updateUserRole } = require('../../utils/datab
 const { createOrderImage } = require('../../utils/imageManipulator')
 const { Roles } = require('../../utils/enums')
 const { join } = require('path')
-const { CommandStatus } = require('../../utils/objectParser')
+const { CommandStatus } = require('../../utils/usefulObjects')
 const { updateRole: updateDiscordRole } = require('../../modules/discord-api')
 const config = require(join(__dirname, '../../../../user/', 'config.js'))
 
 module.exports = {
-  names: ['neworder', 'no', 'new'],
+  names: ['newOrder', 'no', 'new'],
   help: {
     description: 'Cria uma nova encomenda com as informações fornecidas \n**[Necessário ser Staffer]**',
     visible: true,
     module: 'Encomendas',
-    status: CommandStatus.FIX,
+    status: CommandStatus.ONLINE,
     usage: ['"[Nome]" "[Descrição]" [Valor] @[Cliente] @[Responsáveis]']
   },
   /**
@@ -95,7 +95,6 @@ module.exports = {
      * @param {RegExp} regex Regex pra ser comparado
      * @param {[{name: String | any, value: String | any, inline: Boolean}]} regexFormatFields Formato escrito do padrão validado pelo Regex
      * @param {String} regexExplanation Explicação do Regex
-     * @returns {Promise<Message | void>}
      */
     async function checkvalues (value, valueName, pronom, hasLengthCompare, length, hasRegexCompare, regex = /^.$/, regexFormatFields, regexExplanation = 'Corresponde a qualquer caractere, exceto quebras de linha', callback) {
       if (!value) {
@@ -347,12 +346,17 @@ module.exports = {
 
                     await updateUserOrders(orderCustomer.id, order._id)
 
-                    const channelName = `encomenda-de-${customer.username}`
+                    const channelName = `id-${order._id}-encomenda-de-${customer.username}`
                     const logImageChannel = await message.guild.channels.create(channelName, {
                       permissionOverwrites: [
                         {
                           id: message.guild.id,
                           deny: 'VIEW_CHANNEL'
+                        },
+                        {
+                          id: config.staff_role,
+                          allow: 'VIEW_CHANNEL',
+                          deny: ['ADD_REACTIONS']
                         },
                         {
                           id: customer._id,
@@ -368,10 +372,8 @@ module.exports = {
                     const imageBuffer = await createOrderImage(order._id)
                     const orderImage = new MessageAttachment(imageBuffer, `order-${order._id}.png`)
 
-                    await logImageChannel.send('╔══════════════════════════════════╗')
                     await logImageChannel.send(`<@${customer._id}>`).then(async m => await m.delete())
                     const logImageMessage = await logImageChannel.send(orderImage)
-                    await logImageChannel.send('╚══════════════════════════════════╝')
                     await updateOrder(order._id, 'logImage:channel', logImageChannel.id)
                     await updateOrder(order._id, 'logImage:message', logImageMessage.id)
 
