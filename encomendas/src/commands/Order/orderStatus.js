@@ -4,7 +4,7 @@ const { Client, Message, MessageEmbed, Constants, MessageAttachment } = require(
 const { join } = require('path')
 const { getUser } = require('../../utils/database/user')
 const { getOrder } = require('../../utils/database/order')
-const { getFromCache } = require('../../utils/imageManipulator')
+const { getCachedImage } = require('../../utils/imageManipulator')
 const { CommandStatus } = require('../../utils/usefulObjects')
 const { Roles } = require('../../utils/enums')
 const config = require(join(__dirname, '../../../../user/', 'config.js'))
@@ -101,7 +101,7 @@ module.exports = {
       )
     }
 
-    const imageCache = await getFromCache(order._id)
+    const imageCache = await getCachedImage(order._id) || await getCachedImage(order._id, true)
     const orderImage = new MessageAttachment(imageCache, `order-${order._id}.png`)
     await message.reply(`Aqui está o status da encomenda #${order._id}`, orderImage)
   }

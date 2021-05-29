@@ -15,7 +15,7 @@ async function createOrder (newOrder) {
 }
 
 async function getAllOrders () {
-  return (await OrderModel.find({})).map(order => new Order(order))
+  return (await OrderModel.find({}).exec()).map(order => new Order(order))
 }
 
 async function getOrder (id, populateCustomer, populateResponsibles) {
@@ -54,9 +54,21 @@ async function updateOrder (id, updateItem, newValue) {
   return new Order(await itemToUpdate.save())
 }
 
+/**
+ * @param {String} id
+ * @param {'open' | 'development' | 'delivered' | 'canceled'} status
+ */
+async function updateOrderStatus (id, status) {
+  const itemToUpdate = await OrderModel.findById(id).exec()
+
+  itemToUpdate.status = status
+  return new Order(await itemToUpdate.save())
+}
+
 module.exports = {
   createOrder,
   getOrder,
   updateOrder,
-  getAllOrders
+  getAllOrders,
+  updateOrderStatus
 }

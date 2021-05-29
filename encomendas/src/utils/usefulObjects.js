@@ -36,7 +36,7 @@ class UserDetails {
 class Order {
   /**
    *
-   * @param {{_id: String, name: String, description: String, logImage: OrderLogImage, status: 'open' | 'closed' | 'development' | 'delivered' | 'canceled', customer: String, price: String, responsibles: String[]}} param0
+   * @param {{_id: String, name: String, description: String, logImage: OrderLogImage, status: 'open' | 'development' | 'delivered' | 'canceled', customer: String, price: String, responsibles: String[]}} param0
    * @param {Boolean} populateCustomer
    * @param {Boolean} populateResponsibles
    */

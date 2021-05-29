@@ -155,7 +155,7 @@ module.exports = async function encomendas (client, config, log, leeks) {
             .setColor(config.warn_colour)
             .setDescription(`**Aviso**\nO comando: "\`\`${command}\`\`" retornou um alerta sobre sua execução!\n\n**Alerta:** *${alert}*`)
         ).then(msg =>
-          msg.delete({ timeout: 60000 })
+          msg.delete({ timeout: 30000 })
             .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
             .then(() =>
               message.delete({ timeout: 2000 })

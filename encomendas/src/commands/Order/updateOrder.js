@@ -49,7 +49,9 @@ module.exports = {
 
     const regex = /"[^"]+"|[\S]+/g
     const parsedArgs = []
-    const commandUse = `**Informações necessárias:**\n${module.exports.help.usage[0]}\n\n**Cabeçalhos:**\n${Object.keys(OrderHeaders).map((header, index) => `${header} - ${Object.values(OrderHeaders)[index]}`).join('\n')}\n\n**Nota: Use as aspas para pode definir textos extensos contendo espaços!!**`
+    const commandUse = `**Informações necessárias:**\n${module.exports.help.usage[0]}\n\n**Cabeçalhos:**\n${
+      Object.keys(OrderHeaders).map((header, index) => `${header} - ${Object.values(OrderHeaders)[index]}`).join('\n')
+    }\n\n**Nota: Use as aspas para pode definir textos extensos contendo espaços!!**`
 
     const argsMatched = args.join(' ').match(regex)
 
@@ -106,13 +108,27 @@ module.exports = {
       )
     }
 
+    if (order.status === 'delivered' || order.status === 'canceled') {
+      return await message.channel.send(
+        errorEmbed
+          .setDescription(`**Esta encomenda ja foi finalizada! :(**\nEla está registrada como \`${order.status}\` então por isso não pode ser finalizada!`)
+      ).then(msg =>
+        msg.delete({ timeout: 60000 })
+          .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+          .then(() =>
+            message.delete({ timeout: 2000 })
+              .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+          )
+      )
+    }
+
     const dbReferencesManager = await ImageReferencesModel.findById({ _id: orderID }).exec()
     const currentHeader = dbReferencesManager.references.header.value
 
     if (headerEnum < currentHeader) {
       return await message.channel.send(
         errorEmbed
-          .setDescription(`**O cabeçalho não pode ser anterior ao atual, ja que este foi interrompido! :(**\n\n${commandUse}`)
+          .setDescription('**O cabeçalho não pode ser anterior ao atual, ja que este foi interrompido! :(**')
       ).then(msg =>
         msg.delete({ timeout: 60000 })
           .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))

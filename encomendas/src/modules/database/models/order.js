@@ -38,7 +38,7 @@ const orderSchema = new Schema({
     default: 'open',
     validate: {
       validator: (value) => /open|closed|development|delivered|canceled/g.test(value),
-      message: (props) => `${props.value} is a Invalid status for Order ('open' | 'closed' | 'development' | 'delivered' | 'canceled')`
+      message: (props) => `${props.value} is a Invalid status for Order ('open' | 'development' | 'delivered' | 'canceled')`
     }
   },
   customer: {

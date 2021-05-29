@@ -5,6 +5,12 @@ const imageReferencesSchema = new Schema({
     type: Schema.Types.String
   },
   references: {
+    height: {
+      value: {
+        type: Schema.Types.Number,
+        default: null
+      }
+    },
     maxHeight: {
       value: {
         type: Schema.Types.Number,

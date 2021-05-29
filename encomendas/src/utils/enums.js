@@ -5,8 +5,6 @@ const Roles = {
   OWNER: 3
 }
 
-Object.freeze(Roles)
-
 const OrderHeaders = {
   MAKEORDER: 0,
   DEVELOPMENT: 1,
@@ -14,6 +12,19 @@ const OrderHeaders = {
   OTHER: 3
 }
 
-Object.freeze(OrderHeaders)
+const OrderStatus = {
+  OPEN: 0,
+  DEVELOPMENT: 1
+}
 
-module.exports = { OrderHeaders, Roles }
+const OrderFinishStatus = {
+  DELIVERED: 0,
+  CANCELED: 1
+}
+
+Object.freeze(Roles)
+Object.freeze(OrderHeaders)
+Object.freeze(OrderStatus)
+Object.freeze(OrderFinishStatus)
+
+module.exports = { OrderHeaders, Roles, OrderFinishStatus, OrderStatus }
