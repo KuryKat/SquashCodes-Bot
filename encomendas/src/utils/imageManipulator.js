@@ -7,8 +7,6 @@ const { headers } = require('./usefulObjects')
 const { OrderHeaders } = require('./enums')
 const { updateOrderStatus } = require('./database/order')
 
-// TODO: FUNÇÃO PARA AUMENTAR TAMANHO DA IMAGEM CASO O TEXTO PASSE DO HEIGHT MÁXIMO
-
 const IMAGES_DIRECTORY = join(__dirname, '../images/')
 const CACHE_DIRECTORY = join(IMAGES_DIRECTORY, '/cache/')
 const ARCHIVE_DIRECTORY = join(IMAGES_DIRECTORY, '/archive/')

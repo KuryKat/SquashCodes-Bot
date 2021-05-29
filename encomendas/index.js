@@ -7,10 +7,6 @@ const { cleanUp } = require('./src/utils/cleanUp')
 const { CommandStatus } = require('./src/utils/usefulObjects')
 const _commands = []
 
-// TODO: Validar encomenda pelo status dela
-// - em comandos como "update" por exemplo, verificar se ela está finalizada ou arquivada
-// - em comandos como "finish" verificar isso tbm, e etc
-
 // TODO: Ler todo o código e verificar tudo!
 // Testar mais de 3 vezes qualquer tipo de bug que pode ser causado
 // Tentar quebrar o comando de alguma forma (pedir ajuda ao shiba)

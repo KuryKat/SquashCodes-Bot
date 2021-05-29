@@ -25,8 +25,6 @@ module.exports = {
    * @param {Message} message
    */
   exe: async function (client, args, message) {
-    // TODO: comando para finalizar encomendas (seja por entregue ou cancelada)
-
     const DELIVERED_MESSAGE = 'Entregamos seu pedido, a Squash Codes agradece!'
     const CANCELED_MESSAGE = 'Seu pedido foi cancelado'
 
