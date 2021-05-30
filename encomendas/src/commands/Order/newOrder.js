@@ -369,11 +369,36 @@ module.exports = {
                       reason: `Encomenda de ${customer.username}`
                     })
 
+                    const orderEmbed = new MessageEmbed()
+                      .setTitle(`Encomenda #${order._id}`)
+                      .setDescription(`Encomenda de <@${order.customer}>`)
+                      .addFields([
+                        {
+                          name: 'Nome:',
+                          value: `${order.name}`,
+                          inline: true
+                        },
+                        {
+                          name: 'Descrição:',
+                          value: `${order.description}`,
+                          inline: true
+                        },
+                        {
+                          name: 'Preço:',
+                          value: order.price,
+                          inline: true
+                        },
+                        {
+                          name: 'Responsáveis:',
+                          value: order.responsibles.map(x => `<@${x}>`).join('\n')
+                        }
+                      ])
                     const imageBuffer = await createOrderImage(order._id)
                     const orderImage = new MessageAttachment(imageBuffer, `order-${order._id}.png`)
+                    orderEmbed.setImage(`attachment://order-${order._id}.png`)
 
                     await logImageChannel.send(`<@${customer._id}>`).then(async m => await m.delete())
-                    const logImageMessage = await logImageChannel.send(orderImage)
+                    const logImageMessage = await logImageChannel.send({ embed: orderEmbed, files: [orderImage] })
                     await updateOrder(order._id, 'logImage:channel', logImageChannel.id)
                     await updateOrder(order._id, 'logImage:message', logImageMessage.id)
 
