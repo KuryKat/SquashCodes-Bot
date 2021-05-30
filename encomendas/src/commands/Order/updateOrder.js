@@ -6,7 +6,7 @@ const { updateOrderImage } = require('../../utils/imageManipulator')
 const { join } = require('path')
 const { getUser } = require('../../utils/database/user')
 const { ImageReferencesModel } = require('../../modules/database')
-const { getOrder, updateOrder } = require('../../utils/database/order')
+const { getOrder } = require('../../utils/database/order')
 const { CommandStatus } = require('../../utils/usefulObjects')
 const config = require(join(__dirname, '../../../../user/', 'config.js'))
 
@@ -97,7 +97,7 @@ module.exports = {
     if (!order) {
       return await message.channel.send(
         errorEmbed
-          .setDescription('**Encomenda Desconhecida! :(**\nEla pode não existir ou pode ter sido arquivada')
+          .setDescription('**Encomenda Desconhecida! :(**')
       ).then(msg =>
         msg.delete({ timeout: 60000 })
           .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
@@ -147,12 +147,12 @@ module.exports = {
      */
     const logChannel = message.guild.channels.cache.get(order.logImage.channel)
     const logMessage = (await logChannel.messages.fetch()).get(order.logImage.message)
+    const logEmbed = logMessage.embeds[0]
 
     setTimeout(async () => {
+      logEmbed.setImage(`attachment://order-${order._id}.png`)
       await logChannel.send(`<@${order.customer}>`).then(async m => await m.delete())
-      await logMessage.delete()
-      const logImageMessage = await logChannel.send(updatedOrderImage)
-      await updateOrder(order._id, 'logImage:message', logImageMessage.id)
+      await logMessage.edit({ embed: logEmbed, files: updatedOrderImage })
     }, 900)
   }
 }
