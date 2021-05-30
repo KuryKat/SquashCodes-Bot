@@ -1,6 +1,6 @@
 const Canvas = require('canvas')
 const moment = require('moment')
-const { writeFile, readFile, unlink } = require('fs/promises')
+const { writeFile, readFile, rename } = require('fs/promises')
 const { join } = require('path')
 const { ImageReferencesModel } = require('../modules/database')
 const { headers } = require('./usefulObjects')
@@ -260,11 +260,16 @@ async function finishOrderImage (id, text, type) {
   return imageBuffer
 }
 
+async function restoreOrderImage (id) {
+  await rename(`${ARCHIVE_DIRECTORY}${id}.png`, `${CACHE_DIRECTORY}${id}.png`)
+}
+
 async function cacheImage (buffer, id, archive = false) {
   if (archive) {
-    await unlink(`${CACHE_DIRECTORY}${id}.png`)
+    await rename(`${CACHE_DIRECTORY}${id}.png`, `${ARCHIVE_DIRECTORY}${id}.png`)
+  } else {
+    await writeFile(`${CACHE_DIRECTORY}${id}.png`, buffer)
   }
-  await writeFile(`${archive ? ARCHIVE_DIRECTORY : CACHE_DIRECTORY}${id}.png`, buffer)
 }
 
 async function getCachedImage (id, archived = false) {
@@ -275,5 +280,6 @@ module.exports = {
   createOrderImage,
   getCachedImage,
   updateOrderImage,
-  finishOrderImage
+  finishOrderImage,
+  restoreOrderImage
 }
