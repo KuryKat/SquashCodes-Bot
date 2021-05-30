@@ -10,10 +10,12 @@ const { getOrder, updateOrder } = require('../../utils/database/order')
 const { CommandStatus } = require('../../utils/usefulObjects')
 const config = require(join(__dirname, '../../../../user/', 'config.js'))
 
+const CHANGELOG_LENGTH_LIMIT = 100
+
 module.exports = {
   names: ['updateOrder', 'uo', 'update'],
   help: {
-    description: 'Atualiza uma encomenda e adiciona um novo changelog \n**[Necessário ser Staffer]**',
+    description: 'Atualiza uma encomenda e adiciona um novo change-log \n**[Necessário ser Staffer]**',
     visible: true,
     module: 'Encomendas',
     status: CommandStatus.ONLINE,
@@ -82,6 +84,20 @@ module.exports = {
       return await message.channel.send(
         errorEmbed
           .setDescription(`**Você deve me fornecer as informações necessárias! :(**\n\n${commandUse}`)
+      ).then(msg =>
+        msg.delete({ timeout: 60000 })
+          .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+          .then(() =>
+            message.delete({ timeout: 2000 })
+              .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+          )
+      )
+    }
+
+    if (changelog.length > CHANGELOG_LENGTH_LIMIT) {
+      return await message.channel.send(
+        errorEmbed
+          .setDescription(`**Sua mensagem é muito longa! :(**\nEncurte sua mensagem de ${changelog.length} caracteres.\nPara o conforto de todos, estabelecemos o limite de ${CHANGELOG_LENGTH_LIMIT} caracteres.`)
       ).then(msg =>
         msg.delete({ timeout: 60000 })
           .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))

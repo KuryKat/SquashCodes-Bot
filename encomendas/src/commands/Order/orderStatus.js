@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-const { Client, Message, MessageEmbed, Constants, MessageAttachment } = require('discord.js')
+const { Client, Message, MessageEmbed, Constants, MessageAttachment, TextChannel } = require('discord.js')
 
 const { join } = require('path')
 const { getUser } = require('../../utils/database/user')
@@ -103,6 +103,18 @@ module.exports = {
 
     const imageCache = await getCachedImage(order._id) || await getCachedImage(order._id, true)
     const orderImage = new MessageAttachment(imageCache, `order-${order._id}.png`)
-    await message.reply(`Aqui está o status da encomenda #${order._id}`, orderImage)
+
+    /**
+     * @type {TextChannel}
+     */
+    const logChannel = message.guild.channels.cache.get(order.logImage.channel)
+    const logMessage = (await logChannel.messages.fetch()).get(order.logImage.message)
+    const logEmbed = logMessage.embeds[0]
+    logEmbed.setImage(`attachment://order-${order._id}.png`)
+    logEmbed.setTitle(`Status da Encomenda #${order._id}`)
+
+    setTimeout(async () => {
+      await message.reply({ embed: logEmbed, files: [orderImage] })
+    }, 900)
   }
 }

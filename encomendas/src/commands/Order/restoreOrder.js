@@ -12,7 +12,7 @@ const config = require(join(__dirname, '../../../../user/', 'config.js'))
 module.exports = {
   names: ['restoreOrder', 'ro', 'restore'],
   help: {
-    description: 'Restaura uma encomenda e atualiza/retoma ela \n**[Necessário ser Staffer]**',
+    description: 'Restaura uma encomenda após ela ser finalizada e retoma seu desenvolvimento! \n**[Necessário ser Staffer]**',
     visible: true,
     module: 'Encomendas',
     status: CommandStatus.ONLINE,
