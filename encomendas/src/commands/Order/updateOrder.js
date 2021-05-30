@@ -6,7 +6,7 @@ const { updateOrderImage } = require('../../utils/imageManipulator')
 const { join } = require('path')
 const { getUser } = require('../../utils/database/user')
 const { ImageReferencesModel } = require('../../modules/database')
-const { getOrder } = require('../../utils/database/order')
+const { getOrder, updateOrder } = require('../../utils/database/order')
 const { CommandStatus } = require('../../utils/usefulObjects')
 const config = require(join(__dirname, '../../../../user/', 'config.js'))
 
@@ -147,18 +147,14 @@ module.exports = {
      */
     const logChannel = message.guild.channels.cache.get(order.logImage.channel)
     const logMessage = (await logChannel.messages.fetch()).get(order.logImage.message)
-    const backupEmbed = logMessage.embeds[0]
-    const logEmbed = new MessageEmbed({
-      title: backupEmbed.title,
-      description: backupEmbed.description,
-      fields: backupEmbed.fields
-    })
+    const logEmbed = logMessage.embeds[0]
+    logEmbed.setImage(`attachment://order-${order._id}.png`)
 
     setTimeout(async () => {
-      logEmbed.setImage(`attachment://order-${order._id}.png`)
       await logChannel.send(`<@${order.customer}>`).then(async m => await m.delete())
       await logMessage.delete()
-      await logChannel.send({ embed: logEmbed, files: updatedOrderImage })
+      const newLogMessage = await logChannel.send({ embed: logEmbed, files: [updatedOrderImage] })
+      await updateOrder(order._id, 'logImage:message', newLogMessage.id)
     }, 900)
   }
 }
