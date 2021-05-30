@@ -147,7 +147,7 @@ module.exports = {
      */
     const logChannel = message.guild.channels.cache.get(order.logImage.channel)
     const logMessage = (await logChannel.messages.fetch()).get(order.logImage.message)
-    const logEmbed = logMessage.embeds[0]
+    const logEmbed = new MessageEmbed(logMessage.embeds[0])
 
     setTimeout(async () => {
       logEmbed.setImage(`attachment://order-${order._id}.png`)
