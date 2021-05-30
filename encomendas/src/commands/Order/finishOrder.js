@@ -34,10 +34,24 @@ module.exports = {
       .setFooter('SquashCodes', message.guild.iconURL({ dynamic: true }))
       .setColor(config.err_colour)
 
+    const member = await getUser(message.author.id, true)
+    if (member.details.role < Roles.SELLER) {
+      return await message.channel.send(
+        errorEmbed
+          .setDescription('**Você não está autorizado a utilizar esse comando! :(**')
+      ).then(msg =>
+        msg.delete({ timeout: 60000 })
+          .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+          .then(() =>
+            message.delete({ timeout: 2000 })
+              .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+          )
+      )
+    }
+
     const regex = /"[^"]+"|[\S]+/g
     const parsedArgs = []
     const commandUse = `**Informações necessárias:**\n${module.exports.help.usage[0]}\n\n**Status:**\n${Object.keys(OrderFinishStatus).map((header, index) => `${header} - ${Object.values(OrderFinishStatus)[index]}`).join('\n')}\n\n**Nota: Use as aspas para pode definir textos extensos contendo espaços!!**`
-    const member = await getUser(message.author.id, true)
 
     const argsMatched = args.join(' ').match(regex)
 
@@ -77,25 +91,11 @@ module.exports = {
       )
     }
 
-    if (member.details.role < Roles.SELLER) {
-      return await message.channel.send(
-        errorEmbed
-          .setDescription('**Você não está autorizado a utilizar esse comando! :(**')
-      ).then(msg =>
-        msg.delete({ timeout: 60000 })
-          .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
-          .then(() =>
-            message.delete({ timeout: 2000 })
-              .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
-          )
-      )
-    }
-
     const order = await getOrder(orderID)
     if (!order) {
       return await message.channel.send(
         errorEmbed
-          .setDescription('**Encomenda Desconhecida! :(**\nEla pode não existir ou pode ter sido arquivada')
+          .setDescription('**Encomenda Desconhecida! :(**')
       ).then(msg =>
         msg.delete({ timeout: 60000 })
           .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))

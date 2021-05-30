@@ -90,7 +90,7 @@ module.exports = {
     if (!order) {
       return await message.channel.send(
         errorEmbed
-          .setDescription('**Encomenda Desconhecida! :(**\nEla pode não existir ou pode ter sido arquivada')
+          .setDescription('**Encomenda Desconhecida! :(**')
       ).then(msg =>
         msg.delete({ timeout: 60000 })
           .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
