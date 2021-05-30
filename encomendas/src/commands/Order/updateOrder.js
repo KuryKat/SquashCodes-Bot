@@ -111,7 +111,7 @@ module.exports = {
     if (order.status === 'delivered' || order.status === 'canceled') {
       return await message.channel.send(
         errorEmbed
-          .setDescription(`**Esta encomenda ja foi finalizada! :(**\nEla está registrada como \`${order.status}\` então por isso não pode ser finalizada!`)
+          .setDescription(`**Esta encomenda ja foi finalizada! :(**\nEla está registrada como \`${order.status}\` então por isso não pode ser atualizada!\n\n**Caso você precise adicionar novas informações a ela, você pode restaurá-la com o comando "\`restoreOrder\`"**`)
       ).then(msg =>
         msg.delete({ timeout: 60000 })
           .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))

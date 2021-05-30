@@ -110,6 +110,7 @@ async function updateOrderImage (id, header, content) {
   const subtitleY = dbReferencesManager.references.nextY.value
   const lineLimitY = dbReferencesManager.references.lineLimit.value
   const currentHeader = dbReferencesManager.references.header.value
+  const parsedContent = content.replace(/(\r\n|\n|\r)/gm, ' ')
 
   const canvas = Canvas.createCanvas(2590, currentHeight)
   const ctx = canvas.getContext('2d')
@@ -120,14 +121,14 @@ async function updateOrderImage (id, header, content) {
 
   ctx.font = SUBTITLE_FONT
   const updateDate = moment().utcOffset(-3).format('- HH:mm DD/MM/YYYY')
-  const dateX = 10 + TEXT_X + ctx.measureText(content).width
+  const dateX = 10 + TEXT_X + ctx.measureText(parsedContent).width
   const titleY = subtitleY + NEW_HEADER_DISTANCE
   const lineY = titleY + 5
   const elipseY = titleY - BUGGY_DISTANCE
   await checkHeight()
 
   if (currentHeader === header) {
-    await writeSubtitle(content, subtitleY)
+    await writeSubtitle(parsedContent, subtitleY)
   } else {
     ctx.font = TITLE_FONT
     if (header === OrderHeaders.DEVELOPMENT) {
@@ -143,7 +144,7 @@ async function updateOrderImage (id, header, content) {
   }
 
   async function checkHeight () {
-    if (subtitleY > heightLimit) {
+    if (subtitleY > heightLimit || lineLimitY + 10 > heightLimit) {
       const year = new Date().getFullYear()
       const footer = await Canvas.loadImage(`${IMAGES_DIRECTORY}footer.png`)
       const expandBlock = await Canvas.loadImage(`${IMAGES_DIRECTORY}expand-block.png`)
@@ -164,7 +165,7 @@ async function updateOrderImage (id, header, content) {
     ctx.fillText(headers[newHeader], TEXT_X, titleY)
     await drawDetails(true)
     const newSubtitleY = titleY + SUBTITLE_DISTANCE
-    await writeSubtitle(content, newSubtitleY)
+    await writeSubtitle(parsedContent, newSubtitleY)
     dbReferencesManager.references.header.value = OrderHeaders[newHeader]
   }
 
@@ -232,6 +233,7 @@ async function finishOrderImage (id, text, type) {
     throw SyntaxError('Invalid type for method finishOrderImage in ImageManipulator')
   }
 
+  ctx.font = SUBTITLE_FONT
   ctx.fillText(text, TEXT_X, subtitleY)
   ctx.fillStyle = '#939393'
   ctx.fillText(updateDate, dateX, subtitleY)
@@ -252,7 +254,7 @@ async function finishOrderImage (id, text, type) {
       ctx.fillText(year, 525, ((canvas.height - footer.height) + 48) + BUGGY_DISTANCE)
     }
   }
-  dbReferencesManager.references.nextY.value = subtitleY + DISTANCE_BETWEEN_SUBTITLES
+  dbReferencesManager.references.nextY.value = subtitleY
 
   await dbReferencesManager.save()
   const imageBuffer = canvas.toBuffer()

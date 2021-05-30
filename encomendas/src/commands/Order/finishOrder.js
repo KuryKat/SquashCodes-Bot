@@ -148,11 +148,15 @@ module.exports = {
     const orderChannel = message.guild.channels.cache.get(order.logImage.channel)
     const logMessage = (await orderChannel.messages.fetch()).get(order.logImage.message)
 
+    const logEmbed = logMessage.embeds[0]
+    logEmbed.setImage(`attachment://order-${order._id}.png`)
+
     setTimeout(async () => {
       await orderChannel.send(`<@${order.customer}>`).then(async m => await m.delete())
       await logMessage.delete()
-      const logImageMessage = await orderChannel.send(orderImage)
-      await updateOrder(order._id, 'logImage:message', logImageMessage.id)
+      const newLogMessage = await orderChannel.send({ embed: logEmbed, files: [orderImage] })
+      await newLogMessage.pin()
+      await updateOrder(order._id, 'logImage:message', newLogMessage.id)
     }, 900)
   }
 }
