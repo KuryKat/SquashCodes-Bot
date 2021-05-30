@@ -370,17 +370,18 @@ module.exports = {
                     })
 
                     const orderEmbed = new MessageEmbed()
+                      .setColor(config.colour)
                       .setTitle(`Encomenda #${order._id}`)
                       .setDescription(`Encomenda de <@${order.customer}>`)
                       .addFields([
                         {
                           name: 'Nome:',
-                          value: `${order.name}`,
+                          value: order.name,
                           inline: true
                         },
                         {
                           name: 'Descrição:',
-                          value: `${order.description}`,
+                          value: order.description,
                           inline: true
                         },
                         {
