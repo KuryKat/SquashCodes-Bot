@@ -15,7 +15,7 @@ module.exports = {
     description: 'Verifica o status atual de uma encomenda \n**[Necessário ser o Cliente ou Staffer]**',
     visible: true,
     module: 'Encomendas',
-    status: CommandStatus.FIX,
+    status: CommandStatus.ONLINE,
     usage: ['', '[ID]']
   },
   /**

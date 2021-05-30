@@ -15,7 +15,7 @@ module.exports = {
     description: 'Finaliza uma encomenda e arquiva ela como "entregue" ou "cancelada"\n**[Necessário ser Staffer]**',
     visible: true,
     module: 'Encomendas',
-    status: CommandStatus.WIP,
+    status: CommandStatus.ONLINE,
     usage: ['[ID] [Status]']
   },
   /**

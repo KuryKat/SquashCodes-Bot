@@ -16,7 +16,7 @@ module.exports = {
     description: 'Atualiza uma encomenda e adiciona um novo changelog \n**[Necessário ser Staffer]**',
     visible: true,
     module: 'Encomendas',
-    status: CommandStatus.FIX,
+    status: CommandStatus.ONLINE,
     usage: ['[ID] [Cabeçalho] "[Atualização]"']
   },
   /**

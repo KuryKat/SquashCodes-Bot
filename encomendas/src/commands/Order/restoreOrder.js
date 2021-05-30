@@ -15,7 +15,7 @@ module.exports = {
     description: 'Restaura uma encomenda e atualiza/retoma ela \n**[Necessário ser Staffer]**',
     visible: true,
     module: 'Encomendas',
-    status: CommandStatus.WIP,
+    status: CommandStatus.ONLINE,
     usage: ['[ID]']
   },
   /**
