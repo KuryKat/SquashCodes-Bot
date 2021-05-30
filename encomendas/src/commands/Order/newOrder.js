@@ -400,6 +400,7 @@ module.exports = {
 
                     await logImageChannel.send(`<@${customer._id}>`).then(async m => await m.delete())
                     const logImageMessage = await logImageChannel.send({ embed: orderEmbed, files: [orderImage] })
+                    await logImageMessage.pin()
                     await updateOrder(order._id, 'logImage:channel', logImageChannel.id)
                     await updateOrder(order._id, 'logImage:message', logImageMessage.id)
 
