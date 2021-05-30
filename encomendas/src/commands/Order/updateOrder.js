@@ -152,7 +152,8 @@ module.exports = {
     setTimeout(async () => {
       logEmbed.setImage(`attachment://order-${order._id}.png`)
       await logChannel.send(`<@${order.customer}>`).then(async m => await m.delete())
-      await logMessage.edit({ embed: logEmbed, files: updatedOrderImage })
+      await logMessage.delete()
+      await logChannel.send({ embed: logEmbed, files: updatedOrderImage })
     }, 900)
   }
 }
