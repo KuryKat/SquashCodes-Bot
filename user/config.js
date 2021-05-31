@@ -39,19 +39,18 @@ module.exports = {
       type: 'WATCHING'
     }
   ],
-  owners: ['367425061122211843'],
+  owners: ['373859023679913986', '752929476849172694'],
   append_presence: ' | %sajuda',
   colour: '#a852ff',
-  warn_colour: '#ffcc00',
   err_colour: '#ff5e52',
   cooldown: 3,
-  guild: '846728206697758731', // ID of your guild (REQUIRED)
-  staff_role: '846755035400503327', // ID of your Support Team role (REQUIRED)
-  customers_role: '846755008090865704', // ID of your customers role
-  ordersCategory: '847077722253688862', /// ID of your orders category
+  guild: '827614605605994566', // ID of your guild (REQUIRED)
+  staff_role: '829521598910300190', // ID of your Support Team role (REQUIRED)
+  customers_role: '829521598910300190',
+  ordersCategory: '', /// ID of your orders category
 
   tickets: {
-    category: '842664736305709056', // ID of your tickets category (REQUIRED)
+    category: '829528075884036116', // ID of your tickets category (REQUIRED)
     send_img: true,
     ping: 'staff',
     text: '<:31:829543245792149507> | {{ tag }} um membro da equipe irá lhe atender em breve. Enquanto isso, descreva com detalhes o que deseja!',
@@ -88,13 +87,13 @@ module.exports = {
       enabled: false,
       server: 'https://tickets.example.com'
     },
-    channel: '842664870499188747' // ID of your archives channel
+    channel: '829748527214362694' // ID of your archives channel
   },
 
   panel: {
-    title: '<:older:843703298942828574> | Ticket de suporte',
-    description: 'Reaja abaixo (<:confirm:842975453701996564>) para abrir um canal de suporte.',
-    reaction: '842975453701996564'
+    title: '<:31:829543245792149507> | Ticket de suporte',
+    description: 'Reaja abaixo (<:3_:829543245318193182>) para abrir um canal de suporte.',
+    reaction: '829543245318193182'
   },
 
   storage: {
@@ -108,7 +107,7 @@ module.exports = {
     },
     discord: {
       enabled: true,
-      channel: '845870381373194261'
+      channel: '829748515562455040'
     },
     console: {
       enabled: true,
