@@ -1,8 +1,8 @@
 {
-    "name": "@eartharoid/discordtickets",
-    "version": "2.1.3",
+    "name": "SquashCodes-bot",
+    "version": "1.2.0",
     "private": true,
-    "description": "An open-source & self-hosted Discord bot for ticket management.",
+    "description": "Bot Oficial para SquashCodes",
     "main": "src/index.js",
     "dependencies": {
         "@eartharoid/dtf": "^1.0.8",
@@ -41,23 +41,6 @@
         "dev": "nodemon src/",
         "lint": "eslint --ext .js --ignore-path .gitignore ."
     },
-    "engines": {
-        "node": ">=12"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/eartharoid/DiscordTickets.git"
-    },
-    "keywords": [
-        "discord",
-        "bot",
-        "tickets"
-    ],
-    "author": "eartharoid",
-    "license": "GPL-3.0",
-    "bugs": {
-        "url": "https://github.com/eartharoid/DiscordTickets/issues"
-    },
-    "homepage": "https://github.com/eartharoid/DiscordTickets/#readme",
-    "funding": "https://github.com/eartharoid/DiscordTickets/?sponsor=1"
+    "author": "KuryKat",
+    "license": "none",
 }
