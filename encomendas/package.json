@@ -2,7 +2,7 @@
     "name": "squashcodes-encomendas",
     "version": "1.0.0",
     "main": "index.js",
-    "repository": "https://github.com/KuryKat/SquashCodes-Bot",
+    "repository": "https://github.com/KuryKat/SquashCodes-Bot/tree/master/encomendas",
     "author": "KuryKat",
     "license": "none",
     "private": true
