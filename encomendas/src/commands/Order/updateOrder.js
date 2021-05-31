@@ -28,6 +28,12 @@ module.exports = {
    * @param {Message} message
    */
   exe: async function (client, args, message) {
+    const baseEmbed = new MessageEmbed()
+      .setTitle('📝 SquashCodes - Encomenda')
+      .setTimestamp()
+      .setFooter('SquashCodes', message.guild.iconURL({ dynamic: true }))
+      .setColor(config.colour)
+
     const errorEmbed = new MessageEmbed()
       .setTitle('📝 SquashCodes - Encomenda')
       .setTimestamp()
@@ -173,5 +179,17 @@ module.exports = {
       await newLogMessage.pin()
       await updateOrder(order._id, 'logImage:message', newLogMessage.id)
     }, 900)
+
+    return await message.channel.send(
+      baseEmbed
+        .setDescription(`Encomenda \`#${order._id}\` atualizada com sucesso! :)`)
+    ).then(msg =>
+      msg.delete({ timeout: 60000 })
+        .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+        .then(() =>
+          message.delete({ timeout: 2000 })
+            .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+        )
+    )
   }
 }

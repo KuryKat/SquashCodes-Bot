@@ -192,10 +192,8 @@ module.exports = {
                 )
               }
 
-              let errorInResponsibles = false
-              orderResponsibles.map(async responsible => {
+              for (const responsible of orderResponsibles) {
                 if (responsible.id === orderCustomer.id) {
-                  errorInResponsibles = true
                   return await message.channel.send(
                     errorEmbed
                       .setDescription(`**O responsável e o cliente não podem ser as mesmas pessoas! :(**\n\n${commandUse}`)
@@ -209,7 +207,6 @@ module.exports = {
                 }
 
                 if (!responsible.roles.cache.has(config.staff_role)) {
-                  errorInResponsibles = true
                   return await message.channel.send(
                     errorEmbed
                       .setDescription(`**O responsável "${responsible.user.username}" não é um vendedor autorizado! :(**\n\n${commandUse}`)
@@ -224,7 +221,6 @@ module.exports = {
                 }
 
                 if (responsible.user.bot) {
-                  errorInResponsibles = true
                   return await message.channel.send(
                     errorEmbed
                       .setDescription(`**O responsável não pode ser um BOT, o "${responsible.user.username}" é um! :(**\n\n${commandUse}`)
@@ -237,9 +233,7 @@ module.exports = {
                       )
                   )
                 }
-              })
-
-              if (errorInResponsibles) return
+              }
 
               if (orderResponsibles.length === 0 || !orderResponsibles) {
                 return await message.channel.send(
@@ -303,9 +297,9 @@ module.exports = {
                       customer: orderCustomer.id,
                       responsibles: orderResponsibles.map(x => x.id)
                     })
-                    await confirmOrder.edit(
+                    confirmOrder.edit(
                       baseEmbed
-                        .setDescription(`**Encomenda Confirmada com sucesso!**\nNúmero do pedido: #${order._id}`)
+                        .setDescription(`**Encomenda Confirmada com sucesso! :)**\nNúmero do pedido: \`#${order._id}\``)
                         .addFields([
                           {
                             name: 'Nome:',
@@ -332,6 +326,13 @@ module.exports = {
                             value: order.responsibles.map(x => `<@${x}>`).join('\n')
                           }
                         ])
+                    ).then(msg =>
+                      msg.delete({ timeout: 60000 })
+                        .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+                        .then(() =>
+                          message.delete({ timeout: 2000 })
+                            .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+                        )
                     )
 
                     const customer = await getUser(orderCustomer.id)
@@ -412,7 +413,7 @@ module.exports = {
                     confirmCollector.stop('Cancelado')
                     await confirmOrder.edit(
                       baseEmbed
-                        .setDescription('**Encomenda Cancelada com sucesso!**')
+                        .setDescription('**Encomenda Cancelada com sucesso! :(**')
                     ).then(msg =>
                       msg.delete({ timeout: 60000 })
                         .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))

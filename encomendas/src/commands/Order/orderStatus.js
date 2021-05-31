@@ -16,7 +16,7 @@ module.exports = {
     visible: true,
     module: 'Encomendas',
     status: CommandStatus.ONLINE,
-    usage: ['', '[ID]']
+    usage: ['[ID]', '']
   },
   /**
    *
@@ -31,12 +31,10 @@ module.exports = {
       .setFooter('SquashCodes', message.guild.iconURL({ dynamic: true }))
       .setColor(config.err_colour)
 
-    const regex = /"[^"]+"|[\S]+/g
-    const parsedArgs = []
     const commandUse = `**Informações necessárias:**\n${module.exports.help.usage[0]}\n\n**Nota: Use as aspas para pode definir textos extensos contendo espaços!!**`
     const member = await getUser(message.author.id, true)
 
-    let orderID = message.channel.name.slice(message.channel.name.indexOf('id'), message.channel.name.indexOf('-encomenda')).replace('id-', '')
+    let orderID = message.channel.name.indexOf('-encomenda') !== -1 ? message.channel.name.slice(3, message.channel.name.indexOf('-encomenda')) : null
 
     if (!orderID) {
       if (member.details.role === Roles.CUSTOMER) {
@@ -48,6 +46,13 @@ module.exports = {
             ? '*Você não possui nenhuma encomenda!*\nAbra um ticket usando ``!suporte`` para encomendar algo com nossa equipe!'
             : member.orders.map(order => `<#${order.logImage.channel}>`).join('\n')
           }`)
+        ).then(msg =>
+          msg.delete({ timeout: 60000 })
+            .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+            .then(() =>
+              message.delete({ timeout: 2000 })
+                .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+            )
         )
       } else if (member.details.role < Roles.CUSTOMER) {
         return await message.channel.send(
@@ -63,9 +68,9 @@ module.exports = {
         )
       }
 
-      const argsMatched = args.join(' ').match(regex)
+      orderID = args[0]
 
-      if (!argsMatched) {
+      if (!orderID) {
         return await message.channel.send(
           errorEmbed
             .setDescription(`**Você deve me fornecer as informações necessárias! :(**\n\n${commandUse}`)
@@ -78,13 +83,6 @@ module.exports = {
             )
         )
       }
-
-      argsMatched.forEach(element => {
-        if (!element) return
-        return parsedArgs.push(element.replace(/"/g, ''))
-      })
-
-      orderID = parsedArgs[0]
     }
     const order = await getOrder(orderID)
     if (!order) {
@@ -101,7 +99,7 @@ module.exports = {
       )
     }
 
-    const imageCache = await getCachedImage(order._id) || await getCachedImage(order._id, true)
+    const imageCache = await getCachedImage(order._id) || await getCachedImage(order._id, true, true)
     const orderImage = new MessageAttachment(imageCache, `order-${order._id}.png`)
 
     /**

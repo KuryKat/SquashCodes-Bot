@@ -52,32 +52,8 @@ module.exports = {
       )
     }
 
-    const regex = /"[^"]+"|[\S]+/g
-    const parsedArgs = []
     const commandUse = `**Informações necessárias:**\n${module.exports.help.usage[0]}\n\n**Nota: Use as aspas para pode definir textos extensos contendo espaços!!**`
-
-    const argsMatched = args.join(' ').match(regex)
-
-    if (!argsMatched) {
-      return await message.channel.send(
-        errorEmbed
-          .setDescription(`**Você deve me fornecer as informações necessárias! :(**\n\n${commandUse}`)
-      ).then(msg =>
-        msg.delete({ timeout: 60000 })
-          .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
-          .then(() =>
-            message.delete({ timeout: 2000 })
-              .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
-          )
-      )
-    }
-
-    argsMatched.forEach(element => {
-      if (!element) return
-      return parsedArgs.push(element.replace(/"/g, ''))
-    })
-
-    const orderID = parsedArgs[0]
+    const orderID = args[0]
 
     if (!orderID) {
       return await message.channel.send(
@@ -111,7 +87,7 @@ module.exports = {
     if (order.status === 'open' | order.status === 'development') {
       return await message.channel.send(
         errorEmbed
-          .setDescription('**Você não pode reabrir uma encomenda que não foi finalizada! :(**')
+          .setDescription('**Esta encomenda não foi finalizada! :(**')
       ).then(msg =>
         msg.delete({ timeout: 60000 })
           .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
@@ -126,7 +102,14 @@ module.exports = {
     await restoreOrderImage(restoredOrder._id)
     return await message.channel.send(
       baseEmbed
-        .setDescription(`Encomenda restaurada! :)\nA encomenda \`\`#${restoredOrder._id}\`\` foi restaurada para o status "${restoredOrder.status}"!`)
+        .setDescription(`**Encomenda \`#${order._id}\` restaurada com sucesso! :)**\nEla foi restaurada para o status "${restoredOrder.status}"!`)
+    ).then(msg =>
+      msg.delete({ timeout: 60000 })
+        .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+        .then(() =>
+          message.delete({ timeout: 2000 })
+            .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+        )
     )
   }
 }

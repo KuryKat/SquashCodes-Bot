@@ -28,6 +28,12 @@ module.exports = {
     const DELIVERED_MESSAGE = 'Entregamos seu pedido, a Squash Codes agradece!'
     const CANCELED_MESSAGE = 'Seu pedido foi cancelado'
 
+    const baseEmbed = new MessageEmbed()
+      .setTitle('📝 SquashCodes - Encomenda')
+      .setTimestamp()
+      .setFooter('SquashCodes', message.guild.iconURL({ dynamic: true }))
+      .setColor(config.colour)
+
     const errorEmbed = new MessageEmbed()
       .setTitle('📝 SquashCodes - Encomenda')
       .setTimestamp()
@@ -49,33 +55,9 @@ module.exports = {
       )
     }
 
-    const regex = /"[^"]+"|[\S]+/g
-    const parsedArgs = []
     const commandUse = `**Informações necessárias:**\n${module.exports.help.usage[0]}\n\n**Status:**\n${Object.keys(OrderFinishStatus).map((header, index) => `${header} - ${Object.values(OrderFinishStatus)[index]}`).join('\n')}\n\n**Nota: Use as aspas para pode definir textos extensos contendo espaços!!**`
-
-    const argsMatched = args.join(' ').match(regex)
-
-    if (!argsMatched) {
-      return await message.channel.send(
-        errorEmbed
-          .setDescription(`**Você deve me fornecer as informações necessárias! :(**\n\n${commandUse}`)
-      ).then(msg =>
-        msg.delete({ timeout: 60000 })
-          .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
-          .then(() =>
-            message.delete({ timeout: 2000 })
-              .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
-          )
-      )
-    }
-
-    argsMatched.forEach(element => {
-      if (!element) return
-      return parsedArgs.push(element.replace(/"/g, ''))
-    })
-
-    const orderID = parsedArgs[0]
-    const status = parsedArgs[1]
+    const orderID = args[0]
+    const status = args[1]
 
     if (!orderID || !status) {
       return await message.channel.send(
@@ -96,6 +78,20 @@ module.exports = {
       return await message.channel.send(
         errorEmbed
           .setDescription('**Encomenda Desconhecida! :(**')
+      ).then(msg =>
+        msg.delete({ timeout: 60000 })
+          .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+          .then(() =>
+            message.delete({ timeout: 2000 })
+              .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+          )
+      )
+    }
+
+    if (order.status === 'open' && status === OrderFinishStatus.DELIVERED) {
+      return await message.channel.send(
+        errorEmbed
+          .setDescription(`**Esta encomenda não foi desenvolvida ainda! :(**\nEla está registrada como \`${order.status}\` então por isso não pode ser finalizada!`)
       ).then(msg =>
         msg.delete({ timeout: 60000 })
           .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
@@ -158,5 +154,17 @@ module.exports = {
       await newLogMessage.pin()
       await updateOrder(order._id, 'logImage:message', newLogMessage.id)
     }, 900)
+
+    return await message.channel.send(
+      baseEmbed
+        .setDescription(`Encomenda \`#${order._id}\` finalizada com sucesso! :)`)
+    ).then(msg =>
+      msg.delete({ timeout: 60000 })
+        .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+        .then(() =>
+          message.delete({ timeout: 2000 })
+            .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+        )
+    )
   }
 }

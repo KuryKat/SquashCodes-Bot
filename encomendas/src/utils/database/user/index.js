@@ -9,7 +9,7 @@ async function createUser (id) {
   return new User(await createdUser.save())
 }
 
-async function getUser (id, populateOrders = false) {
+async function getUser (id, populateOrders) {
   let query = UserModel.findById(id)
   if (populateOrders) {
     query = query
@@ -32,7 +32,6 @@ async function updateUserRole (id, newRole) {
     await UserModel.updateOne({ _id: id }, user).exec()
     return true
   } catch (err) {
-    console.error(err)
     return false
   }
 }
@@ -45,7 +44,6 @@ async function updateUserOrders (id, orderID) {
     await UserModel.updateOne({ _id: id }, user).exec()
     return true
   } catch (err) {
-    console.error(err)
     return false
   }
 }

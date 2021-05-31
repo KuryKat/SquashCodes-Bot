@@ -13,7 +13,7 @@ const config = require(join(__dirname, '../../../../user/', 'config.js'))
 // eslint-disable-next-line no-unused-vars
 const commandLike = (client, args, message) => {}
 class HelpData {
-  constructor ({ description = undefined, visible = false, module = undefined, status = undefined, usage = undefined }) {
+  constructor ({ description, visible, module, status, usage }) {
     this.description = description
     this.visible = visible
     this.module = module
@@ -78,7 +78,7 @@ module.exports = {
       const cmd = _commands.find(x => x.commandNames.findIndex(name => name.toLowerCase() === command) !== -1)
 
       if (!cmd) {
-        await unknownCommand()
+        return await unknownCommand()
       }
 
       let cmdMetadata = cmd.helpData
@@ -88,7 +88,7 @@ module.exports = {
       }
 
       if (!cmdMetadata.visible) {
-        await unknownCommand()
+        return await unknownCommand()
       }
 
       if (!cmdMetadata.description) {
@@ -102,8 +102,8 @@ module.exports = {
         cmdMetadata.usage = ['']
       }
       let usage = ''
-      for (const argusage of cmdMetadata?.usage) {
-        usage += prefix + (cmd?.commandNames[0]) + ' ' + argusage + '\n'
+      for (const argusage of cmdMetadata.usage) {
+        usage += prefix + (cmd.commandNames[0]) + ' ' + argusage + '\n'
       }
 
       if (!cmdMetadata.status) {
@@ -113,15 +113,24 @@ module.exports = {
       embed.addField('Status do comando:', `${cmdMetadata.status} **${Object.keys(CommandStatus).find((s, index) => index === Object.values(CommandStatus).findIndex(s => s === cmdMetadata.status))}**`)
       embed.addField('Uso(s) do comando:', usage)
 
-      if (cmd?.commandNames !== undefined && cmd?.commandNames.length > 1) {
+      if (cmd.commandNames && cmd.commandNames.length > 1) {
         let aliases = ''
-        cmd?.commandNames.forEach(alias => {
+        cmd.commandNames.forEach(alias => {
           aliases += alias + '\n'
         })
         embed.addField('Apelidos (outros nomes do comando):', aliases)
       }
 
-      await message.channel.send(embed)
+      return await message.channel.send(embed)
+        .then(msg =>
+          msg.delete({ timeout: 60000 })
+            .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+            .then(() =>
+              message.delete({ timeout: 2000 })
+                .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+            )
+        )
+        .catch(console.error)
     }
 
     async function allCommands () {
@@ -172,7 +181,15 @@ module.exports = {
       }
 
       embed.addFields(embedFields)
-      await message.channel.send(embed)
+      return await message.channel.send(embed)
+        .then(msg =>
+          msg.delete({ timeout: 60000 })
+            .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+            .then(() =>
+              message.delete({ timeout: 2000 })
+                .catch(error => error.code === Constants.APIErrors.UNKNOWN_MESSAGE ? null : console.error(error))
+            )
+        )
         .catch(console.error)
     }
   }

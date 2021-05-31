@@ -110,14 +110,14 @@ module.exports = async function encomendas (client, config, log, leeks) {
 
     const command = args.shift().toLowerCase()
 
-    if (command === undefined) {
+    if (!command) {
       return
     }
 
     const commandFound = _commands.find(commandObj =>
       commandObj.commandNames.findIndex(name => name.toLowerCase() === command) !== -1)
 
-    if (commandFound === undefined) {
+    if (!commandFound) {
       return
     }
 

@@ -1,6 +1,6 @@
 const Canvas = require('canvas')
 const moment = require('moment')
-const { writeFile, readFile, rename } = require('fs/promises')
+const { writeFile, readFile, rename, unlink } = require('fs/promises')
 const { join } = require('path')
 const { ImageReferencesModel } = require('../modules/database')
 const { headers } = require('./usefulObjects')
@@ -75,7 +75,7 @@ async function createOrderImage (id) {
   ctx.drawImage(line, LINE_X, lineY)
 
   ctx.font = SUBTITLE_FONT
-  const initialDate = moment().utcOffset(-3).format('- HH:mm DD/MM/YYYY')
+  const initialDate = moment().utcOffset(-3).format('- HH:mm DD/MM/YYYY [(GMT-3)]')
   const initialSubtitle = 'Recebemos seu pedido'
   const dateX = 10 + TEXT_X + ctx.measureText(initialSubtitle).width
   // Draw Default Subtitle
@@ -120,7 +120,7 @@ async function updateOrderImage (id, header, content) {
   ctx.drawImage(cachedImage, 0, 0, canvas.width, canvas.height)
 
   ctx.font = SUBTITLE_FONT
-  const updateDate = moment().utcOffset(-3).format('- HH:mm DD/MM/YYYY')
+  const updateDate = moment().utcOffset(-3).format('- HH:mm DD/MM/YYYY [(GMT-3)]')
   const dateX = 10 + TEXT_X + ctx.measureText(parsedContent).width
   const titleY = subtitleY + NEW_HEADER_DISTANCE
   const lineY = titleY + 5
@@ -169,7 +169,7 @@ async function updateOrderImage (id, header, content) {
     dbReferencesManager.references.header.value = OrderHeaders[newHeader]
   }
 
-  async function drawDetails (elipseToo = false) {
+  async function drawDetails (elipseToo) {
     if (lineY < lineLimitY) {
       ctx.drawImage(line, LINE_X, lineY)
       if (elipseToo) {
@@ -210,33 +210,46 @@ async function updateOrderImage (id, header, content) {
  * @param {String} text
  * @param {'delivered' | 'canceled'} type
  */
-async function finishOrderImage (id, text, type) {
+async function finishOrderImage (id, text, type, cache = true, getArquivedCache) {
+  const currentHeader = (await ImageReferencesModel.findOne({ _id: id }).exec()).references.header.value
+
+  const cachedImage = currentHeader < 2 && type !== 'canceled' ? await updateOrderImage(id, 2, 'Encomenda finalizada') : await getCachedImage(id, getArquivedCache)
+
   const dbReferencesManager = await ImageReferencesModel.findOne({ _id: id }).exec()
   const heightLimit = dbReferencesManager.references.maxHeight.value
   const currentHeight = dbReferencesManager.references.height.value
   const subtitleY = dbReferencesManager.references.nextY.value
+  const status = dbReferencesManager.references.status
+
+  const canvasCachedImage = await Canvas.loadImage(cachedImage)
 
   const canvas = Canvas.createCanvas(2590, currentHeight)
   const ctx = canvas.getContext('2d')
-  const cachedImage = await Canvas.loadImage(`${CACHE_DIRECTORY}${id}.png`)
-  ctx.drawImage(cachedImage, 0, 0, canvas.width, canvas.height)
-  const updateDate = moment().utcOffset(-3).format('- HH:mm DD/MM/YYYY')
+  ctx.drawImage(canvasCachedImage, 0, 0, canvas.width, canvas.height)
+  const updateDate = moment().utcOffset(-3).format('- HH:mm DD/MM/YYYY [(GMT-3)]')
   ctx.font = SUBTITLE_FONT
   const dateX = 10 + TEXT_X + ctx.measureText(text).width
   await checkHeight()
 
+  const canceled = type === 'canceled'
   if (type === 'delivered') {
     ctx.fillStyle = '#ACE96F'
-  } else if (type === 'canceled') {
+    dbReferencesManager.references.nextY.value = subtitleY + SUBTITLE_DISTANCE
+    dbReferencesManager.references.status = 1
+  } else if (canceled) {
     ctx.fillStyle = '#E40000'
+    dbReferencesManager.references.nextY.value = subtitleY
+    dbReferencesManager.references.status = 2
   } else {
     throw SyntaxError('Invalid type for method finishOrderImage in ImageManipulator')
   }
 
-  ctx.font = SUBTITLE_FONT
-  ctx.fillText(text, TEXT_X, subtitleY)
-  ctx.fillStyle = '#939393'
-  ctx.fillText(updateDate, dateX, subtitleY)
+  if (status !== 1 || canceled) {
+    ctx.font = SUBTITLE_FONT
+    ctx.fillText(text, TEXT_X, subtitleY)
+    ctx.fillStyle = '#939393'
+    ctx.fillText(updateDate, dateX, subtitleY)
+  }
 
   async function checkHeight () {
     if (subtitleY > heightLimit) {
@@ -246,19 +259,20 @@ async function finishOrderImage (id, text, type) {
       canvas.height += expandBlock.height - footer.height
       dbReferencesManager.references.maxHeight.value = canvas.height - footer.height - 100
       dbReferencesManager.references.height.value = canvas.height
-      ctx.drawImage(cachedImage, 0, 0, cachedImage.width, cachedImage.height)
-      ctx.drawImage(expandBlock, 0, cachedImage.height - footer.height)
+      ctx.drawImage(canvasCachedImage, 0, 0, canvasCachedImage.width, canvasCachedImage.height)
+      ctx.drawImage(expandBlock, 0, canvasCachedImage.height - footer.height)
       ctx.drawImage(footer, 0, canvas.height - footer.height)
       ctx.font = '40px "SquashCode Font Medium", "SquashCode Font Regular"'
       ctx.fillStyle = '#FFFFFF'
       ctx.fillText(year, 525, ((canvas.height - footer.height) + 48) + BUGGY_DISTANCE)
     }
   }
-  dbReferencesManager.references.nextY.value = subtitleY
 
   await dbReferencesManager.save()
   const imageBuffer = canvas.toBuffer()
-  await cacheImage(imageBuffer, id, true)
+  if (cache) {
+    await cacheImage(imageBuffer, id, true, canceled)
+  }
   return imageBuffer
 }
 
@@ -266,16 +280,30 @@ async function restoreOrderImage (id) {
   await rename(`${ARCHIVE_DIRECTORY}${id}.png`, `${CACHE_DIRECTORY}${id}.png`)
 }
 
-async function cacheImage (buffer, id, archive = false) {
-  if (archive) {
+async function cacheImage (buffer, id, archive, canceled) {
+  if (canceled) {
     await rename(`${CACHE_DIRECTORY}${id}.png`, `${ARCHIVE_DIRECTORY}${id}.png`)
   } else {
-    await writeFile(`${CACHE_DIRECTORY}${id}.png`, buffer)
+    if (archive) {
+      await unlink(`${CACHE_DIRECTORY}${id}.png`)
+    }
+    await writeFile(`${archive ? ARCHIVE_DIRECTORY : CACHE_DIRECTORY}${id}.png`, buffer)
   }
 }
 
-async function getCachedImage (id, archived = false) {
-  return await readFile(`${archived ? ARCHIVE_DIRECTORY : CACHE_DIRECTORY}${id}.png`)
+async function verifyImageStatus (id) {
+  return (await ImageReferencesModel.findOne({ _id: id }).exec()).references.status
+}
+
+async function getCachedImage (id, archived, canceled) {
+  try {
+    if (canceled && await verifyImageStatus(id) === 2) {
+      return await finishOrderImage(id, 'Seu pedido foi cancelado', 'canceled', false)
+    }
+    return await readFile(`${archived ? ARCHIVE_DIRECTORY : CACHE_DIRECTORY}${id}.png`)
+  } catch (error) {
+    return undefined
+  }
 }
 
 module.exports = {

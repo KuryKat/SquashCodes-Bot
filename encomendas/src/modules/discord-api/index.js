@@ -13,7 +13,7 @@ const api = Axios.create({
 
 async function getUser (id) {
   let user = cache.get(id)
-  if (user === undefined) {
+  if (!user) {
     user = (await api.get(`/users/${id}`)).data
     cache.set(id, user, 3600)
   }
